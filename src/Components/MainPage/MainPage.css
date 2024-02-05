@@ -1,0 +1,61 @@
+.mainpage{
+    margin: 0px;
+    padding: 0;
+    position:relative;
+}
+/* Background Img */
+.backgroundContainer{
+    width: 100vw;
+    height: 92vh;
+    position: relative;
+}
+.backgroundContainer img{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    z-index: 100;
+    filter: brightness(50%)
+}
+/* Texto y boton del cover */
+.textMP{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: auto;
+    z-index: 50px;
+    top: 35%;
+    left:10%;
+}
+.textMP h1{
+    color: white;
+    margin-bottom: 2rem;
+}
+.textMP h3{
+    color:white;
+}
+.textMP button{
+    margin-top: 2rem;
+    height: 8vh;
+    width: 25vh;
+    background-color: orange;
+    border-radius: 25px;
+    border: none;
+    color:white;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+/* Redes sociales */
+.redesMP{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top:35%;
+    right: 10%;
+    color: white;
+}
+.redesMP img{
+    margin: 10px 0;
+}
