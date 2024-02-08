@@ -13,9 +13,9 @@ const App = () => {
     <div className={`container ${theme}`}>
       <Navbar theme={theme} setTheme={setTheme}/>
       <MainPage />
-      <AboutUs />
       <Services />
       <MasServicios />
+      <AboutUs />
       <Contact />
       <Footer />
     </div>
