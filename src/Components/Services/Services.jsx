@@ -6,7 +6,8 @@ import Certificacion from '../../assets/services/CertificacionLaboral.png'
 import Capacitaciones from '../../assets/services/Capacitaciones.png'
 import MedioAmbiente from '../../assets/services/MedioAmbiente.png'
 import flecha from '../../assets/services/flecha.png'
-function Services() {
+
+function Services(){
   return (
     <div className='Services'>
       <div className='textServices'>
@@ -49,8 +50,10 @@ function Services() {
           <span>Medio Ambiente</span>
         </div>
       </div>
-      <div className='flecha'>
-        <img src={flecha} alt="Flechita" />
+      <div className='arrow'>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </div>
   )
