@@ -1,13 +1,13 @@
 .navbar{
     width: 100vw;
-    height:8vh;
+    height:8svh;
     display: flex;
     align-items: center;
     justify-content:space-evenly;
-    background-color: white;
+    background-color: black;
 }
 .navbar ul{
-    width: 50vw;
+    max-width: 50vw;
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -29,9 +29,10 @@
 .login img{
     width: 25px;
     cursor: pointer;
+
 }
 
-.theme{
+/* .theme{
     width:25px;
     cursor: pointer;
 }
@@ -39,4 +40,4 @@
 .dark .navbar{
     background-color: black;
     color: white;
-}
+} */

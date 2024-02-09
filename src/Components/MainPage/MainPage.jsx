@@ -13,7 +13,9 @@ function MainPage() {
       </div>
       <div className='textMP'>
         <h1>SAFETY ADVISORS</h1>
-        <h3>Especialista en Seguridad, <br />Salud Ocupacional y Medio Ambiente</h3>
+        <h3>Especialista en Seguridad, <br />
+        Salud Ocupacional <br />
+        y Medio Ambiente</h3>
         <button type='button'>Contáctenos </button>
       </div>
       <div className='redesMP'>

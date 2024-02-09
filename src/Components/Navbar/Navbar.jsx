@@ -1,32 +1,33 @@
 import React from 'react'
 import './Navbar.css'
-import userlogind from '../../assets/user_login_d.png'
-import userloginn from '../../assets/user_login_n.png'
-import night from '../../assets/day.png'
-import day from '../../assets/night.png'
-import logo_light from '../../assets/logo-black.png'
-import logo_dark from '../../assets/logo-white.png'
+import userlogin from '../../assets/user_login_n.png'
+import logo from '../../assets/logo-white.png'
+import {Link} from 'react-router-dom'
+const Navbar = () => {
+    // const navRef = useRef();
 
-const Navbar = ({theme, setTheme}) => {
-    const toggle_mode=()=>{
-        theme=='light'? setTheme('dark'):setTheme('light');
-    }
+	// const showNavbar = () => {
+	// 	navRef.current.classList.toggle(
+	// 		"responsive_nav"
+	// 	);
+	// };
   return (
         <div className='navbar'>
-            <img src={theme=='light'? logo_light:logo_dark} alt="" className='logo' />
+            {/* {theme=='light'? logo_light:logo_dark} */}
+            <img src={logo} alt="Logo" className='logo' />
             <ul>
-                <li>Home</li>
-                <li>Servicios</li>
-                <li>Nosotros</li>
-                <li>Equipo</li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/Servicios">Servicios</Link></li>
+                <li><Link to="/Nosotros">Nosotros</Link></li>
+                <li><Link to="/Equipo">Equipo</Link></li>
             </ul>
 
             <div className='login'>
-                <img src={theme=='light'? userlogind:userloginn} alt="" className='imgLogin' />
+                <img src={userlogin} alt="" className='imgLogin' />
             </div>
             
-            <img onClick={()=>{toggle_mode()}} src={theme=='light'? day:night} alt="pageTheme" className='theme' />
-
+            {/* <img onClick={()=>{toggle_mode()}} src={theme=='light'? day:night} alt="pageTheme" className='theme' /> */}
+            
         </div>
 
   )
