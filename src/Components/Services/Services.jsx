@@ -5,7 +5,6 @@ import SalOcupacional from '../../assets/services/SaludOcupacional.png'
 import Certificacion from '../../assets/services/CertificacionLaboral.png'
 import Capacitaciones from '../../assets/services/Capacitaciones.png'
 import MedioAmbiente from '../../assets/services/MedioAmbiente.png'
-import flecha from '../../assets/services/flecha.png'
 
 function Services(){
   return (
@@ -59,4 +58,5 @@ function Services(){
   )
 }
 
+/* IPhone SE 375 667 SCREEN SIZE DONE */
 export default Services
