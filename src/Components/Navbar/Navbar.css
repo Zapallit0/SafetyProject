@@ -6,18 +6,18 @@
     justify-content:space-evenly;
     background-color: white;
 }
-ul{
+.navbar ul{
     width: 50vw;
     list-style: none;
     display: flex;
     justify-content: space-between;
     justify-content:end;
 }
-ul li{
+.navbar ul li{
     display: inline-block;
     margin: 10px 20px;
 }
-li:hover{
+.navbar li:hover{
     color: grey;
 } 
 
