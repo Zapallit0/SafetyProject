@@ -21,10 +21,9 @@ function Contact() {
         </div>
         <div className='FormContacto'>
                 <h2 className='contactPageTitle'>Contáctanos</h2>
-                {/* <span className='contactDesc'>Para asistencia experta en seguridad y certificación, contáctenos utilizando el formulario a continuación.  Aseguremos su negocio juntos.</span> */}
                 <form action="" className='Forma'>
                     <h5>Correo:</h5>
-                    <input type='text' className='name' placeholder='Your Email' name='from_name'></input>
+                    <input type='text' className='correo' placeholder='Your Email' name='from_name'></input>
                     <div className='DatosPersonalesContacto'>
                       <div className='DatoPersonal'>
                         <h5>Nombre:</h5>
@@ -32,7 +31,7 @@ function Contact() {
                       </div>
                       <div className='DatoPersonal'>
                         <h5>Número:</h5>
-                        <input type='text' className='email' placeholder='Your Number' name='from_name'></input>
+                        <input type='text' className='numero' placeholder='Your Number' name='from_name'></input>
                       </div>
                     </div>
                     <h5>Mensaje:</h5>
