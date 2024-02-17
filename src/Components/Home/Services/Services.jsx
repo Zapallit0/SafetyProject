@@ -1,14 +1,14 @@
 import React from 'react'
 import './Services.css'
-import SegLaboral from '../../assets/services/SeguridadLaboral.png'
-import SalOcupacional from '../../assets/services/SaludOcupacional.png'
-import Certificacion from '../../assets/services/CertificacionLaboral.png'
-import Capacitaciones from '../../assets/services/Capacitaciones.png'
-import MedioAmbiente from '../../assets/services/MedioAmbiente.png'
+import SegLaboral from '../../../assets/services/SeguridadLaboral.png'
+import SalOcupacional from '../../../assets/services/SaludOcupacional.png'
+import Certificacion from '../../../assets/services/CertificacionLaboral.png'
+import Capacitaciones from '../../../assets/services/Capacitaciones.png'
+import MedioAmbiente from '../../../assets/services/MedioAmbiente.png'
 
 function Services(){
   return (
-    <div className='Services'>
+    <div className='Services' id='Services'>
       <div className='textServices'>
         <h4>Nuestros</h4>
         <h2>Servicios</h2>

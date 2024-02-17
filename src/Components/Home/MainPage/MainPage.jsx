@@ -1,13 +1,13 @@
 import React from 'react'
 import './MainPage.css'
-import background from '../../assets/background.jpg'
-import Facebook from '../../assets/social/white/facebookW.svg';
-import Linkedin from '../../assets/social/white/linkedinW.svg';
-import Instagram from '../../assets/social/white/instagramW.svg';
+import background from '../../../assets/background.jpg'
+import Facebook from '../../../assets/social/white/facebookW.svg';
+import Linkedin from '../../../assets/social/white/linkedinW.svg';
+import Instagram from '../../../assets/social/white/instagramW.svg';
 
 function MainPage() {
   return (
-    <div className='mainPage'>
+    <div className='mainPage' id='Main_Page'>
       <div className='backgroundContainer'>
         <img src={background} alt="Fondo" />
       </div>

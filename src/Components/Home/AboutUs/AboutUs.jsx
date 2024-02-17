@@ -1,9 +1,9 @@
 import React from 'react'
 import './AboutUs.css'
-import Nosotros from'../../assets/nosotros.jpg';
+import Nosotros from'../../../assets/nosotros.jpg';
 function AboutUs() {
   return (
-    <div className='AboutUs'>
+    <div className='AboutUs' id='About_Us'>
         <img src={Nosotros} alt="Imagen Equipo" />
         <div className='textAboutUs'>
             <div className='textOurInfo'>

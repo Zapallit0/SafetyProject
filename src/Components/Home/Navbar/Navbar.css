@@ -1,0 +1,75 @@
+.navbar{
+    width: 100vw;
+    height:4rem;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background-color: black;
+    padding: 2rem 2rem;
+}
+.desktopMenu{
+    max-width: 50vw;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    justify-content:end;
+    color: white;
+}
+.desktopMenu li{
+    display: inline-block;
+    margin: 10px 20px;
+    cursor: pointer;
+}
+.navbar li:hover{
+    color: grey;
+} 
+
+.logo{
+    height:2rem;
+    cursor: pointer;
+}
+
+.login img{
+    width: 2rem;
+    cursor: pointer;
+
+}
+
+.mobMenu{
+    display: none;
+}
+.navMenu{
+    position: absolute;
+    top: 4rem;
+    left: 1rem;
+    z-index:2;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding: 0.5rem;
+    height: fit-content;
+    width: 15rem;
+    background: rgb(40,40,40);
+    list-style: none;
+    color: #fff;
+    background-color: black;
+}
+.navMenu li{
+    cursor: pointer;
+    margin:0.2rem 0;
+}
+
+
+@media screen and (max-width:720px){
+    .mobMenu{
+        display: flex;
+        color: white;
+        cursor: pointer;
+    }
+    .desktopMenu{
+        display: none;
+    }
+    .desktopMenuBtn{
+        display: none;
+    }
+}

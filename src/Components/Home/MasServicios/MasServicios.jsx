@@ -1,6 +1,6 @@
 import React from 'react'
 import './MasServicios.css'
-import background from '../../assets/services/backgroundServices.jpg';
+import background from '../../../assets/services/backgroundServices.jpg';
 function MasServicios() {
   return (
     <div className='Mas_Servicios'>
