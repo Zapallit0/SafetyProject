@@ -3,6 +3,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    padding: 1rem;
     width: 100vw;
     height: 30vh;
     color:white;
@@ -14,23 +15,28 @@
 }
 .Footer .footerImgs img{
     cursor: pointer;
-    width: 40px;
+    width: 1rem;
+}
+.footerImgs{
+    display: flex;
+    flex-direction: column;
 }
 .LogosFooter{
     display: flex;
     flex-direction: row;
 }
 .footerImgs .LogosFooter img{
-    width: 40px;
-    margin: 10px 10px;
+    width: 1.5rem;
     cursor: pointer;
+    margin:1rem 0.3rem ;
 }
 .Footer ul{
     list-style: none;
 }   
 .Footer li{
-    margin: 5px 0;
+    margin: 0.7rem 0;
     cursor: pointer;
+    font-size: 0.7rem;
 }
 .Footer li:hover{
     color: gray;
