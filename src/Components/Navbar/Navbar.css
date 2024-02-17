@@ -1,0 +1,42 @@
+.navbar{
+    width: 100vw;
+    height:8vh;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    background-color: white;
+}
+.navbar ul{
+    width: 50vw;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    justify-content:end;
+}
+.navbar ul li{
+    display: inline-block;
+    margin: 10px 20px;
+}
+.navbar li:hover{
+    color: grey;
+} 
+
+.logo{
+    width: 100px;
+    cursor: pointer;
+}
+
+.login img{
+    width: 25px;
+    cursor: pointer;
+}
+
+.theme{
+    width:25px;
+    cursor: pointer;
+}
+
+.dark .navbar{
+    background-color: black;
+    color: white;
+}
