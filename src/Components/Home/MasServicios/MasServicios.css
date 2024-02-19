@@ -13,6 +13,8 @@
     width: 100vw;
     height: 100vh;
     position: relative;
+    border-top:0.2rem solid orange;
+    border-bottom: 0.2rem solid orange;
 }
 .backgroundMasServicios img{
     height: 100%;
@@ -75,9 +77,9 @@
     font-size: 0.6rem;
     font-weight: 400;
 }
-@keyframes buttonAnimation{
-    0%{scale: 1}
-    100%{scale: 1.1}
+.btnMasServicios:hover{
+    scale: 1.03;
+    background-color: rgb(221, 143, 0);
 }
 /* IPhone SE 375 667 SCREEN SIZE DONE */
 

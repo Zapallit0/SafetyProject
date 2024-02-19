@@ -15,7 +15,7 @@ function Contact() {
           <div>
           <h3>Redes</h3>
           <p><span>+51</span> 964197982 <br />
-          <span >gerencia@safeadvisors.com</span></p>
+          <span >gerencia@safeadvisors.io</span></p>
           </div>
           <div className='logosRedes'>
             <img src={Facebook} alt="Facebook" />
