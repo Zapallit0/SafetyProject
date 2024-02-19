@@ -17,8 +17,10 @@
 }
 .desktopMenu li{
     display: inline-block;
+    font-size: 1.1rem;
     margin: 10px 20px;
     cursor: pointer;
+    font-weight: 400;
 }
 .navbar li:hover{
     color: grey;
@@ -61,6 +63,9 @@
 
 
 @media screen and (max-width:720px){
+    .navbar {
+        padding: 1rem 1rem;
+    }
     .mobMenu{
         display: flex;
         color: white;

@@ -1,13 +1,11 @@
 import React,{useState} from 'react'
 import './Navbar.css'
-import userlogin from '../../../assets/user_login_n.png';
-import logo from '../../../assets/logo-white.png';
-import burgerMenu from '../../../assets/icons/menu.png';
+import userlogin from '../../../assets/user_login_n.webp';
+import logo from '../../../assets/logo-white.webp';
 import {Squash as Hamburger} from 'hamburger-react'
 
 const Navbar = () => {
     const [showMenu, setShowMenu]=useState(false);
-    const [isOpen,setOpen]=useState(false);
     return (
         <div className='navbar'>
             <div className='mobMenu'>
@@ -28,10 +26,10 @@ const Navbar = () => {
 
             {/* <img src={burgerMenu} alt="Menu" className='mobMenu' onClick={()=>(setShowMenu(!showMenu))} /> */}
             <ul className='navMenu' style={{display:showMenu? 'flex':'none'}}>
-                <li onClick={()=>{document.getElementById('Main_Page').scrollIntoView({behavior:'smooth'})}}>Home</li>
-                <li onClick={()=>{document.getElementById('Services').scrollIntoView({behavior:'smooth'})}}>Servicios</li>
-                <li onClick={()=>{document.getElementById('About_Us').scrollIntoView({behavior:'smooth'})}}>Nosotros</li>
-                <li onClick={()=>{document.getElementById('Main_Page').scrollIntoView({behavior:'smooth'})}}>Equipo</li>
+                <li onClick={()=>{document.getElementById('Main_Page').scrollIntoView({behavior:'smooth'}),setShowMenu(!showMenu)}}>Home</li>
+                <li onClick={()=>{document.getElementById('Services').scrollIntoView({behavior:'smooth'}),setShowMenu(!showMenu)}}>Servicios</li>
+                <li onClick={()=>{document.getElementById('About_Us').scrollIntoView({behavior:'smooth'}),setShowMenu(!showMenu)}}>Nosotros</li>
+                <li onClick={()=>{document.getElementById('Main_Page').scrollIntoView({behavior:'smooth'}),setShowMenu(!showMenu)}}>Equipo</li>
             </ul>
         </div>
 

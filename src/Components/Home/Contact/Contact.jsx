@@ -8,11 +8,15 @@ function Contact() {
     <div className='Contacto'>
       <div className='DatosForm'>
         <div className='DatosContacto'>
+          <div>
           <h3>Ubicación</h3>
           <p>Jr. Brigadier Mateo <br /> Pumacahua 2550</p>
+          </div>
+          <div>
           <h3>Redes</h3>
           <p><span>+51</span> 964197982 <br />
           <span >gerencia@safeadvisors.com</span></p>
+          </div>
           <div className='logosRedes'>
             <img src={Facebook} alt="Facebook" />
             <img src={Instagram} alt="Instagram" />
@@ -27,11 +31,11 @@ function Contact() {
                     <div className='DatosPersonalesContacto'>
                       <div className='DatoPersonal'>
                         <h5>Nombre:</h5>
-                        <input type='email' className='name' placeholder='Your Name' name='from_email'></input>
+                        <input type='name' className='datos' placeholder='Your Name' name='from_email'></input>
                       </div>
                       <div className='DatoPersonal'>
                         <h5>Número:</h5>
-                        <input type='text' className='numero' placeholder='Your Number' name='from_name'></input>
+                        <input type='text' className='datos' placeholder='Your Number' name='from_name'></input>
                       </div>
                     </div>
                     <h5>Mensaje:</h5>

@@ -4,18 +4,3 @@
   box-sizing: border-box;
   font-family:"Work Sans", sans-serif;
 }
-.container{
-  width: 100vw;
-  min-width: 100vw;
-  /* background: black; */
-  display: flex;
-  flex-direction: column;
-}
-/* .container .light{
-  color: black;
-  background-color:white;
-}
-.container .dark{
-  color: white;
-  background-color: black;
-} */

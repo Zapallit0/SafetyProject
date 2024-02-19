@@ -31,12 +31,12 @@
 .textMP h1{
     color: white;
     margin-bottom: 2rem; 
-    font-size: 2.5rem;  /*32px*/
+    font-size: 3rem;  /*32px*/
     font-weight: 900;
 }
-.textMP h3{
+.textMP h2{
     color:white;
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: 400;
     margin-bottom: 2rem;
 }
@@ -52,7 +52,10 @@
     cursor: pointer;
     font-size: 1.1rem;
 }
-
+button:hover{
+    background-color: rgb(221, 143, 0);
+    scale:1.02;
+}
 
 /* Redes sociales */
 .redesMP{
@@ -70,3 +73,19 @@
 }
 
 /* IPhone SE 375 667 SCREEN SIZE DONE */
+
+@media screen and (min-width:720px){
+    .textMP{
+        top: 30%;
+    }
+    .textMP h1{
+        font-size: 4.5rem;
+    }
+    .textMP h2{
+        font-size: 1.4rem;
+    }
+    .textMP button{
+        width: 10rem;
+    }
+
+}

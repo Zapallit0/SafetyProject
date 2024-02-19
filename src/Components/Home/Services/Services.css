@@ -11,7 +11,6 @@
     color: white;
 }
 .textServices{
-    margin-top: 1rem;
     display: flex;
     flex-direction: column;
 }
@@ -27,8 +26,7 @@
 .textServices p{
     font-weight: 400;
     font-size:0.9rem;
-    margin-bottom: 40px;
-
+    margin-bottom: 20px;
 }
 .textServices span{
     font-weight: 1000;
@@ -41,7 +39,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 .areaServices{
     display: flex;
@@ -49,27 +47,44 @@
     align-items: center;
     text-align: center;
     justify-content: center;
-    width: 6rem;
-    height: 6rem;
+    width: 7.5rem;
+    height: 7.5rem;
+    border-radius:50% ;
 }
-.areaServices .iconsServices{
+.iconsServices{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 4rem;
-    height: 4rem;
+    width: 4.5rem;
+    height: 4.5rem;
     background-color: #bae1ff;
     border-radius: 50%;
 }
-
 .areaServices img{
     width:3rem;
     height:3rem;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.iconsServices img:hover{
+    animation-name: scaleIcons;
+    animation-timing-function: ease;
 }
 .imgServices .areaServices span{
     font-weight: 700;
     font-size: 0.7rem;
     margin: 0.3rem;
+}
+@keyframes scaleIcons {
+    0%{
+        scale: 1;
+    }
+    50%{
+        scale: 1.2;
+    }
+    100%{
+        scale: 1;
+    }
 }
 /* Sobre la ultima parte de servicios */
 .arrow {
@@ -78,7 +93,7 @@
     transform: translate(-50%, -50%);
     transform: rotate(90deg);
     cursor: pointer;
-    margin-bottom:10px ;
+    margin-bottom:1rem ;
 }
 .arrow span {
     display: block;
@@ -115,3 +130,39 @@
 
 
 /* IPhone SE 375 667 SCREEN SIZE DONE */
+
+@media screen and (min-width:720px){
+    .textServices h4{
+        font-size: 1.5rem;
+    }
+    .textServices h2{
+        font-size: 3.5rem;
+    }
+    .textServices p{
+        font-size:1.1rem;
+    }
+    .areaServices{
+        width:10rem;
+        height:10rem;
+    }
+    .areaServices .iconsServices{
+        width: 6rem;
+        height: 6rem;
+    }
+    .areaServices img{
+        width:4rem;
+        height:4rem;
+    }
+    .imgServices{
+        margin-bottom: 2rem;
+    }
+    .imgServices .areaServices span{
+        font-size: 0.9rem;
+    }
+    .arrow span{
+        width: 1.5rem;
+        height: 1.5rem;
+        border-bottom: 8px solid orange;
+        border-right: 8px solid orange;
+    }
+}

@@ -49,16 +49,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: left;
     max-width: 80vw;
 }
 .Forma .correo{
     font-size: 0.7rem;
-    width: 14rem;
+    height:1.5rem;
+    width: 20rem;
 }
 .Forma h5{
     margin: 10px 0;
     font-size: 0.7rem;
     font-weight: 800;
+    width: 19rem;
 }
 .Forma input{
     border: none;
@@ -79,26 +82,23 @@
     border-radius: 15px;
     padding-left: 10px;
     box-shadow: 1px 2px 5px 0px rgba(163,155,155,1);
-    width: 14rem;
+    width: 20rem;
 }
 
 .DatosPersonalesContacto{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     text-align: left;
+    width: 25rem;
 }
 .DatosPersonalesContacto h5{
     margin-left: 0.5rem;
+    width: 8rem;
 }
-.DatosPersonalesContacto .name{
-    margin-right: 2rem;
-    width: 6rem;
-    font-size: 0.7rem;
-}
-.DatosPersonalesContacto .numero{
-    width: 6rem;
+.DatosPersonalesContacto .datos{
+    width: 9rem;
     font-size: 0.7rem;
 }
 .Forma .submitBtn{
@@ -107,7 +107,7 @@
     color: white;
     font-size:1rem;
     font-weight: 600;
-    width: 4rem;
+    width: 5rem;
     height: 2.5rem;
     padding: 0;
     cursor: pointer;
