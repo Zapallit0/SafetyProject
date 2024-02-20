@@ -1,0 +1,115 @@
+.Main_Services{
+    border-top: 0.01rem solid white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.Title_Services{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45%;
+    width:100vw;
+    background-color: black;
+}
+.Title_Services h2{
+    color: white;
+    font-size: 6.5rem;
+    text-decoration: underline orange ;
+    text-underline-offset: 2.5rem;
+}
+.Icons_Services{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height:55%;
+}
+.Icons_Services img{
+    width: 6rem;
+    height: 6rem;
+    margin-bottom: 1rem;
+    transform: translateY(5px);
+}
+.Icons_Services .Link_Service{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transform: translateY(-10px);
+    height: 9rem;
+    width: 9rem;
+    cursor: pointer;
+}
+.Icons_Services .Link_Service:hover{
+    background-color: lightblue;
+}
+.Icons_Services .Link_Service:active{
+    background-color: lightskyblue;
+}
+.Icon_Service{
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+.Icon_Service span{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.CallUs_Services{
+    position: absolute;
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding-left: 2rem;
+    width: 15vw;
+    height: 13vh;
+    left: 0%;
+    top: 46%;
+    cursor: pointer;
+}
+.CallUs_Services span{
+    font-size:1rem;
+    margin-bottom: 0.7rem;
+    font-weight: 600;
+}
+.CallUs_Services h3{
+    font-size: 2.2rem;
+    text-decoration: underline;
+}
+.UpMainSticky{
+    display: flex;
+    justify-content: end;
+    position: sticky;
+    margin-right:2rem;
+    align-items: center;
+    cursor: pointer;
+    width: 100vw;
+    transform: translateY(-90px);
+}
+.UpMain{
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: orange;
+    border-radius: 50%;
+}
+.UpMain svg{
+    rotate: -90deg;
+}
