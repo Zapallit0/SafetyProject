@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar2 from './Services/Navbar2/Navbar2'
-function AboutUs() {
+function Contacto() {
   return (
     <div>
       <Navbar2 />
@@ -8,4 +8,4 @@ function AboutUs() {
   )
 }
 
-export default AboutUs
+export default Contacto

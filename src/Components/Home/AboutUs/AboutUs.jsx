@@ -1,5 +1,6 @@
 import React from 'react'
 import './AboutUs.css'
+import {Link} from 'react-router-dom'
 import Nosotros from'../../../assets/nosotros.jpg';
 function AboutUs() {
   return (
@@ -23,9 +24,11 @@ function AboutUs() {
                     seguro, saludable y sostenible.
                 </p>
             </div>
-            <button>
-                Nuestro Equipo
-            </button>
+            <Link className='linkAboutUs' to={'/Nosotros'}>
+                <button>
+                    Nuestro Equipo
+                </button>
+            </Link>
         </div>
     </div>
   )

@@ -1,11 +1,11 @@
 import React,{useState} from 'react'
-import './Navbar.css'
+import './Navbar2.css'
 import {Link} from 'react-router-dom'
 import userlogin from '../../../assets/user_login_n.webp';
 import logo from '../../../assets/logo-white.webp';
 import {Squash as Hamburger} from 'hamburger-react'
 
-const Navbar = () => {
+const Navbar2 = () => {
     const [showMenu, setShowMenu]=useState(false);
     return (
         <div className='navbar'>
@@ -16,9 +16,9 @@ const Navbar = () => {
             <img src={logo} alt="Logo" className='logo' />
             <ul className='desktopMenu'>
                 <Link className='link' to={'/'}><li onClick={()=>{document.getElementById('Main_Page').scrollIntoView({behavior:'smooth'})}}>Home</li></Link>
-                <li onClick={()=>{document.getElementById('Services').scrollIntoView({behavior:'smooth'})}}>Servicios</li>
-                <li onClick={()=>{document.getElementById('About_Us').scrollIntoView({behavior:'smooth'})}}>Nosotros</li>
-                <li onClick={()=>{document.getElementById('Main_Page').scrollIntoView({behavior:'smooth'})}}>Contacto</li>
+                <Link className='link' to={'/Servicios'}><li>Servicios</li></Link>
+                <Link className='link' to={'/Nosotros'}><li>Nosotros</li></Link>
+                <Link className='link' to={'/Contacto'}><li>Contacto</li></Link>
             </ul>
             <div className='login'>
                 <img src={userlogin} alt="" className='imgLogin' />
@@ -27,14 +27,14 @@ const Navbar = () => {
 
             {/* <img src={burgerMenu} alt="Menu" className='mobMenu' onClick={()=>(setShowMenu(!showMenu))} /> */}
             <ul className='navMenu' style={{display:showMenu? 'flex':'none'}}>
-                <li onClick={()=>{document.getElementById('Main_Page').scrollIntoView({behavior:'smooth'}),setShowMenu(!showMenu)}}>Home</li>
-                <li onClick={()=>{document.getElementById('Services').scrollIntoView({behavior:'smooth'}),setShowMenu(!showMenu)}}>Servicios</li>
-                <li onClick={()=>{document.getElementById('About_Us').scrollIntoView({behavior:'smooth'}),setShowMenu(!showMenu)}}>Nosotros</li>
-                <li onClick={()=>{document.getElementById('Main_Page').scrollIntoView({behavior:'smooth'}),setShowMenu(!showMenu)}}>Contacto</li>
+                <Link className='link' to={'/'}><li onClick={()=>{setShowMenu(!showMenu)}}>Home</li></Link>
+                <Link className='link' to={'/Servicios'}><li onClick={()=>{setShowMenu(!showMenu)}}>Servicios</li></Link>
+                <Link className='link' to={'/Nosotros'}><li onClick={()=>{setShowMenu(!showMenu)}}>Nosotros</li></Link>
+                <Link className='link' to={'/Contacto'}><li onClick={()=>{setShowMenu(!showMenu)}}>Contacto</li></Link>
             </ul>
         </div>
 
   )
 }
 
-export default Navbar
+export default Navbar2

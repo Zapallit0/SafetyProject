@@ -36,7 +36,7 @@ function MasServicios() {
                     <p>Permisos de uso de aguas, plan manejo ambiental</p>
                 </div>
             </div>
-            <Link to={'/Services'} className='bttnServices'>
+            <Link to={'/Servicios'} className='bttnServices'>
                 <button className='btnMasServicios'>Todos los servicios</button>
             </Link>
         </div>

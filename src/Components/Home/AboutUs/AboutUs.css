@@ -86,9 +86,7 @@
      scale: 1.02;
 }
 
-
 /* IPhone SE 375 667 SCREEN SIZE DONE */
-
 @media screen and (min-width:720px){
     .AboutUs{
         flex-wrap: nowrap;
