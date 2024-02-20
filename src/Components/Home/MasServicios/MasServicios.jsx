@@ -1,6 +1,7 @@
 import React from 'react'
 import './MasServicios.css'
 import background from '../../../assets/services/backgroundServices.jpg';
+import {Link} from 'react-router-dom'
 function MasServicios() {
   return (
     <div className='Mas_Servicios' id='Mas_Servicios'>
@@ -35,9 +36,9 @@ function MasServicios() {
                     <p>Permisos de uso de aguas, plan manejo ambiental</p>
                 </div>
             </div>
-            <button className='btnMasServicios'>
-                Todos los servicios
-        </button>
+            <Link to={'/Services'} className='bttnServices'>
+                <button className='btnMasServicios'>Todos los servicios</button>
+            </Link>
         </div>
     </div>
   )

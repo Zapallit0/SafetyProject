@@ -50,6 +50,10 @@
     animation-name: buttonAnimation;
     animation-duration: 2s;
 }
+.bttnServices{
+    text-decoration: none;
+    color: white;
+}
 .serviciosCards{
     display: flex;
     flex-wrap: wrap;
