@@ -36,3 +36,19 @@
     background-color:rgb(204, 202, 202);
 }
 
+@media screen and (min-width:720px){
+    .MasInfoTexto h3{
+        font-size: 2.3rem;
+    }
+    .MasInfoTexto p{
+        font-size: 1rem;
+    }
+    .MasInfoButton button{
+        font-size: 1rem;
+        border: none;
+        border-radius: 25px;
+        width: 100%;
+        height: 2.8rem;
+        background-color: white;
+    }
+}
