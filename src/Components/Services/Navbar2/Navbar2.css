@@ -1,13 +1,13 @@
-.navbar{
+.navbar2{
     width: 100vw;
-    height:5vh;
+    height:10vh;
     display: flex;
     align-items: center;
     justify-content:space-between;
     background-color: black;
     padding: 2rem 2rem;
 }
-.desktopMenu{
+.desktopMenu2{
     max-width: 50vw;
     list-style: none;
     display: flex;
@@ -15,35 +15,35 @@
     justify-content:end;
     color: white;
 }
-.desktopMenu li{
+.desktopMenu2 li{
     display: inline-block;
     font-size: 1.1rem;
     margin: 10px 20px;
     cursor: pointer;
     font-weight: 400;
 }
-.navbar li:hover{
+.navbar2 li:hover{
     color: grey;
 } 
 
-.logo{
+.logo2{
     height:2rem;
     cursor: pointer;
 }
 
-.login img{
+.login2 img{
     width: 2rem;
     cursor: pointer;
 
 }
-.link{
+.link2{
     text-decoration: none;
     color: white;
 }
-.mobMenu{
+.mobMenu2{
     display: none;
 }
-.navMenu{
+.navMenu2{
     position: absolute;
     top: 4rem;
     left: 1rem;
@@ -59,25 +59,25 @@
     color: #fff;
     background-color: black;
 }
-.navMenu li{
+.navMenu2 li{
     cursor: pointer;
     margin:0.2rem 0;
 }
 
 
 @media screen and (max-width:720px){
-    .navbar {
+    .navbar2 {
         padding: 1rem 1rem;
     }
-    .mobMenu{
+    .mobMenu2{
         display: flex;
         color: white;
         cursor: pointer;
     }
-    .desktopMenu{
+    .desktopMenu2{
         display: none;
     }
-    .desktopMenuBtn{
+    .desktopMenuBtn2{
         display: none;
     }
 }   
