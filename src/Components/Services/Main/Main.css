@@ -31,6 +31,8 @@
     justify-content: center;
     width: 100vw;
     height:60%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
 .Icons_Services img{
     width: 3rem;
@@ -44,8 +46,8 @@
     align-items: center;
     border-radius: 50%;
     transform: translateY(-10px);
-    height: 4rem;
-    width: 4rem;
+    height: 4.5em;
+    width: 4.5rem;
     cursor: pointer;
 }
 .Icons_Services .Link_Service:hover{
@@ -110,4 +112,39 @@
 }
 .UpMain svg{
     rotate: -90deg;
+}
+@media screen and (min-width:720px){
+    .CallUs_Services{
+        width: 13rem;
+        height: 10vh;
+        top: 41%;
+        text-align: left;
+        padding-left: 2rem;
+    }
+    .CallUs_Services span{
+        font-size: 1rem;
+    }
+    .CallUs_Services h3{
+        font-size: 1.7rem;
+    }
+    .Icons_Services{
+        padding: 1.5rem 4rem;
+    }
+    .Icons_Services .Link_Service{
+        height: 5rem;
+        width: 5rem;
+    }
+    .Icon_Service{
+        width: 20%;
+        margin: 0rem 2rem;
+    }
+    .Icons_Services img{
+        width: 4rem;
+        height: 4rem;
+    }
+    .Title_Services h2{
+        font-size: 3.5rem;
+        text-decoration: underline solid orange;
+        text-underline-offset: 2rem;
+    }
 }
