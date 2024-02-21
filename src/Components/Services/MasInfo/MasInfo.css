@@ -9,24 +9,24 @@
     justify-content: space-evenly;
 }
 .MasInfoTexto{
-    width: 40%;
+    width: 60%;
 }
 .MasInfoTexto h3{
-    font-size: 3rem;
+    font-size: 1.5rem;
     margin-bottom:2rem;
 }
 .MasInfoTexto p{
-    font-size: 1.2rem;
+    font-size: 0.8rem;
 }
 .MasInfoButton{
-    width: 10%;
+    width: 20%;
 }
 .MasInfoButton button{
-    font-size: 1.3rem;
+    font-size: 0.8rem;
     border: none;
     border-radius: 25px;
     width: 100%;
-    height: 4rem;
+    height: 2.8rem;
     background-color: white;
 }
 .MasInfoButton button:hover{
