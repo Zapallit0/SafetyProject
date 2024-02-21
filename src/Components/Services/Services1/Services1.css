@@ -6,15 +6,6 @@
     align-items: center;
     text-align: center;
 }
-.SecurityServices{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    max-width: 90vw;
-    margin-bottom: 1.5rem;
-}
 .Services1_Title{
     width: 100vw;
     height: 15vh;
@@ -25,6 +16,7 @@
     position: relative;
     overflow-y: hidden;
     background-color: black;
+    padding: 0 1rem;
 }
 .Services1_Title img{
     position: absolute;
@@ -35,27 +27,35 @@
     pointer-events: none;
 }
 .Services1_Title h3{
-    font-size: 4rem;
+    font-size: 2rem;
     height: 100%;
     color: white;
     z-index: 100;
-    margin-top:1rem;
+    margin-top: 0.6rem;
 }
 .Services1_Title span{
     color: orange;
     text-decoration: underline;
+}
+.SecurityServices{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 90vw;
+    margin-bottom: 1.5rem;
 }
 .CardService{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: left;
-    width:30%;
+    text-align: center;
+    width:16rem;
     height: 45vh;
-    margin: 0rem 3rem ;
+    margin: 0rem 2rem ;
     margin-top: 3rem;
-
 }
 .CardService img{
     width: 100%;
@@ -64,7 +64,7 @@
     pointer-events: none;
 }
 .CardService h4{
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     width: 100%;
     color: #4C4C4C;
     margin:1.2rem 0;
@@ -73,4 +73,5 @@
 }
 .CardService p{
     width: 100%;
+    font-size: 0.9rem;
 }
