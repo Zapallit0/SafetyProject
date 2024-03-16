@@ -8,7 +8,6 @@ const App = () => {
   return (
     <div>
       <Routes>
-
         <Route path='' element={<Home />} />
         <Route path='/Nosotros' element={<AboutUs />} />
         <Route path='/Servicios' element={<Services />} />
