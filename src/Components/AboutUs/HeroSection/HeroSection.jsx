@@ -1,19 +1,24 @@
 import React from 'react'
 import './HeroSection.css'
+import backgroundAboutUs from '../../../assets/AboutUsPage/Background.jpg'
+import iconCall from '../../../assets/AboutUsPage/Icon.png'
+
 function HeroSection() {
   return (
-    <div>
+    <div className='heroSectionAboutUs1'>
         <div className='backgroundHeroAboutUs'>
-            <img src="" alt="Background" />
+            <img src={backgroundAboutUs} alt="Background" />
         </div>
-        <div>
+        <div className='contentAboutUs1'>
             <h2 className='textBackgroundHeroAboutUs'>Sobre Nosotros</h2>
             <span>Comprometidos en brindar soluciones efectivas y practicas</span>
         </div>
         <div className='contactNumberHeroAboutUs'>
-          <img src="" alt="IconCaller" />
-          <span>Obten una consulta gratis hoy!</span>
-          <h4>964197982</h4>
+          <img src={iconCall} alt="IconCaller" />
+          <div className='infoHeroAboutUs'>
+            <span>Obten una consulta gratis hoy!</span>
+            <h4>964197982</h4>
+          </div>
         </div>
     </div>
   )

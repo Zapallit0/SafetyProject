@@ -1,0 +1,44 @@
+.aboutUs1{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    height: fit-content;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 0;
+}
+.titleAboutUs1{
+    margin-top: 2rem;
+    color: white;
+    width:50%;
+    margin-bottom: 3rem;
+}
+.titleAboutUs1 h2{
+    font-size: 4rem;
+    margin-bottom: 4rem;
+    text-decoration:dotted underline #FFA500;
+}
+.titleAboutUs1 p{
+    width: fit-content;
+    font-size: 1.3rem;
+}
+.titleAboutUs1 p span{
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: #FFA500;
+}
+.infoAboutUs1{
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+.imgsAboutUs1{
+    display: flex;
+    gap: 5rem;
+    margin-bottom: 1rem;
+}
+.imgsAboutUs1 img{
+    width: 20rem;
+}

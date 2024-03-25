@@ -1,0 +1,41 @@
+.Mission_View {
+    color:white;
+    background-color: black;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    padding: 5rem 0;
+}
+.Mission_View h3{
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+    /* text-decoration: underline #FFA500; */
+    text-underline-offset: 0.5rem;
+}
+.paragraphsMission_View{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 60%;
+    height:10rem;
+    margin: 3rem 0;
+}
+.paragraphsMission_View p{
+    padding-left: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    width: 40%;
+    height: 7rem;
+    border-left: 3px #FFA500;
+    border-style: solid;
+    border-bottom: 0px white;
+    border-right: 0px white;
+    border-top: 0px white;
+}
+.Mission_View img{
+    width: 50%;
+}
