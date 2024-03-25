@@ -6,6 +6,7 @@
     justify-content:space-between;
     background-color: black;
     padding: 2rem 2rem;
+    z-index: 100;
 }
 .desktopMenu2{
     max-width: 50vw;

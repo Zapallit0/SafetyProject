@@ -1,6 +1,6 @@
 import React from 'react'
 import './HeroSection.css'
-import backgroundAboutUs from '../../../assets/AboutUsPage/Background.jpg'
+import backgroundAboutUs from '../../../assets/AboutUsPage/Background1.webp'
 import iconCall from '../../../assets/AboutUsPage/Icon.png'
 
 function HeroSection() {
