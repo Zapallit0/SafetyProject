@@ -1,7 +1,7 @@
 import React from 'react'
 import './AboutUs.css'
 import {Link} from 'react-router-dom'
-import Nosotros from'../../../assets/nosotros.jpg';
+import Nosotros from'../../../assets/HomePageImgs/AboutUs.jpg';
 function AboutUs() {
   return (
     <div className='AboutUs' id='About_Us'>

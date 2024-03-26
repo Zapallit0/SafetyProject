@@ -5,7 +5,7 @@
     align-items: center;
     justify-content:space-between;
     background-color: black;
-    padding: 2rem 2rem;
+    padding: 4rem 2rem;
     z-index: 100;
 }
 .desktopMenu2{
@@ -28,7 +28,7 @@
 } 
 
 .logo2{
-    height:2rem;
+    height:4rem;
     cursor: pointer;
 }
 
@@ -46,23 +46,25 @@
 }
 .navMenu2{
     position: absolute;
-    top: 4rem;
-    left: 1rem;
+    top: 5rem;
     z-index:2;
     display: flex;
     flex-direction: column;
     align-items:center;
     padding: 0.5rem;
     height: fit-content;
-    width: 15rem;
+    width: 90vw;
     background: rgb(40,40,40);
     list-style: none;
     color: #fff;
     background-color: black;
+    text-align: center;
 }
 .navMenu2 li{
     cursor: pointer;
-    margin:0.2rem 0;
+    border:solid 1px white;
+    width: 90vw;
+    height: 1.5rem;
 }
 
 

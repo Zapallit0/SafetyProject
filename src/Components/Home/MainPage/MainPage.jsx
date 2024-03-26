@@ -1,6 +1,6 @@
 import React from 'react'
 import './MainPage.css'
-import background from '../../../assets/background.webp'
+import background from '../../../assets/HomePageImgs/HeroBackground.jpg'
 import Facebook from '../../../assets/social/white/facebookW.svg';
 import Linkedin from '../../../assets/social/white/linkedinW.svg';
 import Instagram from '../../../assets/social/white/instagramW.svg';

@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import './Navbar2.css'
 import {Link} from 'react-router-dom'
 import userlogin from '../../../assets/user_login_n.webp';
-import logo from '../../../assets/logo-white.webp';
+import logo from '../../../assets/Logos/LogoHome.svg';
 import {Squash as Hamburger} from 'hamburger-react'
 
 const Navbar2 = () => {
