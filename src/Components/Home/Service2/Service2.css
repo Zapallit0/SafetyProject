@@ -1,0 +1,97 @@
+.Service2{
+    background-image: url("../../../assets/HomePageImgs/ServicesBackground.jpg");
+    background-size: cover;
+    width: 100%;
+    height: fit-content;
+    background-position-y:center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 8rem 0;
+}
+.Service2Text{
+    display: flex;
+    flex-direction: column;
+    width:25vw;
+    height: fit-content;
+    color: white;
+    background-color:#4C4C4C;
+    justify-content: center;
+    padding: 2.5rem;
+    border-radius: 25px;
+    height:42rem;
+    margin-right: 2rem;
+}
+.Service2Text h3{
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+.Service2Text p{
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+}
+.Service2Text button{
+    height: 3rem;
+    width: 10rem;
+    padding:0 1rem ;
+    border: none;
+    border-radius: 25px;
+    background-color: #FF9800;
+    color: white ;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.Service2Text button:hover{
+    scale: 1.02;
+}
+.ServicesPresentation{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    width: 55vw;
+    color: white;
+}
+.ServiceCard{
+    width: 22rem;
+    height: 22rem;
+    margin: 1rem;
+    padding: 2rem;
+    color: black;
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    transition: color 0.6s ease-out 100ms;
+    transition: background-color 0.5s ease-out 100ms;
+    cursor: pointer;
+}
+.ServiceCard:hover{
+    background-color: #FF9800;
+    transition: background-color 0.5s ease-out 100ms;
+    color:white;  
+    transition: color 0.6s ease-out 100ms;
+}
+.ServiceCard:hover h4{
+    color:white;
+    transition: color 0.6s ease-out 100ms;
+}
+.ServiceCard img{
+    width: 40%;
+    margin:1rem 0;
+}
+.ServiceCard h4{
+    color:#FF9800;
+    font-size: 1.3rem;
+    margin-bottom: 1.1rem;
+    transition: color 0.6s ease-out 100ms;
+}
+
+
