@@ -1,5 +1,4 @@
 import React from 'react'
-import Serv from '../../../assets/ServicesPage/Services.webp'
 import EnvironmentBackground from '../../../assets/ServicesPage/BackgroundSaludOcupacional.jpg'
 import VigMedica from "../../../assets/ServicesPage/Gestion de Salud Ocupacional/Servicio1.webp"
 import AgenOcupacional from "../../../assets/ServicesPage/Gestion de Salud Ocupacional/Servicio2.jpg"

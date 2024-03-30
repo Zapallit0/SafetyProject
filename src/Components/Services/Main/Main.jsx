@@ -4,7 +4,6 @@ import SegLaboral from '../../../assets/services/SeguridadLaboral.png'
 import SalOcupacional from '../../../assets/services/SaludOcupacional.png'
 import Certificacion from '../../../assets/services/CertificacionLaboral.png'
 import Capacitaciones from '../../../assets/services/Capacitaciones.png'
-import MedioAmbiente from '../../../assets/services/MedioAmbiente.png'
 import { Link } from 'react-scroll'
 
 function Main() {
