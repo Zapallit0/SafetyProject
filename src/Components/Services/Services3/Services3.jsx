@@ -1,36 +1,36 @@
 import React from 'react'
-import Serv from '../../../assets/ServicesPage/Services.webp'
 import CapacitacionBackground from '../../../assets/ServicesPage/BackgroundCapacitacion.webp'
+import DwnldButton from "../../../assets/ServicesPage/Global/DownloadArrow.svg"
+import Services1 from "../../../assets/ServicesPage/Salud Ocupacional/Servicio1.webp"
 function Services3() {
   const ServicesEnvironment =[{
-    "Service": "Capacitacion1",
-    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus felis dolor, euismod eu justo vel, pharetra tempor nibh. Duis vel tempor augue. "
-  }, {
-    "Service": "Capacitacion2",
-    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus felis dolor, euismod eu justo vel, pharetra tempor nibh. Duis vel tempor augue. "
-  },{
-    "Service": "Capacitacion3",
-    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus felis dolor, euismod eu justo vel, pharetra tempor nibh. Duis vel tempor augue. "
-  },{
-    "Service": "Capacitacion4",
-    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus felis dolor, euismod eu justo vel, pharetra tempor nibh. Duis vel tempor augue. "
-  }
-];
+      "ServiceName": "Programas de Higiene Ocupacional",
+      "Image":""
+  }];
   return (
     <div className='Services1'>
       <div className='Services1_Title'>
         <img src={CapacitacionBackground} alt="Security Back" />
-        <h3>
-          Soluciones <span>Sostenibles</span>
-        </h3>
+        <div className='Services1_Title_Content'>
+          <h3>
+            Gestión de Salud Ocupacional
+          </h3>
+          <span>
+            según Ley 29783, DS 005-2012 TR, RM 375-2088 TR
+          </span>
+        </div>
+        
       </div>
+      <button className='downloadBtn'>
+        <a>
+          <img src={DwnldButton} alt="DescargaBrouche" /> Descargar Brouche
+        </a>
+      </button>
       <div className='SecurityServices'>
         {
           ServicesEnvironment.map((service,index)=>(
             <div className='CardService'>
-              <img src={Serv} alt="Servicio"/>
-              <h4>{service.Service}</h4>
-              <p>{service.Description}</p>
+              <img src={Services1} alt="Servicio"/>
             </div>
           ))
         }

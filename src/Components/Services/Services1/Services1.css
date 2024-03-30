@@ -48,13 +48,17 @@
     height: 4rem;
     padding: 1rem 2rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
     background-color:#FF9800;
     border: none;
     border-radius: 2rem;
+}
+.downloadBtn a{
+    text-decoration: none;
+    color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: 500;
-    font-size: 1rem;
     letter-spacing: 2px;
 }
 .downloadBtn:hover{
@@ -96,7 +100,7 @@
     border-radius: 25px;
     pointer-events: none;
     object-fit: cover;
-    margin-bottom:1rem;
+    margin-bottom:1.5rem;
 }
 .CardService h4{
     font-size: 1rem;

@@ -1,6 +1,5 @@
 import React from 'react'
 import './Services1.css'
-import Serv from '../../../assets/ServicesPage/Services.webp'
 import SecurityBackground from '../../../assets/ServicesPage/BackgroundGestionSeg.jpg'
 import SSTimg from "../../../assets/ServicesPage/Sistema de Gestión Seguridad y Salud en el Trabajo/Service1.png"
 import IPERCimg from "../../../assets/ServicesPage/Sistema de Gestión Seguridad y Salud en el Trabajo/Service2.jpg"
@@ -44,7 +43,11 @@ function Services1() {
         </div>
       </div>
 
-    <button className='downloadBtn'><img src={DwnldButton} alt="DescargaBrouche" /> Descargar Brouche</button>
+      <button className='downloadBtn'>
+        <a>
+          <img src={DwnldButton} alt="DescargaBrouche" /> Descargar Brouche
+        </a>
+      </button>
     
       <div className='SecurityServices'>
         {

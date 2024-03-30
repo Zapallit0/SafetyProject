@@ -1,36 +1,47 @@
 import React from 'react'
 import Serv from '../../../assets/ServicesPage/Services.webp'
-import EnvironmentBackground from '../../../assets/ServicesPage/BackgroundEnvironment.webp'
+import EnvironmentBackground from '../../../assets/ServicesPage/BackgroundSaludOcupacional.jpg'
+import VigMedica from "../../../assets/ServicesPage/Gestion de Salud Ocupacional/Servicio1.webp"
+import AgenOcupacional from "../../../assets/ServicesPage/Gestion de Salud Ocupacional/Servicio2.jpg"
+import HigOcupacional from "../../../assets/ServicesPage/Gestion de Salud Ocupacional/Servicio3.jpg"
+import DwnldButton from "../../../assets/ServicesPage/Global/DownloadArrow.svg"
 function Services2() {
   const ServicesEnvironment =[{
-    "Service": "Ambiente1",
-    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus felis dolor, euismod eu justo vel, pharetra tempor nibh. Duis vel tempor augue. "
+    "ServiceName": "Programas de vigilancia médica ocupacional",
+    "Image": VigMedica
   }, {
-    "Service": "SalvemosElMundo",
-    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus felis dolor, euismod eu justo vel, pharetra tempor nibh. Duis vel tempor augue. "
+    "ServiceName": "Monitoreos de Agentes Ocupacionales",
+    "Image": AgenOcupacional
   },{
-    "Service": "SalvemosElMundo",
-    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus felis dolor, euismod eu justo vel, pharetra tempor nibh. Duis vel tempor augue. "
-  },{
-    "Service": "SalvemosElMundo",
-    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus felis dolor, euismod eu justo vel, pharetra tempor nibh. Duis vel tempor augue. "
+    "ServiceName": "Programas de Higiene Ocupacional",
+    "Image": HigOcupacional
   }
 ];
   return (
     <div className='Services1'>
       <div className='Services1_Title'>
         <img src={EnvironmentBackground} alt="Security Back" />
-        <h3>
-          Soluciones <span>Sostenibles</span>
-        </h3>
+        <div className='Services1_Title_Content'>
+          <h3>
+            Gestión de Salud Ocupacional
+          </h3>
+          <span>
+            según Ley 29783, DS 005-2012 TR, RM 375-2088 TR
+          </span>
+        </div>
+    
       </div>
+      <button className='downloadBtn'>
+        <a>
+          <img src={DwnldButton} alt="DescargaBrouche" /> Descargar Brouche
+        </a>
+      </button>
       <div className='SecurityServices'>
         {
           ServicesEnvironment.map((service,index)=>(
             <div className='CardService'>
-              <img src={Serv} alt="Servicio"/>
-              <h4>{service.Service}</h4>
-              <p>{service.Description}</p>
+              <img src={service.Image} alt="Servicio"/>
+              <h4>{service.ServiceName}</h4>
             </div>
           ))
         }
