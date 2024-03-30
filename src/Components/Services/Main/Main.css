@@ -70,7 +70,7 @@
 }
 .CallUs_Services{
     position: absolute;
-    background-color: orange;
+    background-color: #FF9800;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -107,7 +107,7 @@
     align-items: center;
     width: 4rem;
     height: 4rem;
-    background-color: orange;
+    background-color: #FF9800;
     border-radius: 50%;
 }
 .UpMain svg{
@@ -144,7 +144,7 @@
     }
     .Title_Services h2{
         font-size: 3.5rem;
-        text-decoration: underline solid orange;
+        text-decoration: underline solid #FF9800;
         text-underline-offset: 2rem;
     }
 }

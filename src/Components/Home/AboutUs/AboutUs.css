@@ -30,7 +30,7 @@
     font-weight: 600;
     font-size: 0.8rem;
     border: none;
-    background-color:#FFA500;
+    background-color:#FF9800;
     color: white;
     border-radius: 25px;
     cursor: pointer;
@@ -46,7 +46,7 @@
     width: 75vw;
 }
 .textOurInfo h4{
-    color:#FFA500;
+    color:#FF9800;
     font-size: 0.9rem;
 }
 .textOurInfo h2{

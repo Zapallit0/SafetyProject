@@ -44,7 +44,7 @@
 .textMP button{
     height: 3rem;
     width: 9rem;
-    background-color: orange;
+    background-color: #FF9800;
     border-radius: 25px;
     border: none;
     color:white;
@@ -53,7 +53,7 @@
     font-size: 1.1rem;
 }
 .textMP button:hover{
-    background-color: rgb(221, 143, 0);
+    background-color: #d58000;
     scale:1.02;
 }
 

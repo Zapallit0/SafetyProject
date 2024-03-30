@@ -42,12 +42,6 @@ function Services(){
           </div>
           <span>Capacitaciones</span>
         </div>
-        <div className="areaServices">
-          <div className='iconsServices'>
-          <img src={MedioAmbiente} alt="Medio Ambiente" />
-          </div>
-          <span>Medio Ambiente</span>
-        </div>
       </div>
       <div className='arrow' onClick={()=>{document.getElementById('Mas_Servicios').scrollIntoView({behavior:'smooth'})}}>
         <span></span>

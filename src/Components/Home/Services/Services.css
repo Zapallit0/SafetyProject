@@ -15,7 +15,7 @@
     flex-direction: column;
 }
 .textServices h4{
-    color: orange;
+    color: #FF9800;
     font-size: 1rem;
 }
 .textServices h2{
@@ -30,7 +30,7 @@
 }
 .textServices span{
     font-weight: 1000;
-    color: #FE9E0D;
+    color: #FF9800;
     text-decoration: underline;
 }
 .imgServices{
@@ -66,26 +66,12 @@
     animation-duration: 2s;
     animation-iteration-count: infinite;
 }
-.iconsServices img:hover{
-    animation-name: scaleIcons;
-    animation-timing-function: ease;
-}
 .imgServices .areaServices span{
     font-weight: 700;
     font-size: 0.7rem;
     margin: 0.3rem;
 }
-@keyframes scaleIcons {
-    0%{
-        scale: 1;
-    }
-    50%{
-        scale: 1.2;
-    }
-    100%{
-        scale: 1;
-    }
-}
+
 /* Sobre la ultima parte de servicios */
 .arrow {
     rotate:-90deg;
@@ -99,8 +85,8 @@
     display: block;
     width: 1rem;
     height: 1rem;
-    border-bottom: 5px solid orange;
-    border-right: 5px solid orange;
+    border-bottom: 5px solid #FF9800;
+    border-right: 5px solid #FF9800;
     transform: rotate(45deg);
     margin: -10px;
     animation: animate 2s infinite;
@@ -162,7 +148,7 @@
     .arrow span{
         width: 1.5rem;
         height: 1.5rem;
-        border-bottom: 8px solid orange;
-        border-right: 8px solid orange;
+        border-bottom: 8px solid #FF9800;
+        border-right: 8px solid #FF9800;
     }
 }

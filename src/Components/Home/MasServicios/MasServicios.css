@@ -13,8 +13,8 @@
     width: 100vw;
     height: 100vh;
     position: relative;
-    border-top:0.2rem solid orange;
-    border-bottom: 0.2rem solid orange;
+    border-top:0.2rem solid #FF9800;
+    border-bottom: 0.2rem solid #FF9800;
 }
 .backgroundMasServicios img{
     height: 100%;
@@ -38,7 +38,7 @@
 }
 .contentMasServicios button{
     margin-top: 1rem;
-    background-color: orange;
+    background-color: #FF9800;
     color:white;
     border: none;
     font-size:0.9rem;
@@ -75,7 +75,7 @@
 .servicioCard h3{
     font-size: 0.8rem;
     margin-bottom: 0.5rem;
-    color: orange;
+    color: #FF9800;
 }
 .servicioCard p{
     font-size: 0.6rem;
