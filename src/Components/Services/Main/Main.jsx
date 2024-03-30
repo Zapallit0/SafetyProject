@@ -30,20 +30,11 @@ function Main() {
           <Link className='Link_Service'><img src={Capacitaciones} alt="" /></Link>
           <span>Capacitaciones</span>
         </div>
-        <div className='Icon_Service'>
-          <Link className='Link_Service'><img src={MedioAmbiente} alt="" /></Link>
-          <span>Medio Ambiente</span>
-        </div>
       </div>
       <div className='CallUs_Services'>
         <span>¡Llámanos!</span>
         <h3>964197982</h3>
       </div>
-      {/* <div className='UpMainSticky'>
-        <Link className='UpMain'>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg>
-        </Link>
-      </div> */}
     </div>
   )
 }
