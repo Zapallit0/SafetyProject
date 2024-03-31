@@ -1,14 +1,13 @@
 .mainpage{
     margin: 0px;
-    padding: 0;
     position:relative;
     width: 100svw;
-    height: 92vh;
+    height: fit-content;
 }
 /* Background Img */
 .backgroundContainer{
     width: 100%;
-    height: 92svh;
+    height: 100dvh;
     position: relative;
 }
 .backgroundContainer img{
@@ -87,5 +86,35 @@
     .textMP button{
         width: 10rem;
     }
-
+}
+/* Here for small trouble in small heights we put this small css */
+@media screen and (max-height:415px){
+    .textMP h1{
+        font-size: 3rem;
+    }
+    .textMP h2{
+        font-size: 1rem;
+    }
+}
+@media screen and (min-width:1200px){
+    .textMP{
+        top: 33%;
+        left:10%;
+    }
+    .textMP h1{
+        font-size: 5.5rem;
+    }
+    .textMP h2{
+        font-size: 1.6rem;
+    }
+    .textMP button{
+        width: fit-content;
+        padding: 0 1rem;
+        font-size: 1.5rem;
+    }
+    .redesMP img{
+        margin: 0.8rem 0;
+        width: 2.5rem;
+        cursor: pointer;
+    }
 }

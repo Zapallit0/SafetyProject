@@ -3,12 +3,13 @@ import './Footer.css'
 import Facebook from '../../../assets/social/white/facebookW.svg';
 import Linkedin from '../../../assets/social/white/linkedinW.svg';
 import Instagram from '../../../assets/social/white/instagramW.svg';
+import logo from '../../../assets/Logos/LogoTitle.svg';
 
 function Footer() {
   return (
     <div className='Footer'>
       <div className='footerImgs'>
-        <img src="" alt="LOGO" />
+        <img src={logo} alt="LOGO" />
         <div className='LogosFooter'>
           <img src={Facebook} alt="facebook" />
           <img src={Linkedin} alt="linkedin" />

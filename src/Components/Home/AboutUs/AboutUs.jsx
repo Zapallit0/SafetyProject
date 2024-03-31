@@ -13,7 +13,7 @@ function AboutUs() {
                 <p>Somos una empresa comprometida en brindar soluciones 
                 y servicios de calidad dedicada a los servicios de 
                 Asesoria y Consultoria, en las áreas de <span>GESTIÓN DE SEGURIDAD,
-                SALUD OCUPACIONAL, MEDIO AMBIENTE, HOMOLOGACIONES,  
+                SALUD OCUPACIONAL, HOMOLOGACIONES,  
                 GESTIÓN DE TALENTO Y CAPACITACIONES</span> 
                 </p>
             </div>
@@ -26,7 +26,7 @@ function AboutUs() {
             </div>
             <Link className='linkAboutUs' to={'/Nosotros'}>
                 <button>
-                    Nuestro Equipo
+                    Conoce más
                 </button>
             </Link>
         </div>

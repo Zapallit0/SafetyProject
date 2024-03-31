@@ -4,25 +4,26 @@
     flex-wrap: wrap-reverse;
     padding: 3rem 0;
     position:relative;
-    height:100vh ;
+    height:fit-content;
     width:100vw;
     align-items: center;
-    text-align: left;
-    justify-content: space-evenly;
+    justify-content:center;
     background-color: #D9D9D9;
     overflow-y: scroll;
     overflow-x: hidden;
 }
 .AboutUs img{
-    width: 55vw;
-    height:25vh;
+    margin-top:1rem;
+    width: 18rem;
+    height:15rem;
+    object-fit: cover;
 }
 .textAboutUs {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align:left;
     max-width: 80%;
+    text-align: center;
 }
 .textAboutUs button{
     height: 2.5rem;
@@ -41,7 +42,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
     margin-bottom:2rem;
     width: 75vw;
 }
@@ -68,7 +68,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
     margin-bottom: 25px;
     width: 75vw;
 }
@@ -90,42 +89,86 @@
 @media screen and (min-width:720px){
     .AboutUs{
         flex-wrap: nowrap;
+        justify-content:space-evenly;
+        padding: 6rem 0;
+    }
+    .textAboutUs{
+        text-align: center;
     }
     .textOurInfo{
         width: 40vw;
-        text-align: left;
     }
     .textOurMission{
         width: 40vw;
-        text-align: left;
     }
     .textOurInfo h4{
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
     .textOurInfo h2{
-        font-size: 2.2rem;
+        font-size: 2.5rem;
     }
     .textOurInfo span{
         color: #21336f;
         font-weight: bolder;
     }
     .textOurInfo p{
-        font-size: 0.9rem;
+        font-size: 1.1rem;
         font-weight: 400;
     }
     .textOurMission h3{
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
     .textOurMission p{
-        font-size: 0.9rem;
+        font-size: 1.1rem;
     }
     .textAboutUs button{
-        width: 6.5rem;
+        width: 8rem;
         height: 3rem;
-        font-size: 0.9rem;
+        font-size: 1rem;
+        padding: 0 1rem;
     }
     .AboutUs img{
-        width: 30vw;
-        height:45vh;
+        width: 18rem;
+        height:30rem;
+        object-fit: cover;
+    }
+}
+@media screen and (min-width:1100px){
+    .AboutUs{
+        padding: 12rem 0;
+    }
+    .textAboutUs{
+        text-align: left;
+    }
+    .AboutUs img{
+        width: 35rem;
+        height:35rem;
+        object-fit: cover;
+    }
+    .textOurInfo h4{
+        font-size: 2rem;
+    }
+    .textOurInfo h2{
+        font-size: 3rem;
+        margin-bottom: 3rem;
+    }
+    .textOurInfo p{
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin-bottom: 3rem;
+    }
+    .textOurMission h3{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    .textOurMission p{
+        font-size: 1.5rem;
+    }
+    .textAboutUs button{
+        margin-top: 2rem;
+        width: 15rem;
+        height: 4rem;
+        font-size: 2rem;
+        padding: 0 1rem;
     }
 }
