@@ -14,9 +14,9 @@
 .backgroundContainer img{
     height: 100%;
     width: 100%;
-    background-size: cover;
+    object-fit: cover;
     z-index: 100;
-    filter: brightness(37%)
+    filter: brightness(37%);
 }
 /* Texto y boton del cover */
 .textMP{

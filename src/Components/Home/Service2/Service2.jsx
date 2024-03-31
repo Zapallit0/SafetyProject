@@ -41,6 +41,9 @@ function Service2() {
             ))
             }
         </div>
+        <Link to={'/Servicios'} className='btnServicio2'>
+                <button className='btnMasInfoCel'>Todos los servicios</button>
+        </Link>
     </div>
   )
 }
