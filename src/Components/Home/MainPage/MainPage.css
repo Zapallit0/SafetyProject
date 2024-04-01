@@ -1,7 +1,7 @@
 .mainpage{
     margin: 0px;
     position:relative;
-    width: 100svw;
+    width: 100dvw;
     height: fit-content;
 }
 /* Background Img */
@@ -109,7 +109,8 @@
     }
     .textMP button{
         width: fit-content;
-        padding: 0 1rem;
+        height: fit-content;
+        padding: 1rem 2rem;
         font-size: 1.5rem;
     }
     .redesMP img{

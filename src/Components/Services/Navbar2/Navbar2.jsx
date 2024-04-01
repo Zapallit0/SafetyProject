@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 import userlogin from '../../../assets/user_login_n.webp';
 import logo from '../../../assets/Logos/LogoTitle.svg';
 import {Squash as Hamburger} from 'hamburger-react'
+import logoCell from '../../../assets/Logos/LogoHome.svg';
 
 const Navbar2 = () => {
     const [showMenu, setShowMenu]=useState(false);
@@ -13,7 +14,8 @@ const Navbar2 = () => {
                 <Hamburger color="#fff" duration={0.3} toggled={showMenu} toggle={setShowMenu} easing="ease-in"/>
             </div>
             
-            <img src={logo} alt="Logo" className='logo2' />
+            <img src={logo} alt="Logo" className='logo' />
+            <img src={logoCell} alt="Logo" className='logoCell' />
             <ul className='desktopMenu2'>
                 <Link className='link2' to={'/'}><li onClick={()=>{document.getElementById('Main_Page').scrollIntoView({behavior:'smooth'})}}>Home</li></Link>
                 <Link className='link2' to={'/Servicios'}><li>Servicios</li></Link>

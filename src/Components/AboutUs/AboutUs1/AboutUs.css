@@ -7,22 +7,21 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 4rem 0;
+    padding: 2rem 0;
 }
 .titleAboutUs1{
-    margin-top: 2rem;
     color: white;
-    width:50%;
-    margin-bottom: 3rem;
+    width:80%;
+    margin: 2rem 0;
 }
 .titleAboutUs1 h2{
-    font-size: 4rem;
-    margin-bottom: 4rem;
+    font-size: 2rem;
     text-decoration:dotted underline #FFA500;
+    margin-bottom: 1.5rem;
 }
 .titleAboutUs1 p{
     width: fit-content;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 .titleAboutUs1 p span{
     text-transform: uppercase;
@@ -36,9 +35,41 @@
 }
 .imgsAboutUs1{
     display: flex;
-    gap: 5rem;
-    margin-bottom: 1rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 .imgsAboutUs1 img{
-    width: 20rem;
+    width: 10rem;
+    margin-bottom: 1rem;
+}
+@media screen and (min-width: 720px) {
+    .titleAboutUs1 h2{
+        font-size: 3rem;
+    }
+    .titleAboutUs1 p{
+        font-size: 1.2rem;
+    }
+    .imgsAboutUs1{
+        gap: 2rem;
+    }
+    .imgsAboutUs1 img{
+        width: 15rem;
+    }
+}
+@media screen and (min-width:1000px){
+    .titleAboutUs1 h2{
+        font-size: 4rem;
+    }
+    .titleAboutUs1 p{
+        font-size: 1.5rem;
+        max-width: 40vw;
+        margin: auto;
+    }
+    .imgsAboutUs1{
+        gap: 4rem;
+    }
+    .imgsAboutUs1 img{
+        width: 20rem;
+    }
 }

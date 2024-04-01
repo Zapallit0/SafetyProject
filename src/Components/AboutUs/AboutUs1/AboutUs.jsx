@@ -16,7 +16,6 @@ function AboutUs() {
         <div className='imgsAboutUs1'>
             <img src={Engineer} alt="Img1" />
             <img src={Engineer} alt="Img2" />
-            <img src={Engineer} alt="Img3" />
         </div>
     </div>
   )

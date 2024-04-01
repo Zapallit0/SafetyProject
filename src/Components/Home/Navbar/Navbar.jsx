@@ -3,6 +3,8 @@ import './Navbar.css'
 import {Link} from 'react-router-dom'
 import userlogin from '../../../assets/user_login_n.webp';
 import logo from '../../../assets/Logos/LogoTitle.svg';
+import logoCell from '../../../assets/Logos/LogoHome.svg';
+
 import {Squash as Hamburger} from 'hamburger-react'
 
 const Navbar = () => {
@@ -14,6 +16,7 @@ const Navbar = () => {
             </div>
             
             <img src={logo} alt="Logo" className='logo' />
+            <img src={logoCell} alt="Logo" className='logoCell' />
             <ul className='desktopMenu'>
                 <Link className='link' to={'/'}><li onClick={()=>{document.getElementById('Main_Page').scrollIntoView({behavior:'smooth'})}}>Home</li></Link>
                 <li onClick={()=>{document.getElementById('Services').scrollIntoView({behavior:'smooth'})}}>Servicios</li>
@@ -24,8 +27,7 @@ const Navbar = () => {
                 <img src={userlogin} alt="" className='imgLogin' />
             </div>
             
-
-            {/* <img src={burgerMenu} alt="Menu" className='mobMenu' onClick={()=>(setShowMenu(!showMenu))} /> */}
+            {/* Menu Mobile */}
             <ul className='navMenu' style={{display:showMenu? 'flex':'none'}}>
                 <li onClick={()=>{document.getElementById('Main_Page').scrollIntoView({behavior:'smooth'}),setShowMenu(!showMenu)}}>Home</li>
                 <li onClick={()=>{document.getElementById('Services').scrollIntoView({behavior:'smooth'}),setShowMenu(!showMenu)}}>Servicios</li>

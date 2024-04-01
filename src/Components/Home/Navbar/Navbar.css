@@ -30,11 +30,14 @@
     height: 4rem;
     cursor: pointer;
 }
-
+.logoCell{
+    height: 4rem;
+    cursor: pointer;
+    display: none;
+}
 .login img{
     width: 2rem;
     cursor: pointer;
-
 }
 .link{
     text-decoration: none;
@@ -66,7 +69,7 @@
 
 @media screen and (max-width:720px){
     .navbar {
-        padding: 1rem 1rem;
+        padding: 1rem;
     }
     .mobMenu{
         display: flex;
@@ -78,5 +81,19 @@
     }
     .desktopMenuBtn{
         display: none;
+    }
+}
+@media screen and (min-width:1200px){
+    .desktopMenu li{
+        font-size: 1.4rem;
+        margin: 0 1.5rem;
+    }
+}
+@media screen and (max-width:900px){
+    .logo{
+        display: none;
+    }
+    .logoCell{
+        display: flex;
     }
 }
