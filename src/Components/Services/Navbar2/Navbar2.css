@@ -1,6 +1,6 @@
 .navbar2{
     width: 100vw;
-    height:10vh;
+    height:9vh;
     display: flex;
     align-items: center;
     justify-content:space-between;
@@ -46,14 +46,14 @@
 }
 .navMenu2{
     position: absolute;
-    top: 5rem;
+    top: 4rem;
     z-index:2;
     display: flex;
     flex-direction: column;
     align-items:center;
-    padding: 0.5rem;
+    padding: 1rem;
     height: fit-content;
-    width: 90vw;
+    width: 95%;
     background: rgb(40,40,40);
     list-style: none;
     color: #fff;
@@ -62,7 +62,6 @@
 }
 .navMenu2 li{
     cursor: pointer;
-    border:solid 1px white;
     width: 90vw;
     height: 1.5rem;
 }
@@ -84,3 +83,9 @@
         display: none;
     }
 }   
+@media screen and (min-width:1200px){
+    .desktopMenu2 li{
+        font-size: 1.4rem;
+        margin: 0 1.5rem;
+    }
+}

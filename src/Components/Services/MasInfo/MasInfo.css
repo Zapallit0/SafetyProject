@@ -1,12 +1,13 @@
 .MasInfo{
     width: 100vw;
-    height: 50vh;
+    height: fit-content;
     background-color: #FF9800;
     color: white;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    padding: 2rem 0;
 }
 .MasInfoTexto{
     width: 60%;

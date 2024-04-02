@@ -3,17 +3,34 @@ import CapacitacionBackground from '../../../assets/ServicesPage/BackgroundCapac
 import DwnldButton from "../../../assets/ServicesPage/Global/DownloadArrow.svg"
 import Services1 from "../../../assets/ServicesPage/Salud Ocupacional/Servicio1.webp"
 function Services3() {
-  const ServicesEnvironment =[{
-      "ServiceName": "Programas de Higiene Ocupacional",
+  const ServicesSalud =[{
+      "ServiceName": "Evaluación de Riesgos Psicosociales",
       "Image":""
-  }];
+  },
+  {
+    "ServiceName": "Programas de Seguridad Basada en el Comportamiento (SBC)",
+    "Image":""
+},
+{
+  "ServiceName": "Programas Preventivos",
+  "Image":""
+},{
+  "ServiceName": "Evaluación de Riesgos Psicosociales",
+  "Image":""
+},{
+  "ServiceName": "Elaboración de Perfil de Accidentabilidad.",
+  "Image":""
+},{
+  "ServiceName":"Gestión de Riesgos Críticos",
+  "Image":""
+}];
   return (
     <div className='Services1'>
       <div className='Services1_Title'>
         <img src={CapacitacionBackground} alt="Security Back" />
         <div className='Services1_Title_Content'>
           <h3>
-            Gestión de Salud Ocupacional
+          Gestión de Prevención de Riesgos
           </h3>
           <span>
             según Ley 29783, DS 005-2012 TR, RM 375-2088 TR
@@ -28,9 +45,10 @@ function Services3() {
       </button>
       <div className='SecurityServices'>
         {
-          ServicesEnvironment.map((service,index)=>(
+          ServicesSalud.map((service,index)=>(
             <div className='CardService'>
-              <img src={Services1} alt="Servicio"/>
+              <img src={Services1} alt="" />
+              <h4>{service.ServiceName}</h4>
             </div>
           ))
         }

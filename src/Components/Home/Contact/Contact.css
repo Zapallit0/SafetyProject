@@ -59,7 +59,7 @@
     flex-direction: column;
     align-items: center;
     text-align: left;
-    max-width: 80vw;
+    max-width: 90%;
 }
 .Forma .correo{
     font-size: 0.7rem;
@@ -101,6 +101,7 @@
     align-items: center;
     text-align: left;
     width: 100%;
+    gap: 2rem;
 }
 .DatosPersonalesContacto .DatoPersonal{
     width: 50%;
@@ -114,6 +115,7 @@
     font-size: 0.7rem;
 }
 .Forma .submitBtn{
+    padding: 0;
     border-radius: 1rem;
     background-color: #FF9800;
     color: white;
@@ -211,7 +213,7 @@
     }
     .DatosContacto{
         padding-left: 2rem;
-        width: 20vw;
+        width: 15vw;
     }
     .Mapa{
         display: none;

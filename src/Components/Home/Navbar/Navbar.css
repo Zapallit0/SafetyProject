@@ -31,7 +31,7 @@
     cursor: pointer;
 }
 .logoCell{
-    height: 4rem;
+    height: 3rem;
     cursor: pointer;
     display: none;
 }
@@ -70,11 +70,15 @@
 @media screen and (max-width:720px){
     .navbar {
         padding: 1rem;
+        height:4rem;
     }
     .mobMenu{
         display: flex;
         color: white;
         cursor: pointer;
+    }
+    .navMenu{
+        top: 4rem;
     }
     .desktopMenu{
         display: none;
@@ -83,17 +87,17 @@
         display: none;
     }
 }
-@media screen and (min-width:1200px){
-    .desktopMenu li{
-        font-size: 1.4rem;
-        margin: 0 1.5rem;
-    }
-}
 @media screen and (max-width:900px){
     .logo{
         display: none;
     }
     .logoCell{
         display: flex;
+    }
+}
+@media screen and (min-width:1200px){
+    .desktopMenu li{
+        font-size: 1.4rem;
+        margin: 0 1.5rem;
     }
 }

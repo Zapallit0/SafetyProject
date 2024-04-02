@@ -1,5 +1,5 @@
 .smallContact{
-    background-color: #f77f00;
+    background-color: #FF9800;
     width: 100%;
     height: fit-content;
     padding: 3rem 0;
@@ -10,11 +10,11 @@
 }
 .smallContact h4{
     color: white;
-    font-size: 2rem;
+    font-size: 1rem;
 }
 .smallContact .smallButton{
     padding: 0.5rem 2.5rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
     border-radius: 25px;
     border: none;
     background-color: white;
@@ -25,4 +25,28 @@
 .smallContact .smallButton:hover{
     scale: 1.01;
     background-color: rgb(187, 184, 184);
+}
+.smallContact h4:nth-child(2){
+    display: none;
+}
+@media screen and (min-width: 720px){
+    .smallContact h4:nth-child(2){
+        display: flex;
+    }
+    .smallContact h4{
+        font-size: 1.3rem;
+    }
+    .smallContact .smallButton{
+        padding: 1rem 2.5rem;
+        font-size: 1.2rem;
+    }
+}
+@media screen and (min-width: 1000px){
+    .smallContact h4{
+        font-size: 1.5rem;
+    }
+    .smallContact .smallButton{
+        padding: 1rem 2.5rem;
+        font-size: 1.3rem;
+    }
 }

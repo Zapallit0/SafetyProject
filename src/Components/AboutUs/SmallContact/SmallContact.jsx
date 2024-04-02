@@ -6,8 +6,8 @@ function SmallContact() {
   return (
     <div className='smallContact'>
         <h4>¿Interesado?</h4>
-        <h4>Contáctanos</h4>
-        <Link className='smallButton'> Formulario</Link>
+        <h4>Reserva una cita</h4>
+        <Link className='smallButton'> Contáctanos</Link>
     </div>
   )
 }

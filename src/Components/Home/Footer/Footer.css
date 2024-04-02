@@ -5,9 +5,10 @@
     justify-content: space-evenly;
     padding: 1rem;
     width: 100vw;
-    height: 30vh;
+    height: fit-content;
     color:white;
     background-color: black;
+    gap: 1rem;
 }
 .Footer .footerImgs{
     display: flex;
@@ -16,7 +17,7 @@
 }
 .Footer .footerImgs img{
     cursor: pointer;
-    height: 2.5rem;
+    height: 2rem;
 }
 .footerImgs{
     display: flex;
@@ -27,7 +28,7 @@
     flex-direction: row;
 }
 .footerImgs .LogosFooter img{
-    width: 1.5rem;
+    width: 1rem;
     cursor: pointer;
     margin:1rem 0.3rem;
 }
@@ -48,6 +49,12 @@
         font-size: 0.9rem;
     }
     .footerImgs .LogosFooter img{
-        width: 1.7rem;
+        width: 2rem;
+    }
+    .Footer li{
+        font-size: 1.1rem;
+    }
+    .Footer .footerImgs img{
+        height:3rem;
     }
 }
