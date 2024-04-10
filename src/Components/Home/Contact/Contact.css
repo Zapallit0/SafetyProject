@@ -1,16 +1,15 @@
 .Contacto{
     display: flex;
     flex-direction: column;
-    width: 100vw;
     align-items: center;
     text-align: center;
+    padding: 0rem;
 }
 .DatosForm{
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-    width:100vw;
     height: fit-content;
     padding: 5rem 0;
 }
@@ -35,11 +34,11 @@
 }
 .logosRedes{
     display: flex;
-    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
 }
 .logosRedes img{
     width: 30px;
-    margin-left: 15px;
     cursor: pointer;
 }
 .FormContacto{
@@ -59,7 +58,6 @@
     flex-direction: column;
     align-items: center;
     text-align: left;
-    max-width: 90%;
 }
 .Forma .correo{
     font-size: 0.7rem;
@@ -206,7 +204,6 @@
 @media screen and (min-width:1000px){
     .DatosForm{
         padding:0;
-        width: 100vw;
     }
     .FormContacto{
         justify-content: space-between;
@@ -218,12 +215,18 @@
     .Mapa{
         display: none;
     }
+    .logosRedes{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+    .logosRedes img{
+        margin-left: 1rem;
+    }
     .MapaDesktop{
         width: 60%;
         display: block;
         height: 40rem;
-    }
-    .Forma{
-        width: 35%;
+        justify-self: center;
     }
 }

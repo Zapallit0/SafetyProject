@@ -5,7 +5,6 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 100vw;
     height: fit-content;
 }
 .Title_Services{
@@ -15,7 +14,7 @@
     align-items: center;
     height:fit-content;
     padding: 15vh 0;
-    width:100vw;
+    width:100%;
     background-color: black;
 }
 .Title_Services h2{
@@ -30,7 +29,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     height:fit-content;
     padding: 5rem 0 ;
 }
@@ -89,34 +88,11 @@
     font-size: 1.2rem;
     text-decoration: underline;
 }
-.UpMainSticky{
-    display: flex;
-    justify-content: end;
-    position: sticky;
-    margin-right:2rem;
-    align-items: center;
-    cursor: pointer;
-    width: 100vw;
-    transform: translateY(-90px);
-}
-.UpMain{
-    position: sticky;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 4rem;
-    height: 4rem;
-    background-color: #FF9800;
-    border-radius: 50%;
-}
-.UpMain svg{
-    rotate: -90deg;
-}
 @media screen and (min-width:720px){
     .CallUs_Services{
         width: 13rem;
         height: 5rem;
-        top: 90vh;
+        top: 50%;
         text-align: left;
         padding-left: 2rem;
     }

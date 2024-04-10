@@ -15,6 +15,7 @@
     background-image: url("../../../assets/HomePageImgs/ServicesBackground.jpg");
     background-size: cover;
     background-position-y:center;
+    filter: brightness(20%);
     z-index: 1;
 }
 .Service2Text{
@@ -24,7 +25,7 @@
     width:80vw;
     height: fit-content;
     color: white;
-    background-color: gray;
+    /* background-color: gray; */
     justify-content: center;
     border-radius: 25px;
     text-align: center;
@@ -162,7 +163,7 @@
         height:fit-content;
         min-height: 70vh;
         color: white;
-        background-color: gray;
+        /* background-color: gray; */
         justify-content: center;
         border-radius: 25px;
         text-align: left;
@@ -172,7 +173,6 @@
     }
     .Service2Text h3{
         align-self: center;
-        justify-self: start;
         margin-bottom: 2rem;
     }
     .Service2Text p{

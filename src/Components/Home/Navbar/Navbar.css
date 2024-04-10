@@ -1,11 +1,10 @@
 .navbar{
-    width: 100vw;
     height:5.5rem;
     display: flex;
     align-items: center;
     justify-content:space-between;
     background-color: black;
-    padding: 2rem 2rem;
+    padding: 0rem 2rem;
 }
 .desktopMenu{
     max-width: 50vw;

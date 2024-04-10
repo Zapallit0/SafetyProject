@@ -3,7 +3,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100vw;
     height: fit-content;
 }
 .backgroundHeroAboutUs{
@@ -43,7 +42,7 @@
     padding: 1rem;
     padding-right: 0;
     right: 0px;
-    bottom: 2rem;
+    bottom: 0px;
 }
 .contactNumberHeroAboutUs img{
     width: 2rem;
@@ -75,7 +74,6 @@
         height: 8rem;
         padding: 1rem;
         right: 0px;
-        bottom: 2rem;
     }
     .contactNumberHeroAboutUs img{
         width: 4rem;

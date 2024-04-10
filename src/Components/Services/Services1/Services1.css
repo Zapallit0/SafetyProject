@@ -1,5 +1,4 @@
 .Services1{
-    width: 100vw;
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -8,7 +7,7 @@
 }
 .Services1_Title{
     padding: 1rem 0;
-    width: 100vw;
+    width: 100%;
     height: fit-content;
     display: flex;
     flex-direction:column;
