@@ -7,7 +7,7 @@ import logo from '../../../assets/Logos/LogoTitle.svg';
 
 function Footer() {
   return (
-    <div className='Footer'>
+    <footer className='Footer'>
       <div className='footerImgs'>
         <img src={logo} alt="LOGO" />
         <div className='LogosFooter'>
@@ -28,7 +28,7 @@ function Footer() {
           <li>gerencia@safeadvisors.com</li>
           <li>Políticas</li>
         </ul>
-      </div>
+      </footer>
   )
 }
 

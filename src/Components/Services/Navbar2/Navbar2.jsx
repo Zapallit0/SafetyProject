@@ -9,7 +9,7 @@ import logoCell from '../../../assets/Logos/LogoHome.svg';
 const Navbar2 = () => {
     const [showMenu, setShowMenu]=useState(false);
     return (
-        <div className='navbar2'>
+        <header className='navbar2'>
             <div className='mobMenu2'>
                 <Hamburger color="#fff" duration={0.3} toggled={showMenu} toggle={setShowMenu} easing="ease-in"/>
             </div>
@@ -26,15 +26,13 @@ const Navbar2 = () => {
                 <img src={userlogin} alt="" className='imgLogin' />
             </div>
             
-
-            {/* <img src={burgerMenu} alt="Menu" className='mobMenu' onClick={()=>(setShowMenu(!showMenu))} /> */}
             <ul className='navMenu2' style={{display:showMenu? 'flex':'none'}}>
                 <Link className='link' to={'/'}><li onClick={()=>{setShowMenu(!showMenu)}}>Home</li></Link>
                 <Link className='link' to={'/Servicios'}><li onClick={()=>{setShowMenu(!showMenu)}}>Servicios</li></Link>
                 <Link className='link' to={'/Nosotros'}><li onClick={()=>{setShowMenu(!showMenu)}}>Nosotros</li></Link>
                 <Link className='link' to={'/Contacto'}><li onClick={()=>{setShowMenu(!showMenu)}}>Contacto</li></Link>
             </ul>
-        </div>
+        </header>
 
   )
 }

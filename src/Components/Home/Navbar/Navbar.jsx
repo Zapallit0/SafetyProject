@@ -10,7 +10,7 @@ import {Squash as Hamburger} from 'hamburger-react'
 const Navbar = () => {
     const [showMenu, setShowMenu]=useState(false);
     return (
-        <div className='navbar'>
+        <header className='navbar'>
             <div className='mobMenu'>
                 <Hamburger color="#fff" duration={0.3} toggled={showMenu} toggle={setShowMenu} easing="ease-in"/>
             </div>
@@ -34,7 +34,7 @@ const Navbar = () => {
                 <li onClick={()=>{document.getElementById('About_Us').scrollIntoView({behavior:'smooth'}),setShowMenu(!showMenu)}}>Nosotros</li>
                 <li onClick={()=>{document.getElementById('Main_Page').scrollIntoView({behavior:'smooth'}),setShowMenu(!showMenu)}}>Contacto</li>
             </ul>
-        </div>
+        </header>
 
   )
 }
