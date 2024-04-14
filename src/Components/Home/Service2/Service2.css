@@ -46,32 +46,33 @@
     text-decoration: none;
 }
 .btnServicio2 .btnMasInfoCel{
-    height: 3rem;
-    width: 10rem;
-    padding:0 1rem ;
+    height: fit-content;
+    width: fit-content;
+    padding:1rem 1rem ;
     border: none;
     border-radius: 25px;
-    background-color: #FF9800;
-    color: white ;
+    background-color: var(--orange500);
+    color: var(--orange50) ;
     font-size: 1.1rem;
     font-weight: 600;
     margin: 2rem 0;
 }
 .btnMasInfoCel:hover{
-    scale: 1.02;
+    background-color: var(--orange600);
+    scale: 1.01;
 }
 /* Button Big screens */
 .Service2Text button{
     height: 3.5rem;
-        width: 10rem;
-        padding:0 1rem ;
-        border: none;
-        border-radius: 25px;
-        background-color: #FF9800;
-        color: black ;
-        font-size: 1.3rem;
-        font-weight: 600;
-        text-decoration: none;
+    width: 10rem;
+    padding:0 1rem ;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--orange500);
+    color: black ;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-decoration: none;
     display: none;
 }
 .Service2Text button:hover{
@@ -105,18 +106,18 @@
     cursor: pointer;
 }
 .ServiceCard:hover{
-    background-color: #FF9800;
-    color:white;  
+    background-color: var(--orange500);
+    color:var(--orange950);  
 }
 .ServiceCard:hover h4{
-    color:white;
+    color:var(--orange950);
 }
 .ServiceCard img{
     width: 30%;
     margin:1rem 0;
 }
 .ServiceCard h4{
-    color:#FF9800;
+    color:var(--orange500);
     margin-bottom: 1.1rem;
 }
 .ServiceCard span{
@@ -137,6 +138,7 @@
         width: 45%;
         height: 17rem;
         padding:0.5rem;
+        padding: 0px 16px ;
         margin: 0.5rem;
     }
     .ServiceCard h4{
@@ -163,7 +165,6 @@
         height:fit-content;
         min-height: 70vh;
         color: white;
-        /* background-color: gray; */
         justify-content: center;
         border-radius: 25px;
         text-align: left;

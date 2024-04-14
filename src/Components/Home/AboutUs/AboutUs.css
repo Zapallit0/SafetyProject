@@ -13,6 +13,8 @@
     width: 18rem;
     height:15rem;
     object-fit: cover;
+    border-radius: 2rem;
+    border:1px solid var(--orange600);
 }
 .textAboutUs {
     display: flex;
@@ -27,7 +29,7 @@
     font-weight: 600;
     font-size: 0.8rem;
     border: none;
-    background-color:#FF9800;
+    background-color:var(--orange500);
     color: white;
     border-radius: 25px;
     cursor: pointer;
@@ -42,17 +44,17 @@
     width: 75vw;
 }
 .textOurInfo h4{
-    color:#FF9800;
+    color:var(--orange600);
     font-size: 0.9rem;
 }
 .textOurInfo h2{
     margin-bottom: 1rem;
     font-size: 1.7rem;
     font-weight: 1000;
-    color: #4C4C4C;
+    color: #262626;
 }
 .textOurInfo span{
-    color: #21336f;
+    color: var(--orange700);
     font-weight: bolder;
 }
 .textOurInfo p{
@@ -69,7 +71,7 @@
 }
 .textOurMission h3{
     margin-bottom: 0.5rem;
-    color: #4C4C4C;
+    color: #262626;
     font-size: 1rem;
 }
 .textOurMission p{
@@ -77,8 +79,8 @@
     font-weight: 400;
 }
 .textAboutUs button:hover{
-     background-color: rgb(221, 143, 0);
-     scale: 1.02;
+     background-color:var(--orange600);
+     scale: 1.01;
 }
 
 /* IPhone SE 375 667 SCREEN SIZE DONE */
@@ -103,10 +105,6 @@
     .textOurInfo h2{
         font-size: 2.5rem;
     }
-    .textOurInfo span{
-        color: #21336f;
-        font-weight: bolder;
-    }
     .textOurInfo p{
         font-size: 1.1rem;
         font-weight: 400;
@@ -118,10 +116,10 @@
         font-size: 1.1rem;
     }
     .textAboutUs button{
-        width: 8rem;
-        height: 3rem;
+        width: fit-content;
+        height: fit-content;
         font-size: 1rem;
-        padding: 0 1rem;
+        padding: 1rem 1rem;
     }
     .AboutUs img{
         width: 18rem;

@@ -1,9 +1,9 @@
 import React from 'react'
 import './MainPage.css'
 import background from '../../../assets/HomePageImgs/HeroBackground.jpg'
-import Facebook from '../../../assets/social/white/facebookW.svg';
-import Linkedin from '../../../assets/social/white/linkedinW.svg';
-import Instagram from '../../../assets/social/white/instagramW.svg';
+import Facebook from '../../../assets/social/facebook.svg';
+import Linkedin from '../../../assets/social/linkedin.svg';
+import Instagram from '../../../assets/social/instagram.svg';
 
 function MainPage() {
   return (
@@ -19,9 +19,9 @@ function MainPage() {
         <button type='button'>Contáctenos</button>
       </div>
       <div className='redesMP'>
-        <a href="https://www.facebook.com" target='_blank'><img src={Facebook} alt="Facebook" /></a>
-        <a href="https://www.linkedin.com/" target='_blank'><img src={Linkedin} alt="Linkedin" /></a>
-        <a href="https://www.instagram.com/" target='_blank'><img src={Instagram} alt="Instagram" /></a>
+        <a href="https://www.facebook.com" target='_blank'><object className='iconRed' data={Facebook} alt="Facebook" type="image/svg+xml"/></a>
+        <a href="https://www.linkedin.com/" target='_blank'><object className='iconRed' data={Linkedin} alt="Linkedin" type="image/svg+xml"/></a>
+        <a href="https://www.instagram.com/" target='_blank'><object className='iconRed' data={Instagram} alt="Instagram" type="image/svg+xml"/></a>
       </div>
     </div>
   )

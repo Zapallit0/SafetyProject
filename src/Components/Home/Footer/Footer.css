@@ -30,6 +30,7 @@
     width: 1rem;
     cursor: pointer;
     margin:1rem 0.3rem;
+    filter: invert(100%) sepia(93%) saturate(0%) hue-rotate(168deg) brightness(108%) contrast(108%);
 }
 .Footer ul{
     list-style: none;

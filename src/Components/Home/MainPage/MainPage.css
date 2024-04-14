@@ -15,7 +15,7 @@
     width: 100%;
     object-fit: cover;
     z-index: 100;
-    filter: brightness(37%);
+    filter: brightness(20%);
 }
 /* Texto y boton del cover */
 .textMP{
@@ -28,7 +28,7 @@
     left:10%;
 }
 .textMP h1{
-    color: white;
+    color:white;
     margin-bottom: 2rem; 
     font-size: 3rem;  /*32px*/
     font-weight: 900;
@@ -43,17 +43,16 @@
 .textMP button{
     height: 3rem;
     width: 9rem;
-    background-color: #FF9800;
+    background-color: var(--orange500);
     border-radius: 25px;
     border: none;
-    color:white;
+    color:var(--orange950);
     font-weight: 600;
     cursor: pointer;
     font-size: 1.1rem;
 }
 .textMP button:hover{
-    background-color: #d58000;
-    scale:1.02;
+    background-color: var(--orange600);
 }
 
 /* Redes sociales */
@@ -63,14 +62,18 @@
     position: absolute;
     top:35%;
     right: 5%;
-    color: white;
 }
-.redesMP img{
+.redesMP object{
     margin: 0.5rem 0;
     width: 30px;
     cursor: pointer;
 }
-
+.iconRed{
+    filter: invert(100%) sepia(93%) saturate(0%) hue-rotate(168deg) brightness(108%) contrast(108%);
+}
+.iconRed:hover{
+    filter: invert(49%) sepia(37%) saturate(4482%) hue-rotate(9deg) brightness(96%) contrast(101%);
+}
 /* IPhone SE 375 667 SCREEN SIZE DONE */
 
 @media screen and (min-width:720px){

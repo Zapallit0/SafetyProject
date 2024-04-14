@@ -1,10 +1,10 @@
 import React from 'react'
 import "./Service2.css"
 import {Link} from 'react-router-dom'
-import GestionIcon from '../../../assets/Icons/GestionIcon.png'
-import SaludIcon from '../../../assets/Icons/SaludIcon.png'
-import RiesgosIcon from '../../../assets/Icons/RiesgosIcon.png'
-import ProveedorIcon from '../../../assets/Icons/ProveedorIcon.png'
+import GestionIcon from '../../../assets/Icons/Sistema-de-Gestión-Seguridad.svg'
+import SaludIcon from '../../../assets/Icons/Salud Ocupacional.svg'
+import RiesgosIcon from '../../../assets/Icons/Prevencion de Riesgo.svg'
+import ProveedorIcon from '../../../assets/Icons/Homologacion.svg'
 function Service2() {
     const Services=[
         {"ServiceName":"Sistema de Gestión de Seguridad y Salud en el Trabajo",

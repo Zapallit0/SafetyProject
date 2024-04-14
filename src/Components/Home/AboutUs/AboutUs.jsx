@@ -34,5 +34,4 @@ function AboutUs() {
   )
 }
 
-/* IPhone SE 375 667 SCREEN SIZE DONE */
 export default AboutUs

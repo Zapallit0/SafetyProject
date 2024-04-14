@@ -25,17 +25,17 @@ function Contact() {
         </div>
         <div className='FormContacto'>
                 <form action="" className='Forma'>
-                  <h2 className='contactPageTitle'>Contáctanos</h2>
+                  <h2>Contáctanos</h2>
                     <h5>Correo:</h5>
-                    <input type='text' className='correo' placeholder='Your Email' name='from_name'></input>
+                    <input type="email" className='correo' placeholder='Your Email' name='from_email'></input>
                     <div className='DatosPersonalesContacto'>
                       <div className='DatoPersonal'>
                         <h5>Nombre:</h5>
-                        <input type='name' className='datos' placeholder='Your Name' name='from_email'></input>
+                        <input type="firstName" className='datos' placeholder='Your Name' name='from_name' autoComplete="given-name"></input>
                       </div>
                       <div className='DatoPersonal'>
                         <h5>Número:</h5>
-                        <input type='text' className='datos' placeholder='Your Number' name='from_name'></input>
+                        <input type='text' className='datos' placeholder='Your Number' name='from_number' autoComplete='tel'></input>
                       </div>
                     </div>
                     <h5>Mensaje:</h5>
