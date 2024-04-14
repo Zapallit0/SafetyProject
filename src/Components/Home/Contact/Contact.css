@@ -122,6 +122,9 @@
     height: 2.5rem;
     cursor: pointer;
 }
+.submitBtn:hover{
+    background-color: var(--orange600);
+}
 .MapaDesktop{
     background-color: black;
     width: 20vw;
@@ -164,7 +167,7 @@
         font-size: 0.9rem;
     }
     .DatosContacto span{
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
     .FormContacto h2{
         font-size: 2rem;
