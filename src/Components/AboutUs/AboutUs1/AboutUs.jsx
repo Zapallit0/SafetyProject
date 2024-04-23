@@ -1,6 +1,7 @@
 import React from 'react'
 import './AboutUs.css'
 import Engineer from '../../../assets/AboutUsPage/Enginneer.jpg'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 function AboutUs() {
   return (
     <div className='aboutUs1'>
@@ -14,8 +15,8 @@ function AboutUs() {
             </p>
         </div>
         <div className='imgsAboutUs1'>
-            <img src={Engineer} alt="Img1" />
-            <img src={Engineer} alt="Img2" />
+            <LazyLoadImage src={Engineer} alt="Img1" />
+            <LazyLoadImage src={Engineer} alt="Img2" />
         </div>
     </div>
   )

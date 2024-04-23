@@ -11,8 +11,8 @@
     position: relative;
 }
 .backgroundContainer img{
-    height: 100%;
     width: 100%;
+    height: 100%;
     object-fit: cover;
     z-index: 100;
     filter: brightness(20%);
@@ -63,7 +63,7 @@
     top:35%;
     right: 5%;
 }
-.redesMP object{
+.redesMP img{
     margin: 0.5rem 0;
     width: 30px;
     cursor: pointer;

@@ -2,10 +2,12 @@ import React from 'react'
 import './AboutUs.css'
 import {Link} from 'react-router-dom'
 import Nosotros from'../../../assets/HomePageImgs/AboutUs.jpg';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 function AboutUs() {
   return (
     <div className='AboutUs' id='About_Us'>
-        <img src={Nosotros} alt="Imagen Equipo" />
+        <LazyLoadImage src={Nosotros} alt="Imagen Equipo" effect='blur'/>
         <div className='textAboutUs'>
             <div className='textOurInfo'>
                 <h4>Sobre</h4>

@@ -5,6 +5,8 @@ import GestionIcon from '../../../assets/Icons/Sistema-de-Gestión-Seguridad.svg
 import SaludIcon from '../../../assets/Icons/Salud Ocupacional.svg'
 import RiesgosIcon from '../../../assets/Icons/Prevencion de Riesgo.svg'
 import ProveedorIcon from '../../../assets/Icons/Homologacion.svg'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+
 function Service2() {
     const Services=[
         {"ServiceName":"Sistema de Gestión de Seguridad y Salud en el Trabajo",
@@ -34,7 +36,7 @@ function Service2() {
             {
             Services.map((service,index)=>(
                 <div className='ServiceCard' key={index}>
-                    <img src={service.Icon} />
+                    <LazyLoadImage src={service.Icon} />
                     <h4>{service.ServiceName}</h4>
                     <span>{service.Info}</span>
                 </div>

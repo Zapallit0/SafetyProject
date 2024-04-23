@@ -5,6 +5,7 @@ import SaludIcon from '../../../assets/Icons/Salud Ocupacional2.svg'
 import RiesgosIcon from '../../../assets/Icons/Prevencion de Riesgo.svg'
 import ProveedorIcon from '../../../assets/Icons/Homologacion.svg'
 import { Link } from 'react-scroll'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 function Main() {
   return (
@@ -14,19 +15,19 @@ function Main() {
       </div>
       <div className='Icons_Services'>
         <div className='Icon_Service'>
-          <Link className='Link_Service'><img src={GestionIcon} alt="Seguridad Laboral" /></Link>
+          <Link className='Link_Service'><LazyLoadImage src={GestionIcon} alt="Seguridad Laboral" /></Link>
           <span>Seguridad Laboral</span>
         </div>
         <div className='Icon_Service'>
-          <Link className='Link_Service'><img src={SaludIcon} alt="Salud Ocupacional" /></Link>
+          <Link className='Link_Service'><LazyLoadImage src={SaludIcon} alt="Salud Ocupacional" /></Link>
           <span>Salud Ocupacional</span>
         </div>
         <div className='Icon_Service'>
-          <Link className='Link_Service'><img src={RiesgosIcon} alt="Certificacion" /></Link>
+          <Link className='Link_Service'><LazyLoadImage src={RiesgosIcon} alt="Certificacion" /></Link>
           <span>Prevencion de Riesgos</span>
         </div>
         <div className='Icon_Service'>
-          <Link className='Link_Service'><img src={ProveedorIcon} alt="" /></Link>
+          <Link className='Link_Service'><LazyLoadImage src={ProveedorIcon} alt="" /></Link>
           <span>Capacitaciones</span>
         </div>
       </div>

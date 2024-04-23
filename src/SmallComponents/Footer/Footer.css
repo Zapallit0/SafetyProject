@@ -35,6 +35,10 @@
 .Footer ul{
     list-style: none;
 }   
+.Footer .footerIndice{
+    color: white;
+    text-decoration: none;
+}
 .Footer li{
     margin: 0.7rem 0;
     cursor: pointer;

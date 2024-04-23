@@ -4,6 +4,7 @@ import Facebook from '../../../assets/social/facebook.svg';
 import Linkedin from '../../../assets/social/linkedin.svg';
 import Instagram from '../../../assets/social/instagram.svg';
 import ContactForm from '../../../SmallComponents/ContactForm/ContactForm';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 function Contact() {
   return (
     <section className='Contacto' id='Contact'>
@@ -19,9 +20,9 @@ function Contact() {
           <span >gerencia@safeadvisors.io</span></p>
           </div>
           <div className='logosRedes'>
-            <a href="https://www.facebook.com/profile.php?id=61557920314806&mibextid=ZbWKwL" target='_blank'><img src={Facebook} alt="Facebook" /></a>
-            <a href="https://www.linkedin.com/company/safety-advisors24/about/" target='_blank'><img src={Linkedin} alt="Instagram" /></a>
-            <a href="https://www.instagram.com/safety__advisors/?igsh=dGNvN3ZiMGtsMDlm" target='_blank'><img src={Instagram} alt="Linkedin" /></a>
+            <a href="https://www.facebook.com/profile.php?id=61557920314806&mibextid=ZbWKwL" target='_blank'><LazyLoadImage src={Facebook} alt="Facebook" /></a>
+            <a href="https://www.linkedin.com/company/safety-advisors24/about/" target='_blank'><LazyLoadImage src={Linkedin} alt="Instagram" /></a>
+            <a href="https://www.instagram.com/safety__advisors/?igsh=dGNvN3ZiMGtsMDlm" target='_blank'><LazyLoadImage src={Instagram} alt="Linkedin" /></a>
           </div>
         </div>
         <div className='FormContacto'>

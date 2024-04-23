@@ -18,9 +18,9 @@ const Navbar2 = () => {
             <img src={logoCell} alt="Logo" className='logoCell' />
             <ul className='desktopMenu2'>
                 <Link className='link2' to={'/'}><li onClick={()=>{document.getElementById('Main_Page').scrollIntoView({behavior:'smooth'})}}>Home</li></Link>
-                <Link className='link2' to={'/Servicios'}><li>Servicios</li></Link>
-                <Link className='link2' to={'/Nosotros'}><li>Nosotros</li></Link>
-                <Link className='link2' to={'/Contacto'}><li>Contacto</li></Link>
+                <Link className='link2' to={'/Servicios'}><li onClick={()=>{document.getElementById('Main_Page').scrollIntoView({behavior:'smooth'})}}> Servicios</li></Link>
+                <Link className='link2' to={'/Nosotros'}><li onClick={()=>{document.getElementById('Main_Page').scrollIntoView({behavior:'smooth'})}}>Nosotros</li></Link>
+                <Link className='link2' to={'/Contacto'}><li onClick={()=>{document.getElementById('Main_Page').scrollIntoView({behavior:'smooth'})}}>Contacto</li></Link>
             </ul>
             <div className='login2'>
                 <img src={userlogin} alt="" className='imgLogin' />

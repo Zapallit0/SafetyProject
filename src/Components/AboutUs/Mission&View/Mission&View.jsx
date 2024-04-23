@@ -1,6 +1,8 @@
 import React from 'react'
 import './Mission&View.css'
 import LastImg from '../../../assets/AboutUsPage/lastImg.jpg'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+
 function MissionView() {
   return (
     <div className='Mission_View'>
@@ -14,7 +16,7 @@ function MissionView() {
             <p>Brindar <span>soluciones especializadas</span> en asesorías, homologaciones y gestión de talento en Minería, Construcción, Logística, Servicios.</p>
             </div>
         </div>
-        <img src={LastImg} alt="imgMission_View" />
+        <LazyLoadImage src={LastImg} alt="imgMission_View" />
     </div>
   )
 }
