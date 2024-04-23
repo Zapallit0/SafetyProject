@@ -2,6 +2,8 @@ import React,{ useRef,useState } from 'react'
 import './ContactForm.css'
 import emailjs from '@emailjs/browser';
 import { Service_ID,Template_ID,Public_Key } from "../../../config.js"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function ContactForm() {
     const form = useRef(); 
@@ -16,10 +18,15 @@ function ContactForm() {
         (result) => {
           console.log(result.text);
           e.target.reset();
+          toast.success("Correo enviado correctamente",{
+            theme:"dark"
+          });
           setButtonSend(false)
         },
         (error) => {
-          console.log('FAILED...', error.text);
+          toast.error("Hubo un error intente denuevo",{
+            theme:"dark"
+          });
         },
       );
     }
@@ -44,8 +51,10 @@ function ContactForm() {
         <div className="ContactInput" >
             <textarea  className='MessageForm' rows="5" name="message" placeholder='Cuentanos un poco sobre tus metas, que buscas lograr con nuestra ayuda'/>         
         </div>
-        <input type="submit" className='ContactSubmit' value={btnSend?"Enviando..":"Enviar"}/>
+        <input type="submit" className={btnSend?'ContactSubmitLocked':'ContactSubmit'}value={btnSend?"Enviando..":"Enviar"} disabled={btnSend?true:false} />
+        <ToastContainer autoClose={3000}/> 
     </form>
+    
   )
 }
 

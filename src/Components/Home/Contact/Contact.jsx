@@ -19,9 +19,9 @@ function Contact() {
           <span >gerencia@safeadvisors.io</span></p>
           </div>
           <div className='logosRedes'>
-            <img src={Facebook} alt="Facebook" />
-            <img src={Linkedin} alt="Instagram" />
-            <img src={Instagram} alt="Linkedin" />
+            <a href="https://www.facebook.com/profile.php?id=61557920314806&mibextid=ZbWKwL" target='_blank'><img src={Facebook} alt="Facebook" /></a>
+            <a href="https://www.linkedin.com/company/safety-advisors24/about/" target='_blank'><img src={Linkedin} alt="Instagram" /></a>
+            <a href="https://www.instagram.com/safety__advisors/?igsh=dGNvN3ZiMGtsMDlm" target='_blank'><img src={Instagram} alt="Linkedin" /></a>
           </div>
         </div>
         <div className='FormContacto'>

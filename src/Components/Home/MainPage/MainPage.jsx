@@ -19,9 +19,9 @@ function MainPage() {
         <button type='button'>Contáctenos</button>
       </div>
       <div className='redesMP'>
-        <a href="https://www.facebook.com" target='_blank'><object className='iconRed' data={Facebook} alt="Facebook" type="image/svg+xml"/></a>
-        <a href="https://www.linkedin.com/" target='_blank'><object className='iconRed' data={Linkedin} alt="Linkedin" type="image/svg+xml"/></a>
-        <a href="https://www.instagram.com/" target='_blank'><object className='iconRed' data={Instagram} alt="Instagram" type="image/svg+xml"/></a>
+        <a href="https://www.facebook.com/profile.php?id=61557920314806&mibextid=ZbWKwL" target='_blank'><object className='iconRed' data={Facebook} alt="Facebook" type="image/svg+xml"/></a>
+        <a href="https://www.linkedin.com/company/safety-advisors24/about/" target='_blank'><object className='iconRed' data={Linkedin} alt="Linkedin" type="image/svg+xml"/></a>
+        <a href="https://www.instagram.com/safety__advisors/?igsh=dGNvN3ZiMGtsMDlm" target='_blank'><object className='iconRed' data={Instagram} alt="Instagram" type="image/svg+xml"/></a>
       </div>
     </div>
   )

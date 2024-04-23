@@ -36,8 +36,19 @@
     border-radius: 1rem;
     font-weight: 600;
     font-size:1rem;
+    cursor: pointer;
 }
 .ContactSubmit:hover{
     background-color: var(--orange600);
 }
-
+.ContactSubmitLocked{
+    width: fit-content;
+    align-self: center;
+    padding: 1rem 1.5rem;
+    background-color: var(--orange600);
+    border: none;
+    border-radius: 1rem;
+    font-weight: 600;
+    font-size:1rem;
+    cursor: not-allowed;
+}
