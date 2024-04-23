@@ -36,39 +36,35 @@
 .Icons_Services img{
     width: 3rem;
     height: 3rem;
-    transform: translateY(5px);
 }
-.Icons_Services .Link_Service{
+.Link_Service{
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    transform: translateY(-10px);
-    height: 4.5em;
-    width: 4.5rem;
+    height: fit-content;
+    width: fit-content;
     cursor: pointer;
+    padding: 1rem;
 }
 .Icons_Services .Link_Service:hover{
-    background-color: lightblue;
-}
-.Icons_Services .Link_Service:active{
-    background-color: lightskyblue;
+    background-color: var(--orange400);
 }
 .Icon_Service{
     width: 20%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
     margin: 2rem;
 }
 .Icon_Service span{
     font-size: 1rem;
     font-weight: 600;
+    color: --var(orange950);
 }
 .CallUs_Services{
     position: absolute;
-    background-color: #FF9800;
+    background-color: var(--orange500);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -107,8 +103,8 @@
         gap:2rem;
     }
     .Icons_Services .Link_Service{
-        height: 5rem;
-        width: 5rem;
+        height: fit-content;
+        width: fit-content;
     }
     .Icon_Service{
         width: 20%;
@@ -120,7 +116,7 @@
     }
     .Title_Services h2{
         font-size: 3.5rem;
-        text-decoration: underline solid #FF9800;
+        text-decoration: underline solid var(--orange500);
         text-underline-offset: 2rem;
     }
 }

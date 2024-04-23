@@ -1,9 +1,9 @@
 import React from 'react'
 import './Footer.css'
-import Facebook from '../../../assets/social/facebook.svg';
-import Linkedin from '../../../assets/social/linkedin.svg';
-import Instagram from '../../../assets/social/instagram.svg';
-import logo from '../../../assets/Logos/LogoTitle.svg';
+import Facebook from '../../assets/social/facebook.svg';
+import Linkedin from '../../assets/social/linkedin.svg';
+import Instagram from '../../assets/social/instagram.svg';
+import logo from '../../assets/Logos/LogoTitle.svg';
 
 function Footer() {
   return (

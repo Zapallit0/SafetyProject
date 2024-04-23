@@ -1,9 +1,9 @@
 import React from 'react'
 import './Main.css'
-import SegLaboral from '../../../assets/services/SeguridadLaboral.png'
-import SalOcupacional from '../../../assets/services/SaludOcupacional.png'
-import Certificacion from '../../../assets/services/CertificacionLaboral.png'
-import Capacitaciones from '../../../assets/services/Capacitaciones.png'
+import GestionIcon from '../../../assets/Icons/Sistema-de-Gestión-Seguridad.svg'
+import SaludIcon from '../../../assets/Icons/Salud Ocupacional2.svg'
+import RiesgosIcon from '../../../assets/Icons/Prevencion de Riesgo.svg'
+import ProveedorIcon from '../../../assets/Icons/Homologacion.svg'
 import { Link } from 'react-scroll'
 
 function Main() {
@@ -14,19 +14,19 @@ function Main() {
       </div>
       <div className='Icons_Services'>
         <div className='Icon_Service'>
-          <Link className='Link_Service'><img src={SegLaboral} alt="Seguridad Laboral" /></Link>
+          <Link className='Link_Service'><img src={GestionIcon} alt="Seguridad Laboral" /></Link>
           <span>Seguridad Laboral</span>
         </div>
         <div className='Icon_Service'>
-          <Link className='Link_Service'><img src={SalOcupacional} alt="Salud Ocupaciona" /></Link>
+          <Link className='Link_Service'><img src={SaludIcon} alt="Salud Ocupacional" /></Link>
           <span>Salud Ocupacional</span>
         </div>
         <div className='Icon_Service'>
-          <Link className='Link_Service'><img src={Certificacion} alt="" /></Link>
-          <span>Certificación</span>
+          <Link className='Link_Service'><img src={RiesgosIcon} alt="Certificacion" /></Link>
+          <span>Prevencion de Riesgos</span>
         </div>
         <div className='Icon_Service'>
-          <Link className='Link_Service'><img src={Capacitaciones} alt="" /></Link>
+          <Link className='Link_Service'><img src={ProveedorIcon} alt="" /></Link>
           <span>Capacitaciones</span>
         </div>
       </div>

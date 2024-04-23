@@ -21,7 +21,7 @@ const Navbar = () => {
                 <Link className='link' to={'/'}><li onClick={()=>{document.getElementById('Main_Page').scrollIntoView({behavior:'smooth'})}}>Home</li></Link>
                 <li onClick={()=>{document.getElementById('Services').scrollIntoView({behavior:'smooth'})}}>Servicios</li>
                 <li onClick={()=>{document.getElementById('About_Us').scrollIntoView({behavior:'smooth'})}}>Nosotros</li>
-                <li onClick={()=>{document.getElementById('Main_Page').scrollIntoView({behavior:'smooth'})}}>Contacto</li>
+                <li onClick={()=>{document.getElementById('Contact').scrollIntoView({behavior:'smooth'})}}>Contacto</li>
             </ul>
             <div className='login'>
                 <img src={userlogin} alt="" className='imgLogin' />
@@ -32,7 +32,7 @@ const Navbar = () => {
                 <li onClick={()=>{document.getElementById('Main_Page').scrollIntoView({behavior:'smooth'}),setShowMenu(!showMenu)}}>Home</li>
                 <li onClick={()=>{document.getElementById('Services').scrollIntoView({behavior:'smooth'}),setShowMenu(!showMenu)}}>Servicios</li>
                 <li onClick={()=>{document.getElementById('About_Us').scrollIntoView({behavior:'smooth'}),setShowMenu(!showMenu)}}>Nosotros</li>
-                <li onClick={()=>{document.getElementById('Main_Page').scrollIntoView({behavior:'smooth'}),setShowMenu(!showMenu)}}>Contacto</li>
+                <li onClick={()=>{document.getElementById('Contact').scrollIntoView({behavior:'smooth'}),setShowMenu(!showMenu)}}>Contacto</li>
             </ul>
         </header>
 

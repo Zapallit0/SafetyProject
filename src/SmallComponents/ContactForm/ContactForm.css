@@ -1,0 +1,43 @@
+.ContactForm{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    width: 100%;
+}
+.ContactInput{
+    display: flex;
+    flex-direction: column;
+}
+.ContactInput h5{
+    font-weight: 500;
+    font-size: 1rem;
+}
+.ContactInput input{
+    padding: 0.8rem;
+    border:1px solid var(--orange700);
+    border-radius: 5px;
+}
+.ContactInput textarea{
+    padding: 0.8rem;
+    border-radius: 5px;
+}
+.MessageForm{
+    border:1px solid var(--orange700);
+    border-radius: 2px;
+    resize: none;
+}
+.ContactSubmit{
+    width: fit-content;
+    align-self: center;
+    padding: 1rem 1.5rem;
+    background-color: var(--orange500);
+    border: none;
+    border-radius: 1rem;
+    font-weight: 600;
+    font-size:1rem;
+}
+.ContactSubmit:hover{
+    background-color: var(--orange600);
+}
+

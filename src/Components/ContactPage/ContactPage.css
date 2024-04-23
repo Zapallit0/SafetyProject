@@ -1,0 +1,90 @@
+.ContactPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 0rem;
+    padding-bottom: 0;
+    gap: 2rem;
+}
+.ContactHelp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    padding: 2rem;
+    color: var(--orange950);
+    font-weight:500;
+    border-radius: 2px;
+}
+.ContactHelp h2{
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+.ContactHelp span{
+    color: var(--orange600);
+}
+.ContactInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 2rem;
+}
+.ContactList li{
+    list-style-position: inside;
+    list-style-image: url("../../assets/SVG/ListIcons.svg");
+    padding: 0.5rem 0rem;
+}
+.ContactList a{
+    text-decoration: underline dotted;
+    color: var(--orange600);
+}
+.ContactSupport{
+    width: 100%;
+    background-image: url("../../assets//SVG/liquid-cheese.svg");
+    padding: 5rem 0rem;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+.ContactSupport h2{
+    color: var(--orange950);
+    max-width: 80%;
+    font-size: 1.6rem;
+}
+.ContactSupportList{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.ContactSupportList li{
+    color: var(--orange950);
+    font-size: 1.1rem;
+    font-weight: 500;
+    list-style-position: inside;
+    list-style-image: url("../../assets/SVG/ListIcons.svg");
+    padding: 0.5rem 1rem;
+}
+
+@media screen and (min-width:720px){
+    .ContactHelp{
+        max-width: 80%;
+    }
+    .ContactInfo{
+        max-width: 70%;
+    }
+}
+@media screen and (min-width:1200px){
+    .ContactHelp{
+        max-width: 50%;
+    }
+    .ContactInfo{
+        max-width: 50%;
+    }
+}

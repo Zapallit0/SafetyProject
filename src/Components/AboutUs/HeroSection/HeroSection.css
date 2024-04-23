@@ -35,7 +35,7 @@
 .contactNumberHeroAboutUs{
     position:absolute;
     display: flex;
-    background-color: #FFA500;
+    background-color: var(--orange500);
     align-items: center;
     width: 15rem;
     height: 5rem;
