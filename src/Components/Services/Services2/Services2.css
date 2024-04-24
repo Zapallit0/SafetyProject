@@ -1,0 +1,48 @@
+.TwoServices{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: fit-content;
+    width: 100%;
+}
+.Services2{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: fit-content;
+    width: 100%;
+    height: 100%;
+}
+.Services2::before{
+    content:"";
+    opacity: 0.85;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    background-image: url('../../../assets/ServicesPage/BackgroundSaludOcupacional.jpg');
+    background-size: cover;
+    background-position-y:center;
+    filter: brightness(20%);
+    z-index: 1;
+}
+.Services2_Title{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    color: var(--orange50);
+    gap: 2rem;
+    align-items: center;
+    margin-top: 2rem;
+    text-align: center;
+}
+@media screen and (min-width:800px){
+    .TwoServices{
+        flex-direction: row;
+    }
+}
