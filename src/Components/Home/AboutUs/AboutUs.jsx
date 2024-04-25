@@ -1,7 +1,7 @@
 import React from 'react'
 import './AboutUs.css'
 import {Link} from 'react-router-dom'
-import Nosotros from'../../../assets/HomePageImgs/AboutUs.jpg';
+import Nosotros from'../../../assets/HomePageImgs/AboutUs.webp';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 function AboutUs() {

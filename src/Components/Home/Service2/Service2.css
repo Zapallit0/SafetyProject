@@ -12,7 +12,7 @@
     height: 100%;
     display: block;
     position: absolute;
-    background-image: url("../../../assets/HomePageImgs/ServicesBackground.jpg");
+    background-image: url("../../../assets/HomePageImgs/ServicesBackground.webp");
     background-size: cover;
     background-position-y:center;
     filter: brightness(20%);

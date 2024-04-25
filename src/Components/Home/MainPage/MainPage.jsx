@@ -4,7 +4,7 @@ import './MainPage.css'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
-import background from '../../../assets/HomePageImgs/HeroBackground.jpg'
+import background from '../../../assets/HomePageImgs/HeroBackground.webp'
 import Facebook from '../../../assets/social/facebook.svg';
 import Linkedin from '../../../assets/social/linkedin.svg';
 import Instagram from '../../../assets/social/instagram.svg';
