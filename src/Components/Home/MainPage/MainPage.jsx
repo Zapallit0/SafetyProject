@@ -3,7 +3,7 @@ import './MainPage.css'
 // Lazy Load
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-
+import { Link } from 'react-router-dom';
 import background from '../../../assets/HomePageImgs/HeroBackground.webp'
 import Facebook from '../../../assets/social/facebook.svg';
 import Linkedin from '../../../assets/social/linkedin.svg';
@@ -20,7 +20,7 @@ function MainPage() {
         <h2>Especialista en Seguridad, <br />
         Salud Ocupacional <br />
         y Medio Ambiente</h2>
-        <button type='button'>Contáctenos</button>
+        <Link to={"/Contacto"}><button type='button'>Contáctenos</button></Link>
       </div>
       <div className='redesMP'>
         <a href="https://www.facebook.com/profile.php?id=61557920314806&mibextid=ZbWKwL" target='_blank'><LazyLoadImage className='iconRed' src={Facebook} alt="Facebook" type="image/svg+xml"/></a>

@@ -13,8 +13,8 @@ function ContactPage() {
         <div className='ContactInfo'>
             <h4>Si requiere mas información especifica, porfavor usar los siguientes canales de contacto:</h4>
             <ul className='ContactList'>
-              <li>Para contacto directo, correo <a href=''>gerencia@safetyadvisors.io</a></li>
-              <li>Para solución de problemas <a href=''>support@safetyadvisors.io</a></li>
+              <li>Para contacto directo, correo <a href=''>contacto@safetyadvisors.io</a></li>
+              <li>Para solución de problemas <a href=''>contacto@safetyadvisors.io</a></li>
             </ul>
         </div>
         <div className='ContactSupport'>

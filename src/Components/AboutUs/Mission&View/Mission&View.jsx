@@ -1,6 +1,6 @@
 import React from 'react'
 import './Mission&View.css'
-import LastImg from '../../../assets/AboutUsPage/lastImg.jpg'
+import LastImg from '../../../assets/AboutUsPage/lastImg.webp'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 function MissionView() {

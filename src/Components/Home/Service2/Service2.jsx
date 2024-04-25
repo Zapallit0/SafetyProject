@@ -29,7 +29,7 @@ function Service2() {
             Confía en nosotros para salvaguardar lo que más valoras. 
             Descubre cómo podemos fortalecer tu seguridad hoy</p>
             <Link to={'/Servicios'} className='btnServicio2'>
-                <button className='btnMasInfo'>Más Servicios</button>
+                <button className='btnMasInfo'>Todos los servicios</button>
             </Link>
         </div>
         <div className='ServicesPresentation'>

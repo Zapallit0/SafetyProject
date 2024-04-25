@@ -1,6 +1,6 @@
 import React from 'react'
 import './AboutUs.css'
-import Engineer from '../../../assets/AboutUsPage/Enginneer.jpg'
+import Engineer from '../../../assets/AboutUsPage/Enginneer.webp'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 function AboutUs() {
   return (

@@ -64,7 +64,7 @@
 /* Button Big screens */
 .Service2Text button{
     height: 3.5rem;
-    width: 10rem;
+    width: fit-content;
     padding:0 1rem ;
     border: none;
     border-radius: 25px;
@@ -76,7 +76,7 @@
     display: none;
 }
 .Service2Text button:hover{
-    scale: 1.02;
+    scale: 1.01;
 }
 .ServicesPresentation{
     display: flex;
@@ -192,6 +192,11 @@
     }
     .Service2Text button{
         display:block;
+        color:var(--orange50) ;
+        font-size: 1rem;
+    }
+    .Service2Text button:hover{
+        background-color: var(--orange600);
     }
     .Service2Text p{
         display: block;
@@ -216,7 +221,7 @@
     .Service2Text button{
         height: fit-content;
         padding: 1rem;
-        width: 50%;
+        width: fit-content;
         font-size: 1.4rem;
     }
 }
