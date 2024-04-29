@@ -2,7 +2,7 @@ import React from 'react'
 import './MainPage.css'
 // Lazy Load
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
+
 import { Link } from 'react-router-dom';
 import background from '../../../assets/HomePageImgs/HeroBackground.webp'
 import Facebook from '../../../assets/social/facebook.svg';
@@ -13,7 +13,7 @@ function MainPage() {
   return (
     <div className='mainPage' id='Main_Page'>
       <div className='backgroundContainer'>
-        <LazyLoadImage src={background} alt="Fondo" />
+        <LazyLoadImage loading="lazy" src={background} alt="Fondo" />
       </div>
       <div className='textMP'>
         <h1>SAFETY <br />ADVISORS</h1>
