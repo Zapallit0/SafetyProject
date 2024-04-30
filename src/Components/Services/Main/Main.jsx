@@ -1,9 +1,9 @@
 import React from 'react'
 import './Main.css'
-import GestionIcon from '../../../assets/icons/Sistema-de-Gestión-Seguridad.svg'
-import SaludIcon from '../../../assets/icons/Salud Ocupacional2.svg'
-import RiesgosIcon from '../../../assets/icons/Prevencion de Riesgo.svg'
-import ProveedorIcon from '../../../assets/icons/Homologacion.svg'
+import GestionIcon from '../../../assets/Icons/Sistema-de-Gestión-Seguridad.svg'
+import SaludIcon from '../../../assets/Icons/Salud Ocupacional2.svg'
+import RiesgosIcon from '../../../assets/Icons/Prevencion de Riesgo.svg'
+import ProveedorIcon from '../../../assets/Icons/Homologacion.svg'
 import { Link } from 'react-scroll'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 
