@@ -13,8 +13,7 @@ const Navbar = () => {
         <header className='navbar'>
             <div className='mobMenu'>
                 <Hamburger color="#fff" duration={0.3} toggled={showMenu} toggle={setShowMenu} easing="ease-in"/>
-            </div>
-            
+            </div>           
             <img src={logo} alt="Logo" className='logo' />
             <img src={logoCell} alt="Logo" className='logoCell' />
             <ul className='desktopMenu'>

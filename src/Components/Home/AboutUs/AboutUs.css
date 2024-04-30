@@ -115,6 +115,9 @@
     .textOurMission p{
         font-size: 1.1rem;
     }
+    .textOurMission span{
+        font-size: 1.1rem;
+    }
     .textAboutUs button{
         width: fit-content;
         height: fit-content;
@@ -150,6 +153,9 @@
         font-size: 1.5rem;
         font-weight: 400;
         margin-bottom: 3rem;
+    }
+    .textOurInfo span{
+        font-size: 1.5rem;
     }
     .textOurMission h3{
         font-size: 2rem;
