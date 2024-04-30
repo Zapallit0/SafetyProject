@@ -13,9 +13,9 @@ function Footer() {
       <div className='footerImgs'>
         <LazyLoadImage src={logo} alt="LOGO" />
         <div className='LogosFooter'>
-          <a href="https://www.facebook.com/profile.php?id=61557920314806&mibextid=ZbWKwL"><LazyLoadImage src={Facebook} alt="facebook" /></a>
-          <a href="https://www.linkedin.com/company/safety-advisors24/about/"><LazyLoadImage src={Linkedin} alt="linkedin" /></a>
-          <a href="https://www.instagram.com/safety__advisors/?igsh=dGNvN3ZiMGtsMDlm"><LazyLoadImage src={Instagram}  alt="instagram" /></a>
+          <a href="https://www.facebook.com/profile.php?id=61557920314806&mibextid=ZbWKwL" target='_blank'><LazyLoadImage src={Facebook} alt="facebook" /></a>
+          <a href="https://www.linkedin.com/company/safety-advisors24/about/" target='_blank'><LazyLoadImage src={Linkedin} alt="linkedin" /></a>
+          <a href="https://www.instagram.com/safety__advisors/?igsh=dGNvN3ZiMGtsMDlm" target='_blank'><LazyLoadImage src={Instagram}  alt="instagram" /></a>
         </div>
       </div>
         <ul className='footerIndices'>

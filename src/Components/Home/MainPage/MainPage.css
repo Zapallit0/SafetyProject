@@ -1,6 +1,4 @@
 .mainPage{
-    margin: 0px;
-    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -8,7 +6,7 @@
     align-items: center;
     padding: auto;
     text-align: center;
-    gap: 1rem;
+    gap: 2rem;
 }
 .mainPage:before{
     content:" ";
@@ -23,17 +21,17 @@
     background-position-x: center;
     filter: brightness(10%);
     z-index: 1;
+    background-color: black;
 }
 .mainPage h1{
     color:white;
-    font-size: 3.5rem;/*32px*/
+    font-size: 3.5rem;/*56px*/
     font-weight: 800;
     z-index: 10;
 }
 .mainPage .wrapper{
     box-sizing: content-box;
     display: flex;
-    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -46,6 +44,12 @@
     overflow-y: hidden;
     font-weight: 600;
 }
+.mainPage p{
+    display: none;
+    z-index: 20;
+    font-size: 1rem;
+    color: var(--orange50);
+}
 .words{
     display: flex;
     flex-direction: column;
@@ -54,6 +58,7 @@
     overflow-y: hidden;
 }
 .words span{
+    font-weight: 800;
     color: var(--orange500);
     text-decoration: underline;
     animation: spin_words 6s infinite;
@@ -86,67 +91,88 @@
     }
 }
 
-.buttonMain{
-    z-index: 10;
+.buttonsMainPage{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    z-index: 20;
+    width: 75%;
 }
-.buttonMain button{
+.buttonsMainPage button{
     height: 3rem;
-    width: 9rem;
-    background-color: var(--orange500);
-    border-radius: 25px;
-    border: none;
-    color:var(--orange950);
-    font-weight: 600;
+    width: 8rem;
+    font-size: 1rem;
     cursor: pointer;
-    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 25px;
 }
-.mainPage button:hover{
+.buttonServicesMP button{
+    background-color: var(--orange500);
+    color:var(--orange950);
+}
+.buttonsMainPage button:hover{
     background-color: var(--orange600);
 }
 
+.buttonCTA button{
+    background-color: transparent;
+    border-radius: 25px;
+    border: 2px var(--orange500) solid;
+    color:var(--orange50);
+}
+.buttonCTA button:hover{
+    background-color: var(--orange100);
+    color: var(--orange600);
+}
+.RedesMP{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+    z-index: 20;
+    width: 50%;
+}
+
+.RedesMP img{
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(139deg) brightness(103%) contrast(101%);
+    width: 2rem;
+}
 @media screen and (min-width:720px){
-    .textMP{
-        top: 30%;
+    .mainPage{
+        gap: 3rem;
     }
-    .textMP h1{
-        font-size: 4.5rem;
+    .mainPage h1{
+        font-size: 5rem;
     }
-    .textMP h2{
-        font-size: 1.4rem;
+    .wrapper h4, span{
+        font-size:2rem;
     }
-    .textMP button{
+    .words{
+        height: 2rem;
+    }
+    .mainPage p{
+        display: inline;
+        font-size: 1.5rem;
+        width: 70%;
+    }
+    
+    .buttonsMainPage button{
+        height: 3.5rem;
         width: 10rem;
+        font-size: 1.2rem;
+    } 
+    .RedesMP img{
+        width: 2.5rem;
     }
 }
 /* Here for small trouble in small heights we put this small css */
 @media screen and (max-height:415px){
-    .textMP h1{
-        font-size: 3rem;
-    }
-    .textMP h2{
-        font-size: 1rem;
+    .mainPage{
+        height: fit-content;
     }
 }
 @media screen and (min-width:1200px){
-    .textMP{
-        top: 33%;
-        left:10%;
-    }
-    .textMP h1{
-        font-size: 5.5rem;
-    }
-    .textMP h2{
-        font-size: 1.6rem;
-    }
-    .textMP button{
-        width: fit-content;
-        height: fit-content;
-        padding: 1rem 2rem;
-        font-size: 1.5rem;
-    }
-    .redesMP img{
-        margin: 0.8rem 0;
-        width: 2.5rem;
-        cursor: pointer;
-    }
+    
 }
