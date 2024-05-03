@@ -8,14 +8,14 @@ import Service2 from './Home/Service2/Service2.jsx'
 
 function Home() {
   return (
-    <div>
+    <>
         <Navbar />
         <MainPage />
         <Service2/>
         <AboutUs />
         <Contact />
         <Footer />
-    </div>
+    </>
   )
 }
 

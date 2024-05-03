@@ -7,14 +7,14 @@ import MissionView from './AboutUs/Mission&View/Mission&View'
 import SmallContact from '../SmallComponents/SmallContact/SmallContact.jsx'
 function AboutUs() {
   return (
-    <div>
+    <>
       <Navbar2 />
       <HeroSection/>
       <AboutUsInf />
       <MissionView />
       <SmallContact />
       <Footer/>
-    </div>
+    </>
   )
 }
 

@@ -4,11 +4,11 @@ import Footer from '../SmallComponents/Footer/Footer.jsx'
 import ContactPage from '../Components/ContactPage/ContactPage.jsx'
 function Contacto() {
   return (
-    <div>
+    <>
       <Navbar2 />
       <ContactPage />
       <Footer/>
-    </div>
+    </>
   )
 }
 

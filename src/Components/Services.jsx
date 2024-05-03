@@ -8,7 +8,7 @@ import Footer from '../SmallComponents/Footer/Footer.jsx'
 import SmallContact from '../SmallComponents/SmallContact/SmallContact.jsx'
 const Services=()=> {
   return (
-    <div>
+    <>
       <Navbar2 />
       <Main />
       <Services1/>
@@ -16,7 +16,7 @@ const Services=()=> {
       <Services3/>
       <SmallContact />
       <Footer />
-    </div>
+    </>
   )
 }
 
