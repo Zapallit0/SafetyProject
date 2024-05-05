@@ -32,7 +32,7 @@ function Services3() {
         <div className='SecurityServices'>
           {
             ServicesSalud.map((service,index)=>(
-              <div className='CardService'>
+              <div className='CardService' key={index}>
                 <LazyLoadImage src={CheckList}/>
                 <h4>{service.ServiceName}</h4>
               </div>

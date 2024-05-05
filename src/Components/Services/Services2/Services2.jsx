@@ -27,7 +27,7 @@ function Services2() {
       <div className='ListServices'>
         {
           ServicesEnvironment.map((service,index)=>(
-            <div className='CardService'>
+            <div className='CardService' key={index}>
               <LazyLoadImage src={CheckList}/>
               <h4>{service.ServiceName}</h4>
             </div>
@@ -51,7 +51,7 @@ function Services2() {
         <div className='ListServices'>
         {
           ServicesEnvironment.map((service,index)=>(
-            <div className='CardService'>
+            <div className='CardService' key={index}>
               <LazyLoadImage src={CheckList}/>
               <h4>{service.ServiceName}</h4>
             </div>
