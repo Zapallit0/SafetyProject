@@ -2,7 +2,6 @@ import React from 'react'
 import './Services1.css'
 import CheckList from "../../../assets/IconsList/checklist.svg"
 import DwnldButton from "../../../assets/IconsList/DownloadArrow.svg"
-import { Button } from 'react-scroll'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 function Services1() {
@@ -17,8 +16,8 @@ function Services1() {
   {"ServiceName":"Procedimientos y estándares"},
   ]
   return (
-    <div className='Services'>
-        <div className='Services_Title'>
+    <div className='Services' id='Seguridad'>
+        <div className='Services_Title' >
           <h3>
             Sistema de Gestión Seguridad y Salud en el Trabajo
           </h3>

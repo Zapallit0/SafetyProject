@@ -15,25 +15,25 @@ function Main() {
       </div>
       <div className='Icons_Services'>
         <div className='Icon_Service'>
-          <Link className='Link_Service'><LazyLoadImage src={GestionIcon} alt="Seguridad Laboral" /></Link>
+          <Link className='Link_Service' onClick={()=>{document.getElementById('Seguridad').scrollIntoView({behavior:'smooth'})}}><LazyLoadImage src={GestionIcon} alt="Seguridad Laboral" /></Link>
           <span>Seguridad Laboral</span>
         </div>
         <div className='Icon_Service'>
-          <Link className='Link_Service'><LazyLoadImage src={SaludIcon} alt="Salud Ocupacional" /></Link>
+          <Link className='Link_Service' onClick={()=>{document.getElementById('SaludOcupacional').scrollIntoView({behavior:'smooth'})}}><LazyLoadImage src={SaludIcon} alt="Salud Ocupacional" /></Link>
           <span>Salud Ocupacional</span>
         </div>
         <div className='Icon_Service'>
-          <Link className='Link_Service'><LazyLoadImage src={RiesgosIcon} alt="Certificacion" /></Link>
+          <Link className='Link_Service' onClick={()=>{document.getElementById('SaludOcupacional').scrollIntoView({behavior:'smooth'})}}><LazyLoadImage src={RiesgosIcon} alt="Certificacion" /></Link>
           <span>Prevencion de Riesgos</span>
         </div>
         <div className='Icon_Service'>
-          <Link className='Link_Service'><LazyLoadImage src={ProveedorIcon} alt="" /></Link>
+          <Link className='Link_Service' onClick={()=>{document.getElementById('Homologacion').scrollIntoView({behavior:'smooth'})}}><LazyLoadImage src={ProveedorIcon} alt="" /></Link>
           <span>Capacitaciones</span>
         </div>
       </div>
       <div className='CallUs_Services'>
         <span>¡Llámanos!</span>
-        <h3>964197982</h3>
+        <a href="tel:964197982">964197982</a>
       </div>
     </div>
   )

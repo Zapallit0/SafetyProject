@@ -59,7 +59,8 @@
     list-style: none;
     color: #fff;
     background-color: black;
-    padding: 0rem 2rem;
+    padding: 0.5rem 0rem;
+    top: 10vh;
 }
 .navMenu li{
     cursor: pointer;
@@ -75,9 +76,6 @@
         display: flex;
         color: white;
         cursor: pointer;
-    }
-    .navMenu{
-        top: 4rem;
     }
     .desktopMenu{
         display: none;

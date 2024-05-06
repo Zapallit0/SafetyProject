@@ -1,7 +1,7 @@
 import React from 'react'
 import './AboutUs.css'
-import Engineer from '../../../assets/AboutUsPage/Enginneer.webp'
-import { LazyLoadImage } from 'react-lazy-load-image-component'
+// import Engineer from '../../../assets/AboutUsPage/Enginneer.webp'
+// import { LazyLoadImage } from 'react-lazy-load-image-component'
 function AboutUs() {
   return (
     <div className='aboutUs1'>
@@ -14,10 +14,10 @@ function AboutUs() {
                 , certificaciones y capacitaciones.
             </p>
         </div>
-        <div className='imgsAboutUs1'>
+        {/* <div className='imgsAboutUs1'>
             <LazyLoadImage src={Engineer} alt="Img1" />
             <LazyLoadImage src={Engineer} alt="Img2" />
-        </div>
+        </div> */}
     </div>
   )
 }

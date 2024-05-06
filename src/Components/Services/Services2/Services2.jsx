@@ -13,7 +13,7 @@ function Services2() {
   }
 ];
   return (
-    <div className='TwoServices'>
+    <div className='TwoServices' id='SaludOcupacional'>
       <div className='Services2'>
       <div className='Services2_Title'>
           <h3>
@@ -39,7 +39,7 @@ function Services2() {
           </button>
       </div>
       </div>
-      <div className='Services2'>
+      <div className='Services2_Riesgos'>
         <div className='Services2_Title'>
             <h3>
             Gestión de Prevención de Riesgos

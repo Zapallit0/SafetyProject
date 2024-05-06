@@ -1,6 +1,6 @@
 import React from 'react'
 import './HeroSection.css'
-import backgroundAboutUs from '../../../assets/AboutUsPage/Background1.webp'
+import backgroundAboutUs from '../../../assets/AboutUsPage/Background1.jpg'
 import iconCall from '../../../assets/AboutUsPage/Icon.svg'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 

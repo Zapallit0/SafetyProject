@@ -13,8 +13,8 @@ const Navbar = () => {
             <div className='mobMenu'>
                 <Hamburger color="#fff" duration={0.3} toggled={showMenu} toggle={setShowMenu} easing="ease-in"/>
             </div>           
-            <img src={logo} alt="Logo" className='logo' />
-            <img src={logoCell} alt="Logo" className='logoCell' />
+            <Link to='/' className='logo'><img src={logo} alt="Logo" className='logo' /></Link>
+            <Link to='/' className='logoCell'><img src={logoCell} alt="Logo" className='logoCell' /></Link>
             <ul className='desktopMenu'>
                 <Link className='link2' to='/'><li>Home</li></Link>
                 <Link className='link2' to='/Servicios'><li>Servicios</li></Link>

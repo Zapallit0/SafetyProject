@@ -5,31 +5,24 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 function Services3() {
   const ServicesSalud =[{
-      "ServiceName": "Evaluación de Riesgos Psicosociales",},
+      "ServiceName": "Mineria",},
   {
-    "ServiceName": "Programas de Seguridad Basada en el Comportamiento (SBC)",
+    "ServiceName": "Construcción",
 },
 {
-  "ServiceName": "Programas Preventivos",
-},{
-  "ServiceName": "Evaluación de Riesgos Psicosociales",
-},{
-  "ServiceName": "Elaboración de Perfil de Accidentabilidad.",
-},{
-  "ServiceName":"Gestión de Riesgos Críticos",
+  "ServiceName": "Logistica",
 }];
   return (
-    <div className='Services'>
+    <section className='Services' id='Homologacion' >
       <div className='Services_Title'>
           <h3>
-          Gestión de Prevención de Riesgos
-          </h3>
+          Homologación para proveedores
+          </h3> 
           <span>
-            según Ley 29783, DS 005-2012 TR, RM 375-2088 TR
+          Requisitos técnicos, legales, de seguridad, éticos y financieros necesarios en los rubros:
           </span>
       </div>
       <div className='ListServices'>
-        <div className='SecurityServices'>
           {
             ServicesSalud.map((service,index)=>(
               <div className='CardService' key={index}>
@@ -37,15 +30,14 @@ function Services3() {
                 <h4>{service.ServiceName}</h4>
               </div>
             ))
-          }
-        </div>
+          } 
         <button className='downloadBtn'>
           <a>
             <LazyLoadImage src={DwnldButton} alt="DescargaBrouche" />BROUCHE COMPLETO
           </a>
         </button>
-      </div>
-    </div>
+       </div> 
+    </section>
   )
 }
 
