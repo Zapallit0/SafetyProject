@@ -27,7 +27,7 @@
 }
 .mainPage h1{
     color:white;
-    font-size: 3.5rem;/*56px*/
+    font-size: 3.5rem;
     font-weight: 800;
     z-index: 10;
 }
@@ -148,7 +148,7 @@
     .mainPage h1{
         font-size: 5rem;
     }
-    .wrapper h4, span{
+    .wrapper h2, span{
         font-size:2rem;
     }
     .words{

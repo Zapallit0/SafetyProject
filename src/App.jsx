@@ -1,4 +1,4 @@
-import React,{Suspense, lazy} from 'react'
+import React,{lazy} from 'react'
 import {Routes, Route, useLocation} from 'react-router-dom'
 import Navbar from './Components/Home/Navbar/Navbar.jsx'
 import { AnimatePresence } from 'framer-motion'
@@ -15,9 +15,9 @@ const App = () => {
       <AnimatePresence mode='wait'>
         <Routes location={location} key={location.pathname}>
           <Route index element={<Home />}/>
-          <Route path="/Nosotros" element={<AboutUs />}/>
-          <Route path="/Servicios" element={<Services />}/>
-          <Route path="/Contacto" element={<Contacto />}/>
+          <Route exact path="/Nosotros" element={<AboutUs />}/>
+          <Route exact path="/Servicios" element={<Services />}/>
+          <Route exact path="/Contacto" element={<Contacto />}/>
         </Routes>
       </AnimatePresence>
     </>

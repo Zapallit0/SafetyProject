@@ -5,7 +5,6 @@ import Footer from '../SmallComponents/Footer/Footer.jsx'
 import MissionView from './AboutUs/Mission&View/Mission&View'
 import SmallContact from '../SmallComponents/SmallContact/SmallContact.jsx'
 import transition from '../transition.jsx'
-
 function AboutUs() {
   return (
     <>

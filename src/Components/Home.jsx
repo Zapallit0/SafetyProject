@@ -5,7 +5,6 @@ import Contact from './Home/Contact/Contact.jsx'
 import Footer from '../SmallComponents/Footer/Footer.jsx'
 import Service2 from './Home/Service2/Service2.jsx'
 import transition from '../transition.jsx'
-
 function Home() {
   return (
     <>

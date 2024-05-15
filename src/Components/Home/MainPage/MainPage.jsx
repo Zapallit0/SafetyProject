@@ -11,9 +11,9 @@ import Instagram from '../../../assets/social/instagram.svg';
 function MainPage() {
   return (
     <div className='mainPage' id='Main_Page'>
-        <h1>SAFETY <br />ADVISORS</h1>
+        <h1>SAFETY<br/>ADVISORS</h1>
         <div className='wrapper'>
-          <h4>Especialistas en </h4>
+          <h2>Especialistas en</h2>
           <div className='words'>
             <span>Seguridad</span>
             <span>Salud Ocupacional</span>
