@@ -5,15 +5,14 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    height: fit-content;
+    height: 110svh;
 }
 .Title_Services{
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    height:fit-content;
-    padding: 15vh 0;
+    height:45%;
     width:100%;
     background-color: black;
 }
@@ -27,11 +26,10 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
-    height:fit-content;
-    padding: 5rem 0 ;
+    height:55%;
 }
 .Icons_Services img{
     width: 3rem;
@@ -73,7 +71,7 @@
     width: 10rem;
     height: 4rem;
     left: 0%;
-    top: 50%;
+    top: 45%;
     cursor: pointer;
 }
 .CallUs_Services span{
@@ -126,14 +124,14 @@
 }
 @media screen and (min-width:1000px){
     .CallUs_Services{
-        top: 43%;
+        top: 45%;
     }
 }
 @media screen and (min-width:1200px){
     .CallUs_Services{
-        width: 25rem;
-        height: 10rem;
-        top: 43%;
+        width: 22rem;
+        height: 8rem;
+        top: 40%;
         text-align: center;
         padding-left: 2rem;
     }
@@ -151,8 +149,8 @@
         width: 10rem;
     }
     .Icons_Services img{
-        width: 8rem;
-        height: 8rem;
+        width: 7rem;
+        height: 7rem;
     }
     .Icon_Service span{
         font-size: 1.8rem;

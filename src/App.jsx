@@ -8,7 +8,7 @@ const Services=lazy(()=>import('./Components/Services.jsx'))
 const Contacto=lazy(()=>import('./Components/Contacto.jsx'))
 
 const App = () => {
-  const location=useLocation();
+  const location=useLocation(true);
   return (
     <>
       <Navbar />
