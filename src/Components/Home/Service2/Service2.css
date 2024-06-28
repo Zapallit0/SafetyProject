@@ -52,7 +52,7 @@
     border: none;
     border-radius: 25px;
     background-color: var(--orange500);
-    color: var(--orange50) ;
+    color: var(--orange950) ;
     font-size: 1.1rem;
     font-weight: 600;
     margin: 2rem 0;
@@ -172,6 +172,9 @@
         z-index: 100;
         margin-bottom: 0;
     }
+    .ServicesPresentation{
+        align-items: start;
+    }
     .Service2Text h3{
         align-self: center;
         margin-bottom: 2rem;
@@ -180,7 +183,7 @@
         font-size: 1.5rem;
     }
     .ServiceCard{
-        height: fit-content;
+        height: 45vh;
         min-height: 35vh;
         padding: 0 2.5rem;
     }
@@ -192,7 +195,6 @@
     }
     .Service2Text button{
         display:block;
-        color:var(--orange50) ;
         font-size: 1rem;
     }
     .Service2Text button:hover{
