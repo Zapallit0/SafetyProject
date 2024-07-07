@@ -74,6 +74,8 @@
     letter-spacing: 1px;
 }
 .downloadBtn a{
+    color: var(--orange950);
+    text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -3,7 +3,7 @@ import './Services1.css'
 import CheckList from "../../../assets/IconsList/checklist.svg"
 import DwnldButton from "../../../assets/IconsList/DownloadArrow.svg"
 import { LazyLoadImage } from 'react-lazy-load-image-component'
-
+import pdf from '../../../pdf/SAFETY ADVISORS BROCHURE.pdf'
 function Services1() {
   const ServicesList=[
   {"ServiceName":"Política de SST(Seguridad Salud y Trabajo)","title":"Seguridad Salud y Trabajo","descripcion":"Política de SST"},
@@ -32,7 +32,7 @@ function Services1() {
           </div>
         ))}
         <button className='downloadBtn'>
-          <a>
+          <a href={pdf} target='_blank' rel='noopener noreferrer' download>
             <LazyLoadImage src={DwnldButton} alt="DescargaBrouche" />BROUCHE COMPLETO
           </a>
         </button>

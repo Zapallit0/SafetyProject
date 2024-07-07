@@ -3,6 +3,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component'
 import CheckList from "../../../assets/IconsList/checklist.svg"
 import './Services2.css'
 import DwnldButton from "../../../assets/IconsList/DownloadArrow.svg"
+import pdf from '../../../pdf/SAFETY ADVISORS BROCHURE.pdf'
 function Services2() {
   const ServicesEnvironment =[{
     "ServiceName": "Programas de vigilancia médica ocupacional","title":"Vigilancia médica ocupacional","descripcion":"Programas de vigilancia médica ocupacional"
@@ -57,9 +58,9 @@ function Services2() {
             </div>
           ))}
           <button className='downloadBtn'>
-            <a>
-              <LazyLoadImage src={DwnldButton} alt="DescargaBrouche" /> Descargar Brouche
-            </a>
+          <a href={pdf} target='_blank' rel='noopener noreferrer' download>
+            <LazyLoadImage src={DwnldButton} alt="DescargaBrouche" />BROUCHE COMPLETO
+          </a>
           </button>
       </div>
       </div>
