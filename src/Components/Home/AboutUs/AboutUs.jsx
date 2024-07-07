@@ -7,7 +7,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 function AboutUs() {
   return (
     <div className='AboutUs' id='About_Us'>
-        <LazyLoadImage src={Nosotros} alt="Imagen Equipo" effect='blur'/>
+        <LazyLoadImage src={Nosotros} alt="Imagen Equipo Safety Advisors" effect='blur' title='Equipo SA'/>
         <div className='textAboutUs'>
             <div className='textOurInfo'>
                 <h4>Sobre</h4>

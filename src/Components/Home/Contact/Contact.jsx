@@ -1,8 +1,8 @@
 import React from 'react'
 import './Contact.css'
-import Facebook from '../../../assets/social/facebook.svg';
-import Linkedin from '../../../assets/social/linkedin.svg';
-import Instagram from '../../../assets/social/instagram.svg';
+import Facebook from '../../../assets/social/facebook-SafetyAdvisors.svg';
+import Linkedin from '../../../assets/social/linkedin-SafetyAdvisors.svg';
+import Instagram from '../../../assets/social/instagram-SafetyAdvisors.svg';
 import ContactForm from '../../../SmallComponents/ContactForm/ContactForm';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 function Contact() {

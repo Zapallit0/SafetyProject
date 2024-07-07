@@ -1,9 +1,9 @@
 import React from 'react'
 import './Footer.css'
 import { Link } from 'react-router-dom';
-import Facebook from '../../assets/social/facebook.svg';
-import Linkedin from '../../assets/social/linkedin.svg';
-import Instagram from '../../assets/social/instagram.svg';
+import Facebook from '../../assets/social/facebook-SafetyAdvisors.svg';
+import Linkedin from '../../assets/social/linkedin-SafetyAdvisors.svg';
+import Instagram from '../../assets/social/instagram-SafetyAdvisors.svg';
 import logo from '../../assets/Logos/LogoTitle.svg';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 

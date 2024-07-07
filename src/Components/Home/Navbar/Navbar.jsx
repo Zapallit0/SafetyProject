@@ -13,8 +13,8 @@ const Navbar = () => {
             <div className='mobMenu'>
                 <Hamburger color="#fff" duration={0.3} toggled={showMenu} toggle={setShowMenu} easing="ease-in"/>
             </div>           
-            <Link to='/' className='logo'><img src={logo} alt="Logo" className='logo' /></Link>
-            <Link to='/' className='logoCell'><img src={logoCell} alt="Logo" className='logoCell' /></Link>
+            <Link to='/' className='logo'><img src={logo} alt="Logo de Safety Advisors grande" className='logo' title='LogoPrincipal'/></Link>
+            <Link to='/' className='logoCell'><img src={logoCell} alt="Logo de Safety Advisors pequeño" className='logoCell' title='LogoPrincipal' /></Link>
             <ul className='desktopMenu'>
                 <Link className='link2' to='/'><li>Home</li></Link>
                 <Link className='link2' to='/Servicios'><li>Servicios</li></Link>
@@ -22,7 +22,7 @@ const Navbar = () => {
                 <Link className='link2' to='/Contacto'><li>Contacto</li></Link>
             </ul>
             <div className='login'>
-                <img src={userlogin} alt="" className='imgLogin' />
+                <img src={userlogin} alt="Login Safety Adivisors" className='imgLogin' title='LoginSA' />
             </div>      
             {/* Menu Mobile */}
             <ul className='navMenu' style={{display:showMenu? 'flex':'none'}}>

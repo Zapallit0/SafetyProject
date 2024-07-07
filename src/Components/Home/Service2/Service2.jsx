@@ -36,7 +36,7 @@ function Service2() {
             {
             Services.map((service,index)=>(
                 <div className='ServiceCard' key={index}>
-                    <LazyLoadImage src={service.Icon} />
+                    <LazyLoadImage src={service.Icon} title='Service' alt='Homologacion,Salud Ocupacional,Prevencion, Seguridad'/>
                     <h4>{service.ServiceName}</h4>
                     <span>{service.Info}</span>
                 </div>

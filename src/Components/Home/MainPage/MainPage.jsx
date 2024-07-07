@@ -4,9 +4,9 @@ import './MainPage.css'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import { Link } from 'react-router-dom';
-import Facebook from '../../../assets/social/facebook.svg';
-import Linkedin from '../../../assets/social/linkedin.svg';
-import Instagram from '../../../assets/social/instagram.svg';
+import Facebook from '../../../assets/social/facebook-SafetyAdvisors.svg';
+import Linkedin from '../../../assets/social/linkedin-SafetyAdvisors.svg';
+import Instagram from '../../../assets/social/instagram-SafetyAdvisors.svg';
 
 function MainPage() {
   return (
@@ -28,9 +28,9 @@ function MainPage() {
           <Link to={"/Contacto"} className='buttonCTA'> <button>Contáctanos</button></Link>
         </div>
         <div className='RedesMP'>
-          <a href="https://www.facebook.com/profile.php?id=61557920314806&mibextid=ZbWKwL" target='_blank'><LazyLoadImage src={Facebook} alt="facebook" /></a>
-          <a href="https://www.linkedin.com/company/safety-advisors24/about/" target='_blank'><LazyLoadImage src={Linkedin} alt="linkedin" /></a>
-          <a href="https://www.instagram.com/safety__advisors/?igsh=dGNvN3ZiMGtsMDlm" target='_blank'><LazyLoadImage src={Instagram}  alt="instagram" /></a>
+          <a href="https://www.facebook.com/profile.php?id=61557920314806&mibextid=ZbWKwL" target='_blank'><LazyLoadImage src={Facebook} alt="Safety Advisors Facebook" title='FacebookSA'/></a>
+          <a href="https://www.linkedin.com/company/safety-advisors24/about/" target='_blank'><LazyLoadImage src={Linkedin} alt="Safety Advisors Linkedin" title='LinkedinSA'/></a>
+          <a href="https://www.instagram.com/safety__advisors/?igsh=dGNvN3ZiMGtsMDlm" target='_blank'><LazyLoadImage src={Instagram}  alt="Safety Advisors Instagram" title='InstagramSA'/></a>
         </div>
     </div>
   )

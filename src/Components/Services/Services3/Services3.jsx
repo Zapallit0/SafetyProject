@@ -4,14 +4,11 @@ import CheckList from "../../../assets/IconsList/checklist.svg"
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 function Services3() {
-  const ServicesSalud =[{
-      "ServiceName": "Mineria",},
-  {
-    "ServiceName": "Construcción",
-},
-{
-  "ServiceName": "Logistica",
-}];
+  const ServicesSalud =[
+  {"ServiceName": "Mineria","title":"Mineria","descripcion":"Mineria Safety Advisors"},
+  {"ServiceName": "Construcción","title":"Construcción","descripcion":"Construcción Safety Advisors"},
+  {"ServiceName": "Logistica","title":"Logistica","descripcion":"Logistica Safety Advisors"}
+];
   return (
     <section className='Services' id='Homologacion' >
       <div className='Services_Title'>
@@ -25,7 +22,7 @@ function Services3() {
       <div className='ListServices'>
           {
             ServicesSalud.map((service,index)=>(
-              <div className='CardService' key={index}>
+              <div className='CardService' key={index} title={service.title} descripcion={service.descripcion}>
                 <LazyLoadImage src={CheckList}/>
                 <h4>{service.ServiceName}</h4>
               </div>

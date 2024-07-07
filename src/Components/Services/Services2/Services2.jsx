@@ -5,11 +5,11 @@ import './Services2.css'
 import DwnldButton from "../../../assets/IconsList/DownloadArrow.svg"
 function Services2() {
   const ServicesEnvironment =[{
-    "ServiceName": "Programas de vigilancia médica ocupacional",
+    "ServiceName": "Programas de vigilancia médica ocupacional","title":"Vigilancia médica ocupacional","descripcion":"Programas de vigilancia médica ocupacional"
   }, {
-    "ServiceName": "Monitoreos de Agentes Ocupacionales",
+    "ServiceName": "Monitoreos de Agentes Ocupacionales","title":"Agentes Ocupacionales","descripcion":"Monitoreos de Agentes Ocupacionales"
   },{
-    "ServiceName": "Programas de Higiene Ocupacional",
+    "ServiceName": "Programas de Higiene Ocupacional","title":"Higiene Ocupacional","descripcion":"Programas de Higiene Ocupacional"
   }
 ];
   return (
@@ -28,7 +28,7 @@ function Services2() {
         {
           ServicesEnvironment.map((service,index)=>(
             <div className='CardService' key={index}>
-              <LazyLoadImage src={CheckList}/>
+              <LazyLoadImage src={CheckList} title={service.title} descripcion={service.descripcion}/>
               <h4>{service.ServiceName}</h4>
             </div>
           ))}
