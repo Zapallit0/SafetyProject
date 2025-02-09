@@ -34,7 +34,7 @@ function Services2() {
             </div>
           ))}
           <button className='downloadBtn'>
-            <a>
+            <a href={pdf} target='_blank' rel='noopener noreferrer' download>
               <LazyLoadImage src={DwnldButton} alt="DescargaBrouche" /> Descargar Brouche
             </a>
           </button>
