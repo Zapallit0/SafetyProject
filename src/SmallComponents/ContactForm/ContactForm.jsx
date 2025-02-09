@@ -54,7 +54,6 @@ function ContactForm() {
         <input type="submit" className={btnSend?'ContactSubmitLocked':'ContactSubmit'}value={btnSend?"Enviando..":"Enviar"} disabled={btnSend?true:false} />
         <ToastContainer autoClose={3000}/> 
     </form>
-    
   )
 }
 
