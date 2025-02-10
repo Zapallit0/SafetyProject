@@ -7,13 +7,16 @@ import { Link } from 'react-router-dom';
 import Facebook from '../../../assets/social/facebook-SafetyAdvisors.svg';
 import Linkedin from '../../../assets/social/linkedin-SafetyAdvisors.svg';
 import Instagram from '../../../assets/social/instagram-SafetyAdvisors.svg';
-
+import LogoHP from '../../../assets/Logos/LogoHome.svg';
 function MainPage() {
-  return (
+  return ( 
     <div className='mainPage' id='Main_Page'>
-        <h1>SAFETY<br/>ADVISORS</h1>
+        <div className='LogoHP'>
+          <img src={LogoHP} alt="" height="40px"/>
+          <h2>SAFETY ADVISORS</h2>
+        </div>
         <div className='wrapper'>
-          <h2>Especialistas en</h2>
+          <h1>Especialistas en</h1>
           <div className='words'>
             <span>Seguridad</span>
             <span>Salud Ocupacional</span>
