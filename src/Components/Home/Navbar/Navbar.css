@@ -1,16 +1,45 @@
 .navbar{
-    width: 100%;
+    width: 30%;
     display: flex;
     align-items: center;
-    justify-content:space-between;
+    justify-content:center;
     position: absolute;
+    left: 35%;
     background: rgba(118, 118, 118, 0.3);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.5px);
     -webkit-backdrop-filter: blur(8.5px);
     z-index: 100;
-    height: 10vh;
+    height: 7vh;
     padding: 0.5rem 2rem;
+    border-bottom-left-radius:25px;
+    border-bottom-right-radius:25px;
+}
+.link2 {
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.link2::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.link2.active::after {
+    width: 100%;
+}
+
+.link2.active {
+    color: #fff;
+    font-weight: bold;
 }
 .desktopMenu{
     max-width: 50vw;
@@ -100,7 +129,7 @@
 }
 @media screen and (min-width:1200px){
     .desktopMenu li{
-        font-size: 1.4rem;
-        margin: 0 1.5rem;
+        font-size: 1rem;
+        margin: 0 1rem;
     }
 }
