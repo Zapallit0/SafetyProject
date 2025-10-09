@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:"Work Sans", sans-serif;
+}
+:root{
+  --orange50:#fffbea;
+  --orange100:#fff2c5;
+  --orange200:#ffe585;
+  --orange400:#ffbc1b;
+  --orange500:#ff9800;
+  --orange600:#e27100;
+  --orange700:#bb4c02;
+  --orange900:#7c300b;
+  --orange950:#481700;
+}
+
+.slide-in{
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background:#0f0f0f;
+  transform-origin: bottom;
+}
+.slide-out{
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background:#0f0f0f;
+  transform-origin: top;
+}

@@ -1,0 +1,140 @@
+.Contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.DatosForm{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    padding: 5rem 0rem;
+    width: 100%;
+}
+.DatosContacto{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.DatosContacto h3{
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+.DatosContacto p{
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+.DatosContacto span{
+    color: var(--orange600);
+    font-weight: 600;
+}
+.logosRedes{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.logosRedes img{
+    width: 30px;
+    cursor: pointer;
+}
+.FormContacto{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.FormContacto h2{
+    font-size: 1.5rem;
+    color: #4C4C4C;
+    font-weight: 900;
+}
+.FormContacto .FormFull{
+    width: 90%;
+}
+.MapaDesktop{
+    background-color: black;
+    display: none;
+}
+.MapaDesktop iframe{
+    top:0;
+    left: 0;
+    border: none;
+    height: 100%;
+    width: 100%;
+}
+.Mapa{
+    background-color: black;
+    width: 100%;
+    height: 50vh;
+}
+.Mapa iframe{
+    top:0;
+    left: 0;
+    border: none;
+    height: 100%;
+    width: 100%;
+}
+@media screen and (min-width:720px){
+    .DatosForm{
+        flex-direction: row;
+        justify-content:space-evenly;
+        width: 100%;
+    }
+    .DatosContacto{
+        text-align: left;
+        margin-right: 4rem;
+    }
+    .DatosContacto h3{
+        font-size: 1.5rem;
+    }
+    .DatosContacto p{
+        font-size: 0.9rem;
+    }
+    .DatosContacto span{
+        font-size: 1rem;
+    }
+    .FormContacto{
+        justify-content: space-evenly;
+        width: 60%;
+    }
+    .FormContacto h2{
+        font-size: 2rem;
+    }
+    .FormContacto .FormFull{
+        width: 100%;
+    }
+}
+@media screen and (min-width:1000px){
+    .DatosContacto{
+        padding-left: 2rem;
+    }
+    .Mapa{
+        display: none;
+    }
+    .DatosForm{
+        padding: 0;
+    }
+    .FormContacto{
+        justify-content:space-evenly;
+        width: 100%;
+    }
+    .FormContacto .FormFull{
+        width: 60%;
+    }
+    .logosRedes{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+    .logosRedes img{
+        margin-left: 1rem;
+    }
+    .MapaDesktop{
+        display: block;
+        height: 40rem;
+        width: 100%;
+    }
+}

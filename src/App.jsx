@@ -1,24 +1,26 @@
-import React,{useState} from 'react'
-import Navbar from './Components/Navbar/Navbar.jsx'
-import MainPage from './Components/MainPage/MainPage.jsx';
-import AboutUs from './Components/AboutUs/AboutUs.jsx';
-import Services from './Components/Services/Services.jsx'; 
-import MasServicios from './Components/MasServicios/MasServicios.jsx';
-import Contact from './Components/Contact/Contact.jsx';
-import Footer from './Components/Footer/Footer.jsx';
+import React,{lazy} from 'react'
+import {Routes, Route, useLocation} from 'react-router-dom'
+import Navbar from './Components/Home/Navbar/Navbar.jsx'
+import { AnimatePresence } from 'framer-motion'
+const Home=lazy(()=>(import('./Components/Home.jsx')))
+const AboutUs=lazy(()=>import('./Components/AboutUs.jsx'))
+const Services=lazy(()=>import('./Components/Services.jsx'))
+const Contacto=lazy(()=>import('./Components/Contacto.jsx'))
 
 const App = () => {
-  const[theme,setTheme]=useState('light');
+  const location=useLocation(true);
   return (
-    <div className={`container ${theme}`}>
-      <Navbar theme={theme} setTheme={setTheme}/>
-      <MainPage />
-      <Services />
-      <MasServicios />
-      <AboutUs />
-      <Contact />
-      <Footer />
-    </div>
+    <>
+      <Navbar />
+      <AnimatePresence mode='wait'>
+        <Routes location={location} key={location.pathname}>
+          <Route index element={<Home />}/>
+          <Route exact path="/Nosotros" element={<AboutUs />}/>
+          <Route exact path="/Servicios" element={<Services />}/>
+          <Route exact path="/Contacto" element={<Contacto />}/>
+        </Routes>
+      </AnimatePresence>
+    </>
   )
 }
 

@@ -1,0 +1,231 @@
+.Service2{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Service2:before{
+    content:" ";
+    opacity: 0.85;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    background-image: url("../../../assets/HomePageImgs/ServicesBackground.webp");
+    background-size: cover;
+    background-position-y:center;
+    filter: brightness(20%);
+    z-index: 1;
+}
+.Service2Text{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    width:80vw;
+    height: fit-content;
+    color: white;
+    /* background-color: gray; */
+    justify-content: center;
+    border-radius: 25px;
+    text-align: center;
+    padding: 1rem;
+    z-index: 100;
+}
+.Service2Text h3{
+    font-size: 2rem;
+    color: white;
+}
+.Service2Text p{
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    display: none;
+}
+.btnServicio2{
+    z-index: 100;
+    text-decoration: none;
+}
+.btnServicio2 .btnMasInfoCel{
+    height: fit-content;
+    width: fit-content;
+    padding:1rem 1rem ;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--orange500);
+    color: var(--orange950) ;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 2rem 0;
+}
+.btnMasInfoCel:hover{
+    background-color: var(--orange600);
+    scale: 1.01;
+}
+/* Button Big screens */
+.Service2Text button{
+    height: 3.5rem;
+    width: fit-content;
+    padding:0 1rem ;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--orange500);
+    color: black ;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: none;
+}
+.Service2Text button:hover{
+    scale: 1.01;
+}
+.ServicesPresentation{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    width: 80vw;
+    color: white;
+    z-index: 100;
+}
+.ServiceCard{
+    width: 90%;
+    padding: 1rem;
+    margin: 1rem;
+    color: black;
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    transition: color 0.6s ease-out 100ms;
+    transition: background-color 0.5s ease-out 100ms;
+    cursor: pointer;
+}
+.ServiceCard:hover{
+    background-color: var(--orange500);
+    color:var(--orange950);  
+}
+.ServiceCard:hover h4{
+    color:var(--orange950);
+}
+.ServiceCard img{
+    width: 30%;
+    margin:1rem 0;
+}
+.ServiceCard h4{
+    color:var(--orange500);
+    margin-bottom: 1.1rem;
+}
+.ServiceCard span{
+    font-size: 0.8rem;
+}
+@media screen and (min-width:720px){
+    .Service2{
+        padding: 7rem 0;
+    }
+    .Service2Text{
+        margin-bottom: 2rem;
+    }
+    .ServicesPresentation{
+        width: 90vw;
+    }
+    .ServiceCard{
+        justify-content: center;
+        width: 45%;
+        height: 17rem;
+        padding:0.5rem;
+        padding: 0px 16px ;
+        margin: 0.5rem;
+    }
+    .ServiceCard h4{
+        font-size: 1.2rem;
+    }
+    .ServiceCard span{
+        font-size:1rem;
+    }
+    .btnMasInfoCel{
+        margin-top: 2rem;
+        font-size: 1.5rem;
+        height: 4rem;
+        width: 12rem;
+    }
+}
+@media screen and (min-width:1100px){
+    .Service2{
+        flex-direction: row;
+        justify-content: center;
+        padding: 12rem 3rem;
+    }
+    .Service2Text{
+        width:35vw;
+        height:fit-content;
+        min-height: 70vh;
+        color: white;
+        justify-content: center;
+        border-radius: 25px;
+        text-align: left;
+        padding: 1rem 2rem;
+        z-index: 100;
+        margin-bottom: 0;
+    }
+    .ServicesPresentation{
+        align-items: start;
+    }
+    .Service2Text h3{
+        align-self: center;
+        margin-bottom: 2rem;
+    }
+    .Service2Text p{
+        font-size: 1.5rem;
+    }
+    .ServiceCard{
+        height: 45vh;
+        min-height: 35vh;
+        padding: 0 2.5rem;
+    }
+    .ServiceCard h4{
+        font-size: 1.6rem;
+    }
+    .ServiceCard span{
+        font-size: 1.1rem;
+    }
+    .Service2Text button{
+        display:block;
+        font-size: 1rem;
+    }
+    .Service2Text button:hover{
+        background-color: var(--orange600);
+    }
+    .Service2Text p{
+        display: block;
+    }
+    .btnMasInfoCel{
+        display: none;
+    }
+}
+@media screen and (min-width:1300px){
+    .Service2Text{
+        justify-content: start;
+        padding: 5rem 3rem;
+    }
+    .Service2Text h3{
+        font-size: 4rem;
+        margin-bottom: 3rem;
+    }
+    .Service2Text p{
+        font-size: 1.6rem;
+        margin-bottom: 5rem;
+    }
+    .Service2Text button{
+        height: fit-content;
+        padding: 1rem;
+        width: fit-content;
+        font-size: 1.4rem;
+    }
+}
+
+

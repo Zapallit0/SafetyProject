@@ -1,0 +1,153 @@
+.Services{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100svh;
+}
+.Services::before{
+    content:"";
+    opacity: 0.85;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    background-image: url('../../../assets/ServicesPage/BackgroundGestionSeg.jpg');
+    background-size: cover;
+    background-position-y:center;
+    filter: brightness(20%);
+    z-index: 1;
+}
+.Services_Title{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    color: var(--orange50);
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+.Services_Title h3{
+    color: var(--orange50);
+    font-size: 1.5rem;
+}
+.Services_Title span{
+    font-size: 1rem;
+}
+.ListServices{
+    width: 90%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    z-index: 100;
+    margin: 1rem 1rem;
+    gap: 0.5rem;
+}
+.CardService{
+    display: flex;
+    font-size: 0.8rem;
+    align-items: center;
+    flex-direction: row;
+    background-color: var(--orange950);
+    border-radius: 1rem;
+    width: 95%;
+    color: var(--orange50);
+    padding: 0.6rem;
+}
+.CardService img{
+    width:20px;
+    filter:invert(81%) sepia(53%) saturate(5687%) hue-rotate(358deg) brightness(100%) contrast(104%);
+    margin-right: 0.5rem;
+}
+.downloadBtn{
+    margin-bottom: 1rem;
+    width:50%;
+    padding: 0.5rem 1rem;
+    border-radius:1rem;
+    border: none;
+    background-color: var(--orange500);
+    color: var(--orange950);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.downloadBtn a{
+    color: var(--orange950);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.downloadBtn img{
+    margin-right:1rem;
+    width:30px;
+}
+.downloadBtn:hover{
+    background-color: var(--orange600);
+}
+.downloadBtn:active{
+    scale: 0.99;
+}
+@media screen and (min-width:720px){
+    .Services{
+        border-bottom: 3px #FFA500;
+        border-style: solid;
+        border-left: 0px white;
+        border-right: 0px white;
+        border-top: 0px white;
+    }
+    .ListServices{
+        width: 80%;
+        flex-direction: column;
+    }
+    .downloadBtn{
+        margin-top: 2rem;
+    }
+}
+@media screen and (min-width:1000px) {
+    .Services{
+        flex-direction: row;
+    }
+    .Services_Title{
+        width: 40%;
+        margin: 2rem;
+    }
+    .Services_Title h3{
+        font-size: 3rem;
+    }
+    .Services_Title span{
+        font-size: 1.5rem;
+    }
+    .ListServices{
+        width: 60%;
+        margin-right: 2rem;
+        gap: 1.5rem;
+        align-items: start;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+    .CardService{
+        padding: 1rem;
+        font-size: 1.4rem;
+    }
+    .downloadBtn{
+        width:40%;
+    }
+    .downloadBtn img{
+        margin-right:1rem;
+        width:40px;
+    }
+}
+@media screen and (min-width:1200px) {  
+    .Services_Title{
+        width: 55%;
+    }
+    .Services_Title h3{
+        font-size: 3.5rem;
+    }
+    .ListServices{
+        width: 45%;
+    }
+}

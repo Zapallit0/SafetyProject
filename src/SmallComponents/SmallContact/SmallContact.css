@@ -1,0 +1,53 @@
+.MasInfo{
+    height: fit-content;
+    background-color: var(--orange500);
+    color: var(--orange950);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2rem 0;
+}
+.MasInfoTexto{
+    width: 60%;
+}
+.MasInfoTexto h3{
+    font-size: 1.5rem;
+    margin-bottom:2rem;
+}
+.MasInfoTexto p{
+    font-size: 1rem;
+}
+.MasInfoButton{
+    width: 20%;
+}
+.MasInfoButton button{
+    font-size: 0.8rem;
+    border: none;
+    border-radius: 25px;
+    color: var(--orange950);
+    width: 100%;
+    height: 2.8rem;
+    background-color: var(--orange50);
+}
+.MasInfoButton button:hover{
+    background-color:var(--orange100);
+    scale: 1.01;
+}
+
+@media screen and (min-width:720px){
+    .MasInfoTexto h3{
+        font-size: 2.3rem;
+    }
+    .MasInfoTexto p{
+        font-size: 1rem;
+    }
+    .MasInfoButton button{
+        font-size: 1rem;
+        border: none;
+        border-radius: 25px;
+        width: 100%;
+        height: 2.8rem;
+        background-color: white;
+    }
+}
