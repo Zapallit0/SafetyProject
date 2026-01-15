@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     padding: auto;
-    text-align: center;
+    text-align: left;
     gap: 2rem;
     z-index: 50;
 }
@@ -25,11 +25,12 @@
     background-color: black;
     background-attachment: fixed;
 }
-.mainPage h1{
-    color:white;
-    font-size: 3.5rem;
-    font-weight: 800;
-    z-index: 10;
+.mainPage .information{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    z-index: 100;
+    max-width: 70%;
 }
 .mainPage .wrapper{
     box-sizing: content-box;

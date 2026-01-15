@@ -1,17 +1,19 @@
-import React from 'react'
 import './MainPage.css'
 // Lazy Load
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import { Link } from 'react-router-dom';
+import Logo_Fullname from '../../../assets/Logos/Logo_FullName_W.svg'
 import Facebook from '../../../assets/social/facebook-SafetyAdvisors.svg';
 import Linkedin from '../../../assets/social/linkedin-SafetyAdvisors.svg';
 import Instagram from '../../../assets/social/instagram-SafetyAdvisors.svg';
 
+
 function MainPage() {
   return (
-    <div className='mainPage' id='Main_Page'>
-        <h1>SAFETY<br/>ADVISORS</h1>
+    <div className='mainPage' id='Main_Page'> 
+      <div className='information'>
+        <img src={Logo_Fullname} alt="Logo Safety Advisor" height={"100px"} width={"300px"}/>
         <div className='wrapper'>
           <h2>Especialistas en</h2>
           <div className='words'>
@@ -23,6 +25,8 @@ function MainPage() {
           </div>
         </div>
         <p>Creando entornos de trabajo seguros para tu empresa</p>
+      </div>
+
         <div className='buttonsMainPage'>
           <Link to={"/Servicios"} className='buttonServicesMP'><button type='button'>Servicios</button></Link>
           <Link to={"/Contacto"} className='buttonCTA'> <button>Contáctanos</button></Link>
