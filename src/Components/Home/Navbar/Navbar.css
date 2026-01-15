@@ -1,135 +1,129 @@
-.navbar{
-    width: 30%;
-    display: flex;
-    align-items: center;
-    justify-content:center;
+/* Layout general */
+.navbar-wrapper {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  background: rgba(120, 120, 120, 0.35);
+  backdrop-filter: blur(10px);
+  padding:  1.5rem 5rem;
+  z-index: 10;
+  border-radius: 0 0 24px 24px;
+}
+
+/* Menu desktop */
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 4rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #eee;
+  position: relative;
+  font-weight: 400;
+}
+
+.nav-link li {
+  cursor: pointer;
+}
+
+.nav-link.active {
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: white;
+  bottom: -6px;
+  left: 0;
+}
+
+/* Logo */
+.login-btn {
+  width: 5rem;
+  height:100%;
+  border-radius: 0 0 0 30px;
+  background: #E27100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+}
+/* Login */
+.login {
     position: absolute;
-    left: 35%;
-    background: rgba(118, 118, 118, 0.3);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(8.5px);
-    -webkit-backdrop-filter: blur(8.5px);
-    z-index: 100;
-    height: 7vh;
-    padding: 0.5rem 2rem;
-    border-bottom-left-radius:25px;
-    border-bottom-right-radius:25px;
-}
-.link2 {
-    position: relative;
-    display: inline-block;
-    transition: color 0.3s ease;
+    top: 0;
+  right: 0;
+  height: 100%;;
 }
 
-.link2::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background: #fff;
-    transform: translateX(-50%);
-    transition: width 0.3s ease;
+.login img {
+  width: 2.2rem;
+  cursor: pointer;
 }
 
-.link2.active::after {
-    width: 100%;
+/* Hamburger */
+.hamburger {
+  display: none;
 }
 
-.link2.active {
-    color: #fff;
-    font-weight: bold;
+/* Mobile menu */
+.mobile-menu {
+  position: absolute;
+  top: 9vh;
+  width: 90%;
+  background: rgba(120, 120, 120, 0.35);
+  backdrop-filter: blur(10px);
+  list-style: none;
+  padding: 1rem 0;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.desktopMenu{
-    max-width: 50vw;
-    list-style: none;
-    display: flex;
+
+.mobile-link {
+  text-decoration: none;
+  color: white;
+  margin: 0.5rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar{
+      padding: 1.5rem;
+      border-radius: 0 0 24px 0px;
+  }
+  .navbar-wrapper {
+    left: 0;
     justify-content: space-between;
-    justify-content:end;
-    color: white;
-}
-.desktopMenu li{
-    display: inline-block;
-    font-size: 1.1rem;
-    margin: 0 20px;
-    cursor: pointer;
-    font-weight: 400;
-}
-.navbar li:hover{
-    color:gray;
-} 
+  }
+  .menu {
+    display: none;
+  }
 
-.logo{
-    height: 4rem;
-    cursor: pointer;
-}
-.logoCell{
-    height: 3rem;
-    cursor: pointer;
-    display: none;
-}
-.login img{
-    width: 2rem;
-    cursor: pointer;
-}
-.link, .link2{
-    text-decoration: none;
-    color: white;
-}
-.mobMenu{
-    display: none;
-}
-.navMenu{
+  .hamburger {
+    display: block;
+  }
+
+  .logo img {
+    display: block;
     position: absolute;
-    z-index:2;
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-    height: fit-content;
-    width: 95%;
-    list-style: none;
-    color: #fff;
-    background: rgba(118, 118, 118, 0.3);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(8.5px);
-    -webkit-backdrop-filter: blur(8.5px);
-    padding: 0.5rem 0rem;
-    top: 10vh;
-}
-.navMenu li{
-    cursor: pointer;
-    margin:0.2rem 0;
-}
-
-
-@media screen and (max-width:720px){
-    .navbar {
-        padding: 1rem;
-    }
-    .mobMenu{
-        display: flex;
-        color: white;
-        cursor: pointer;
-    }
-    .desktopMenu{
-        display: none;
-    }
-    .desktopMenuBtn{
-        display: none;
-    }
-}
-@media screen and (max-width:900px){
-    .logo{
-        display: none;
-    }
-    .logoCell{
-        display: flex;
-    }
-}
-@media screen and (min-width:1200px){
-    .desktopMenu li{
-        font-size: 1rem;
-        margin: 0 1rem;
-    }
+    left: 1rem;
+  }
 }

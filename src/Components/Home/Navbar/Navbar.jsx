@@ -1,37 +1,67 @@
-import React,{useState} from 'react'
-import './Navbar.css'
-import {NavLink} from 'react-router-dom'
-import userlogin from '../../../assets/user_login_n.webp';
-import logo from '../../../assets/Logos/LogoTitle.svg';
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { Squash as Hamburger } from 'hamburger-react';
+import './Navbar.css';
+
 import logoCell from '../../../assets/Logos/LogoHome.svg';
-import {Squash as Hamburger} from 'hamburger-react'
+import { UserRound } from 'lucide-react';
+
+const links = [
+  { to: '/', label: 'Inicio' },
+  { to: '/Servicios', label: 'Servicios' },
+  { to: '/Nosotros', label: 'Nosotros' },
+  { to: '/Contacto', label: 'Contacto' },
+];
 
 const Navbar = () => {
-    const [showMenu, setShowMenu]=useState(false);
-    return (
-        <header className='navbar'>
-            <div className='mobMenu'>
-                <Hamburger color="#fff" duration={0.3} toggled={showMenu} toggle={setShowMenu} easing="ease-in"/>
-            </div>           
-            {/* <Link to='/' className='logo'><img src={logo} alt="Logo de Safety Advisors grande" className='logo' title='LogoPrincipal'/></Link> */}
-            <NavLink to='/' className='logoCell'><img src={logoCell} alt="Logo de Safety Advisors pequeño" className='logoCell' title='LogoPrincipal' /></NavLink>
-            <ul className='desktopMenu'>
-                <NavLink className='link2' to='/'><li>Home</li></NavLink>
-                <NavLink className='link2' to='/Servicios'><li>Servicios</li></NavLink>
-                <NavLink className='link2' to='/Nosotros'><li>Nosotros</li></NavLink>
-                <NavLink className='link2' to='/Contacto'><li>Contacto</li></NavLink>
-            </ul>
-            {/* <div className='login'>
-                <img src={userlogin} alt="Login Safety Adivisors" className='imgLogin' title='LoginSA' />
-            </div>       */}
-            {/* Menu Mobile */}
-            <ul className='navMenu' style={{display:showMenu? 'flex':'none'}}>
-                <NavLink className='link' to='/'><li onClick={()=>{setShowMenu(!showMenu)}}>Home</li></NavLink>
-                <NavLink className='link' to='/Servicios'><li onClick={()=>{setShowMenu(!showMenu)}}>Servicios</li></NavLink>
-                <NavLink className='link' to='/Nosotros'><li onClick={()=>{setShowMenu(!showMenu)}}>Nosotros</li></NavLink>
-                <NavLink className='link' to='/Contacto'><li onClick={()=>{setShowMenu(!showMenu)}}>Contacto</li></NavLink>
-            </ul>
-        </header>
-  )}
+  const [open, setOpen] = useState(false);
 
-export default Navbar
+  return (
+    <header className="navbar-wrapper">
+      <nav className="navbar">
+        <ul className="menu">
+          {links.map(({ to, label }) => (
+            <NavLink
+              key={to}
+              to={to}
+              className={({ isActive }) =>
+                `nav-link ${isActive ? 'active' : ''}`
+              }
+            >
+              <li>{label}</li>
+            </NavLink>
+          ))}
+        </ul>
+
+        <div className="hamburger">
+          <Hamburger toggled={open} toggle={setOpen} size={20} color="#fff" />
+        </div>
+      </nav>
+
+      {/* Login */}
+    <div className="login">
+        <div className="login-btn">
+            <UserRound size={25} />
+        </div>
+    </div>
+
+      {/* Mobile Menu */}
+      {open && (
+        <ul className="mobile-menu">
+          {links.map(({ to, label }) => (
+            <NavLink
+              key={to}
+              to={to}
+              className="mobile-link"
+              onClick={() => setOpen(false)}
+            >
+              <li>{label}</li>
+            </NavLink>
+          ))}
+        </ul>
+      )}
+    </header>
+  );
+};
+
+export default Navbar;
