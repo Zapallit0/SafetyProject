@@ -37,9 +37,7 @@
     color: white;
 }
 .Service2Text p{
-    font-size: 1.5rem;
-    margin-bottom: 3rem;
-    display: none;
+    font-size: 1rem;
 }
 .btnServicio2{
     z-index: 100;
@@ -123,6 +121,7 @@
 .ServiceCard span{
     font-size: 0.8rem;
 }
+
 @media screen and (min-width:720px){
     .Service2{
         padding: 7rem 0;
