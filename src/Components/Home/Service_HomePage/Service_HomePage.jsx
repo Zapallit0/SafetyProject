@@ -92,7 +92,14 @@ function Service_HomePage() {
             }
         </motion.div>
         <Link to={'/Servicios'} className='btnServicio2'>
-                <button className='btnMasInfoCel'>Todos los servicios</button>
+                <motion.button
+                    className="btnMasInfoCel"
+                    whileHover={{ y: -3 }}
+                    whileTap={{ scale: 0.96 }}
+                    transition={{ duration: 0.2, ease: "easeOut" }}
+                >
+                    Todos los servicios →
+                </motion.button>
         </Link>
     </div>
   )

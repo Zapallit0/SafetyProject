@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 2rem 0;
 }
 .Service2:before{
     content:" ";
@@ -19,21 +20,22 @@
     z-index: 1;
 }
 .Service2Text{
-    margin-top: 1rem;
+    margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
-    width:80vw;
+    width:75%;
     height: fit-content;
     color: white;
-    /* background-color: gray; */
     justify-content: center;
     border-radius: 25px;
     text-align: center;
-    padding: 1rem;
     z-index: 100;
 }
 .Service2Text h3{
-    font-size: 2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1rem;
     color: white;
 }
 .Service2Text p{
@@ -43,21 +45,37 @@
     z-index: 100;
     text-decoration: none;
 }
-.btnServicio2 .btnMasInfoCel{
-    height: fit-content;
-    width: fit-content;
-    padding:1rem 1rem ;
-    border: none;
-    border-radius: 25px;
-    background-color: var(--orange500);
-    color: var(--orange950) ;
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin: 2rem 0;
+.btnServicio2 .btnMasInfoCel {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  padding: 0.9rem 1.4rem;
+  border: none;
+  border-radius: 28px;
+
+  background-color: var(--orange500);
+  color: white;
+
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  box-shadow:
+    0 10px 25px rgba(255, 152, 0, 0.35);
+  transition:
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
-.btnMasInfoCel:hover{
-    background-color: var(--orange600);
-    scale: 1.01;
+
+.btnServicio2 .btnMasInfoCel:hover {
+  background-color: var(--orange600);
+  box-shadow:
+    0 14px 35px rgba(255, 152, 0, 0.45);
+}
+
+.btnServicio2 .btnMasInfoCel:active {
+  background-color: var(--orange700);
 }
 /* Button Big screens */
 .Service2Text button{
