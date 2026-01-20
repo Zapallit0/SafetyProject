@@ -12,9 +12,7 @@ function Service_HomePage() {
         {
             "ServiceName":"Sistema de Gestión de Seguridad y Salud en el Trabajo",
             "Info":"según Ley 29783 y reglamento sectorial",
-            "Icon":GestionIcon,
-            feature:true
-
+            "Icon":GestionIcon
     },
         {"ServiceName":"Gestión de Salud Ocupacional",
         "Info":"según Ley 29783, DS 005-2012 TR,RM 375-2088 TR",
@@ -69,16 +67,27 @@ function Service_HomePage() {
             >
             {Services.map((service, index) => (
                 <motion.div
-                    className="ServiceCard"
-                    key={index}
-                    variants={cardVariants}
-                    whileHover={{ scale: 1.03 }}
-                    whileTap={{ scale: 0.96 }}
+                className="ServiceCard horizontal"
+                key={index}
+                variants={cardVariants}
+                whileHover={{ y: -6 }}
+                whileTap={{ scale: 0.97 }}
                 >
-                    <LazyLoadImage src={service.Icon} title='Service' alt='Homologacion,Salud Ocupacional,Prevencion, Seguridad'/>
+                <div className="ServiceCardContent">
                     <h4>{service.ServiceName}</h4>
-                    <span>{service.Info}</span>
-                </motion.div>
+                    <p>{service.Info}</p>
+                    <span className="ServiceLink">
+                    Conocer más →
+                    </span>
+                </div>
+
+                <div className="ServiceCardIcon">
+                    <LazyLoadImage
+                    src={service.Icon}
+                    alt={service.ServiceName}
+                    />
+                </div>
+            </motion.div>
             ))
             }
         </motion.div>
