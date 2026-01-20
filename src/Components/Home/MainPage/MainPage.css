@@ -139,7 +139,8 @@
 .RedesMP{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: left;
+    width: 75%;
     gap: 2rem;
     z-index: 20;
 }
