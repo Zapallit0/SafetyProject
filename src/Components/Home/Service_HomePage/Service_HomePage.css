@@ -1,4 +1,5 @@
 .Service2{
+    margin-top: 2rem;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -6,19 +7,6 @@
     align-items: center;
     padding: 2rem 0;
 }
-/* .Service2:before{
-    content:" ";
-    opacity: 0.85;
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    background-image: url("../../../assets/HomePageImgs/ServicesBackground.webp");
-    background-size: cover;
-    background-position-y:center;
-    filter: brightness(20%);
-    z-index: 1;
-} */
 .Service2Text{
     margin-bottom: 2rem;
     display: flex;
