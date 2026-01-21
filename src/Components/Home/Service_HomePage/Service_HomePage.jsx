@@ -51,12 +51,9 @@ function Service_HomePage() {
     
     <div className='Service2' id='Services'>
         <div className='Service2Text'>
-            <h3>Nuestros Servicios</h3>
+            <h3>Nuestros <span>Servicios</span></h3>
             <p>Diseñamos e implementamos soluciones en seguridad y salud ocupacional 
                 que protegen a tu empresa, cumplen la normativa y reducen riesgos reales.</p>
-            <Link to={'/Servicios'} className='btnServicio2'>
-                <button className='btnMasInfo'>Todos los servicios</button>
-            </Link>
         </div>
         <motion.div
             className="ServicesPresentation"
@@ -77,7 +74,7 @@ function Service_HomePage() {
                     <h4>{service.ServiceName}</h4>
                     <p>{service.Info}</p>
                     <span className="ServiceLink">
-                    Conocer más →
+                    Conoce más →
                     </span>
                 </div>
 

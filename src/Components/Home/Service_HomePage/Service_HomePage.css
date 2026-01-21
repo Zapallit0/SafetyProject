@@ -31,12 +31,15 @@
     text-align: center;
     z-index: 100;
 }
-.Service2Text h3{
+.Service2Text h3,span{
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 0.1rem;
     margin-bottom: 1rem;
     color: var(--orange950)
+}
+.Service2Text span{
+    color:var(--orange600);
 }
 .Service2Text p{
     font-size: 1rem;
@@ -58,7 +61,7 @@
   background-color: var(--orange500);
   color: white;
 
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.3px;
   cursor: pointer;
@@ -128,6 +131,9 @@
     transform 0.35s ease,
     box-shadow 0.35s ease,
     background-color 0.35s ease;
+}
+.ServiceCard.horizontal span {
+    letter-spacing: 0;
 }
 .ServiceCardContent {
   display: flex;
@@ -199,97 +205,59 @@
     .Service2{
         padding: 3rem 0;
     }
+    .Service2Text{
+        max-width: 60%;
+    }
     .ServicesPresentation{
         width: 100%;
     }
      .ServiceCard.horizontal {
-    width:35% ;
-    text-align: left;
-    align-items: flex-start;
-  }
-
-  .ServiceCardIcon {
-    align-self: flex-end;
-  }
+        width:35% ;
+        text-align: left;
+        align-items: flex-start;
+        min-height: 250px;
+    }
+    .ServiceCardIcon {
+        align-self: flex-end;
+    }
     .btnMasInfoCel{
         margin-top: 2rem;
-        font-size: 1.5rem;
-        height: 4rem;
-        width: 12rem;
     }
 }
-@media screen and (min-width:1100px){
-    .Service2{
-        flex-direction: row;
-        justify-content: center;
-        padding: 12rem 3rem;
-    }
+@media screen and (min-width:1400px){
     .Service2Text{
-        width:35vw;
-        height:fit-content;
-        min-height: 70vh;
-        color: white;
         justify-content: center;
         border-radius: 25px;
-        text-align: left;
-        padding: 1rem 2rem;
+        text-align: center;
         z-index: 100;
-        margin-bottom: 0;
+        max-width: 50%;
     }
     .ServicesPresentation{
         align-items: start;
     }
-    .Service2Text h3{
-        align-self: center;
+    .Service2Text h3,span{
         margin-bottom: 2rem;
+        font-size: 2rem;
     }
-    .Service2Text p{
-        font-size: 1.5rem;
+    .ServiceCard.horizontal {
+        width:20% ;
+        min-height: 300px;
     }
-    .ServiceCard{
-        height: 45vh;
-        min-height: 35vh;
-        padding: 0 2.5rem;
-    }
-    .ServiceCard h4{
-        font-size: 1.6rem;
+    .ServiceCard.horizontal h4{
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
     }
     .ServiceCard span{
         font-size: 1.1rem;
     }
-    .Service2Text button{
-        display:block;
-        font-size: 1rem;
+    .ServiceCardContent{
+        height:250px;
     }
-    .Service2Text button:hover{
-        background-color: var(--orange600);
+    .ServiceCardContent span{
+        justify-self:end
     }
-    .Service2Text p{
-        display: block;
-    }
-    .btnMasInfoCel{
-        display: none;
+    .ServiceCardIcon img {
+    width: 90%;
     }
 }
-@media screen and (min-width:1300px){
-    .Service2Text{
-        justify-content: start;
-        padding: 5rem 3rem;
-    }
-    .Service2Text h3{
-        font-size: 4rem;
-        margin-bottom: 3rem;
-    }
-    .Service2Text p{
-        font-size: 1.6rem;
-        margin-bottom: 5rem;
-    }
-    .Service2Text button{
-        height: fit-content;
-        padding: 1rem;
-        width: fit-content;
-        font-size: 1.4rem;
-    }
-}
-
 
