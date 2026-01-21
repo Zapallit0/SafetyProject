@@ -6,7 +6,7 @@
     align-items: center;
     padding: 2rem 0;
 }
-.Service2:before{
+/* .Service2:before{
     content:" ";
     opacity: 0.85;
     width: 100%;
@@ -18,7 +18,7 @@
     background-position-y:center;
     filter: brightness(20%);
     z-index: 1;
-}
+} */
 .Service2Text{
     margin-bottom: 2rem;
     display: flex;
@@ -36,10 +36,11 @@
     font-weight: 700;
     letter-spacing: 0.1rem;
     margin-bottom: 1rem;
-    color: white;
+    color: var(--orange950)
 }
 .Service2Text p{
     font-size: 1rem;
+    color: black;
 }
 .btnServicio2{
     z-index: 100;
@@ -101,13 +102,12 @@
     justify-content: center;
     align-items: center;
     text-align: left;
-    width: 80vw;
+    width: 90%;
     color: white;
     z-index: 100;
 }
 .ServiceCard.horizontal {
   width: 100%;
-  max-width: 520px;
   min-height: 160px;
 
   display: flex;
@@ -195,18 +195,15 @@
   background-color: white;
 }
 
-@media screen and (min-width:720px){
+@media screen and (min-width:960px){
     .Service2{
-        padding: 7rem 0;
-    }
-    .Service2Text{
-        margin-bottom: 2rem;
+        padding: 3rem 0;
     }
     .ServicesPresentation{
-        width: 90vw;
+        width: 100%;
     }
      .ServiceCard.horizontal {
-    flex-direction: column;
+    width:35% ;
     text-align: left;
     align-items: flex-start;
   }
