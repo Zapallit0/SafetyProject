@@ -13,14 +13,15 @@
     content:" ";
     opacity: 0.85;
     width: 100%;
-    height: 110svh;
+    height: 100svh;
     display: block;
     position: absolute;
-    background-image: url("../../../assets/HomePageImgs/HeroBackground.jpg");
+    background-image: url("../../../assets/HomePageImgs/Bg.jpg");
     background-size: cover;
     background-position-y:center;
-    background-position-x: center;
-    filter: brightness(10%);
+    background-position-x:70%;
+    filter: brightness(30%);
+    
     z-index: 1;
     background-color: black;
     background-attachment: fixed;
