@@ -35,31 +35,49 @@
     cursor: pointer;
 }
 
-/* Cambios sobre la primera parte del texto*/
-.textOurInfo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom:2rem;
-    width: 75vw;
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
 }
-.textOurInfo h4{
-    color:var(--orange600);
-    font-size: 0.9rem;
+
+.cardEspecializacion {
+  width: 150px;
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
 }
-.textOurInfo h2{
-    margin-bottom: 1rem;
-    font-size: 1.7rem;
-    font-weight: 1000;
-    color: #262626;
+
+.card-bg {
+  position: relative;
+  flex: 1;
+  /* background-image: url('../../../assets/HomePageImgs/Especializacion/Gestion_Seguridad.jpg'); */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.textOurInfo span{
-    color: var(--orange700);
-    font-weight: bolder;
+.card-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
 }
-.textOurInfo p{
-    font-size: 0.8rem;
-    font-weight: 400;
+.card-number {
+  position: relative;
+  z-index: 2;
+  font-size: 4.5rem;
+  font-weight: 800;
+  line-height: 1;
+  color: transparent;
+
+  /* Borde del texto */
+  -webkit-text-stroke: 2px #38bdf8; /* celeste */
+  text-stroke: 2px #38bdf8;
+
+  opacity: 0.9;
 }
 /* Cambios sobre la segunda parte del texto */
 .textOurMission{

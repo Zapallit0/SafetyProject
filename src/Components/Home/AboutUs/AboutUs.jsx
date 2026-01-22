@@ -2,42 +2,60 @@ import './AboutUs.css'
 import {Link} from 'react-router-dom'
 import Nosotros from'../../../assets/HomePageImgs/AboutUs.webp';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import SeguridadImg from '../../../assets/HomePageImgs/Especializacion/Gestion_Seguridad.jpg';
+import SaludImg from '../../../assets/HomePageImgs/Especializacion/Gestion_Seguridad.jpg';
+import MedioAmbienteImg from '../../../assets/HomePageImgs/Especializacion/Gestion_Seguridad.jpg';
+import HomologacionesImg from '../../../assets/HomePageImgs/Especializacion/Gestion_Seguridad.jpg';
+import TalentoImg from '../../../assets/HomePageImgs/Especializacion/Gestion_Seguridad.jpg';
 
 function AboutUs() {
-    const areas_especializacion=[
-        {   
-            "Index":"1",
-            "Area":"Gestión de Seguridad",
-            "Image":""
-        },
-        {   
-            "Index":"2",
-            "Area":"Salud Ocupacional",
-            "Image":""
-        },
-        {   
-            "Index":"3",
-            "Area":"Medio Ambiente",
-            "Image":""
-        },
-        {   
-            "Index":"4",
-            "Area":"Homologaciones",
-            "Image":""
-        },
-        {   
-            "Index":"5",
-            "Area":"Gestión de Talento y Capacitaciones",
-            "Image":""
-        },
-    ]
+    const areas_especializacion = [
+    {
+        index: 1,
+        area: 'Gestión de Seguridad',
+        image: SeguridadImg,
+    },
+    {
+        index: 2,
+        area: 'Salud Ocupacional',
+        image: SaludImg,
+    },
+    {
+        index: 3,
+        area: 'Medio Ambiente',
+        image: MedioAmbienteImg,
+    },
+    {
+        index: 4,
+        area: 'Homologaciones',
+        image: HomologacionesImg,
+    },
+    {
+        index: 5,
+        area: 'Gestión de Talento y Capacitaciones',
+        image: TalentoImg,
+    },
+    ];
   return (
     <div className='AboutUs' id='About_Us'>
-        <div className='textAboutUs'>
-            <div className='textOurInfo'>
-                <h4>ÁREAS DE ESPECIALIZACIÓN</h4>
-                <div className='card'>
-                    
+        <div className='AboutUsContent'>
+            <div className="CardsContainer">
+            <h4>ÁREAS DE ESPECIALIZACIÓN</h4>
+                <div className="cardsGrid">
+                    {areas_especializacion.map((item) => (
+                    <div className="cardEspecializacion" key={item.index}>
+                        <div
+                        className="card-bg"
+                        style={{ backgroundImage: `url(${item.image})` }}
+                        >
+                        <span className="card-number">
+                            {item.index.toString().padStart(2, '0')}
+                        </span>
+                        </div>
+
+                        <h3 className="card-title">{item.area}</h3>
+                    </div>
+                    ))}
                 </div>
             </div>
             <div className='textOurMission'>
