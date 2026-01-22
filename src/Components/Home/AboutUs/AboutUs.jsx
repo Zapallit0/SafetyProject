@@ -1,12 +1,11 @@
 import './AboutUs.css'
 import {Link} from 'react-router-dom'
-import Nosotros from'../../../assets/HomePageImgs/AboutUs.webp';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import Nosotros from'../../../assets/HomePageImgs/Especializacion/Nosotros.jpg';
 import SeguridadImg from '../../../assets/HomePageImgs/Especializacion/Gestion_Seguridad.jpg';
-import SaludImg from '../../../assets/HomePageImgs/Especializacion/Gestion_Seguridad.jpg';
-import MedioAmbienteImg from '../../../assets/HomePageImgs/Especializacion/Gestion_Seguridad.jpg';
-import HomologacionesImg from '../../../assets/HomePageImgs/Especializacion/Gestion_Seguridad.jpg';
-import TalentoImg from '../../../assets/HomePageImgs/Especializacion/Gestion_Seguridad.jpg';
+import SaludImg from '../../../assets/HomePageImgs/Especializacion/Salud_Ocupacional.jpg';
+import MedioAmbienteImg from '../../../assets/HomePageImgs/Especializacion/Medio_Ambiente.jpg';
+import HomologacionesImg from '../../../assets/HomePageImgs/Especializacion/Homologacion.jpg';
+import TalentoImg from '../../../assets/HomePageImgs/Especializacion/Gestion_Talento.jpg';
 
 function AboutUs() {
     const areas_especializacion = [
@@ -38,7 +37,6 @@ function AboutUs() {
     ];
   return (
     <div className='AboutUs' id='About_Us'>
-        <div className='AboutUsContent'>
             <div className="CardsContainer">
             <h4>ÁREAS DE ESPECIALIZACIÓN</h4>
                 <div className="cardsGrid">
@@ -51,15 +49,15 @@ function AboutUs() {
                         <span className="card-number">
                             {item.index.toString().padStart(2, '0')}
                         </span>
+                        <h3>{item.area}</h3>
                         </div>
-
-                        <h3 className="card-title">{item.area}</h3>
                     </div>
                     ))}
                 </div>
             </div>
             <div className='textOurMission'>
-                <img src="" alt="" />
+                <div className='MissionContainer'>
+                <img src={Nosotros} alt=""  height={'200px'}  />
                 <div className='cardOurMission'>
                     <h3>No solo te protegemos y cuidamos</h3>
                     <p>
@@ -72,8 +70,8 @@ function AboutUs() {
                         </button>
                     </Link>
                 </div>
+                </div>
             </div>
-        </div>
     </div>
   )
 }

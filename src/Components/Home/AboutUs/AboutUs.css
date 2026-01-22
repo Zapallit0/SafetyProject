@@ -1,27 +1,12 @@
 .AboutUs{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap-reverse;
-    padding: 3rem 0;
+    flex-direction: column;
+    padding: 2rem 0;
     height:fit-content;
+    width: 100%;
     align-items: center;
     justify-content:center;
-    background-color: #D9D9D9;
-}
-.AboutUs img{
-    margin-top:1rem;
-    width: 18rem;
-    height:15rem;
-    object-fit: cover;
-    border-radius: 2rem;
-    border:1px solid var(--orange600);
-}
-.textAboutUs {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 80%;
-    text-align: center;
+    gap: 4rem;
 }
 .textAboutUs button{
     height: 2.5rem;
@@ -34,37 +19,55 @@
     border-radius: 25px;
     cursor: pointer;
 }
-
+.CardsContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+}
+.CardsContainer h4{
+    font-size: 20px;
+    color:var(--orange950)
+}
 .cardsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .cardEspecializacion {
-  width: 150px;
-  height: 200px;
-  border-radius: 12px;
+  width: 100%;
+  height: 100px;
   overflow: hidden;
 }
 
 .card-bg {
   position: relative;
   flex: 1;
-  /* background-image: url('../../../assets/HomePageImgs/Especializacion/Gestion_Seguridad.jpg'); */
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  height: 100%;
 }
+
 .card-bg::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.55);
   z-index: 1;
+  width: 100%;
 }
+.card-bg h3{
+    z-index: 90;
+    color: white;
+    width: 180px;
+    text-align: left;
+}
+
 .card-number {
   position: relative;
   z-index: 2;
@@ -72,51 +75,74 @@
   font-weight: 800;
   line-height: 1;
   color: transparent;
-
   /* Borde del texto */
-  -webkit-text-stroke: 2px #38bdf8; /* celeste */
+  -webkit-text-stroke: 2px white;
   text-stroke: 2px #38bdf8;
 
   opacity: 0.9;
 }
+
+
 /* Cambios sobre la segunda parte del texto */
-.textOurMission{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 25px;
-    width: 75vw;
+.textOurMission {
+  /* position: relative; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 24px;
+}
+.textOurMission .MissionContainer{
+    position: relative;
+    width:80%;
+}
+.MissionContainer img {
+  width: 200px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.cardOurMission {
+  position: absolute;
+  left: 20%; /* se monta sobre la imagen */
+  top: 50%;
+  transform: translateY(-50%);
+
+  background: var(--orange950);
+  color: #fff;
+
+  padding: 24px;
+  width: 320px;
+  /* border-radius: 16px; */
+
+  z-index: 2;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
 }
 .textOurMission h3{
     margin-bottom: 0.5rem;
-    color: #262626;
+    color: white;
     font-size: 1rem;
 }
 .textOurMission p{
     font-size: 0.8rem;
     font-weight: 400;
 }
-.textAboutUs button:hover{
+.textOurMission button:hover{
      background-color:var(--orange600);
      scale: 1.01;
 }
 
 /* IPhone SE 375 667 SCREEN SIZE DONE */
 @media screen and (min-width:720px){
-    .AboutUs{
-        flex-wrap: nowrap;
-        justify-content:space-evenly;
-        padding: 6rem 0;
-    }
+
     .textAboutUs{
         text-align: center;
     }
     .textOurInfo{
         width: 40vw;
     }
-    .textOurMission{
-        width: 40vw;
-    }
+ 
     .textOurInfo h4{
         font-size: 1.5rem;
     }
@@ -126,26 +152,6 @@
     .textOurInfo p{
         font-size: 1.1rem;
         font-weight: 400;
-    }
-    .textOurMission h3{
-        font-size: 1.5rem;
-    }
-    .textOurMission {
-        font-size: 1.1rem;
-    }
-    .textAboutUs .textOurInfo span{
-        font-size: 1.1rem;
-    }
-    .textAboutUs button{
-        width: fit-content;
-        height: fit-content;
-        font-size: 1rem;
-        padding: 1rem 1rem;
-    }
-    .AboutUs img{
-        width: 18rem;
-        height:30rem;
-        object-fit: cover;
     }
 }
 @media screen and (min-width:1100px){
