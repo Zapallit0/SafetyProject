@@ -61,8 +61,7 @@ function AboutUs() {
                 <div className='cardOurMission'>
                     <h3>No solo te protegemos y cuidamos</h3>
                     <p>
-                        Tambien transformamos tu organización hacia un futuro más
-                        seguro, saludable y sostenible.
+                        Transformamos su organización hacia un futuro más seguro, saludable y sostenible
                     </p>
                     <Link className='linkAboutUs' to={'/Nosotros'}>
                         <button>

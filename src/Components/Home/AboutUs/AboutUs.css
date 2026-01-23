@@ -75,124 +75,115 @@
   font-weight: 800;
   line-height: 1;
   color: transparent;
-  /* Borde del texto */
+
   -webkit-text-stroke: 2px white;
   text-stroke: 2px #38bdf8;
-
   opacity: 0.9;
 }
 
 
 /* Cambios sobre la segunda parte del texto */
 .textOurMission {
-  /* position: relative; */
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  gap: 24px;
 }
 .textOurMission .MissionContainer{
     position: relative;
-    width:80%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .MissionContainer img {
   width: 200px;
   height: 400px;
   object-fit: cover;
   border-radius: 12px;
+  transform: translateX(50px);
 }
 .cardOurMission {
-  position: absolute;
-  left: 20%; /* se monta sobre la imagen */
-  top: 50%;
-  transform: translateY(-50%);
-
-  background: var(--orange950);
-  color: #fff;
-
-  padding: 24px;
-  width: 320px;
-  /* border-radius: 16px; */
-
-  z-index: 2;
-
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+    transform: translateX(-50px);
+    background: var(--orange900);
+    color: #fff;
+    padding: 24px;
+    height: 60%;
+    width: 300px;
+    z-index: 2;
+    box-shadow: 0 20px 40px rgba(7, 6, 6, 0.35);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
-.textOurMission h3{
-    margin-bottom: 0.5rem;
+.cardOurMission h3{
     color: white;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
-.textOurMission p{
+.cardOurMission p{
     font-size: 0.8rem;
     font-weight: 400;
 }
-.textOurMission button:hover{
-     background-color:var(--orange600);
-     scale: 1.01;
+.cardOurMission button{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-weight: 600;
+    border-bottom: var(--orange600) 2px solid; /* línea normal en celular */
 }
 
-/* IPhone SE 375 667 SCREEN SIZE DONE */
 @media screen and (min-width:720px){
-
-    .textAboutUs{
-        text-align: center;
+    .cardOurMission {
+        justify-content: center;
+        height: 320px;
+        width: 350px;
     }
-    .textOurInfo{
-        width: 40vw;
+    .cardOurMission h3{
+        font-size: 2rem;
+        justify-self: flex-start;
     }
- 
-    .textOurInfo h4{
-        font-size: 1.5rem;
-    }
-    .textOurInfo h2{
-        font-size: 2.5rem;
-    }
-    .textOurInfo p{
-        font-size: 1.1rem;
+    .cardOurMission p{
+        font-size: 1rem;
         font-weight: 400;
+    }
+    .MissionContainer img {
+        width: 300px;
+        height: 500px;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+    .cardOurMission button{
+        font-size: 1.2rem;
     }
 }
 @media screen and (min-width:1100px){
-    .AboutUs{
-        padding: 12rem 0rem;
+    .textOurMission .MissionContainer{
+        width:100%;
     }
-    .textAboutUs{
-        text-align: left;
+    .MissionContainer img{
+        width: 500px;
+        height:650px;
     }
-    .AboutUs img{
-        width: 35rem;
-        height:35rem;
-        object-fit: cover;
-    }
-    .textOurInfo h4{
-        font-size: 2rem;
-    }
-    .textOurInfo h2{
-        font-size: 3rem;
-        margin-bottom: 3rem;
-    }
-    .textOurInfo p{
-        font-size: 1.5rem;
-        font-weight: 400;
-        margin-bottom: 3rem;
-    }
-    .textAboutUs .textOurInfo span{
-        font-size: 1.5rem;
+    .cardOurMission {
+        padding-left: 2rem;
+        transform: translateX(-100px);
+        justify-content: center;
+        height: 450px;
+        width: 500px;
     }
     .textOurMission h3{
-        font-size: 2rem;
+        width: 80%;
+        font-size: 2.2rem;
         margin-bottom: 2rem;
     }
     .textOurMission p{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+        width: 80%;
     }
-    .textAboutUs button{
+    .cardOurMission button{
         margin-top: 2rem;
-        width: 15rem;
         height: 4rem;
-        font-size: 2rem;
+        font-size: 1.5rem;
         padding: 0 1rem;
     }
 }
