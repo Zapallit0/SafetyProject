@@ -104,10 +104,13 @@ function ServiceSection() {
   return (
     <div className="SrvSections">
       {servicesData.map((service, i) => (
-        <section
+        <div
           key={i}
           id={service.id}
-          className={`Srv Srv--${service.scheme} ${i % 2 !== 0 ? 'Srv--imgRight' : ''}`}
+          className={`SrvWrap SrvWrap--${service.scheme} ${i < servicesData.length - 1 ? 'SrvWrap--bordered' : ''}`}
+        >
+        <section
+          className={`Srv ${i % 2 !== 0 ? 'Srv--imgRight' : ''}`}
         >
           <motion.div
             className="Srv_imageWrap"
@@ -163,6 +166,7 @@ function ServiceSection() {
             </motion.button>
           </motion.div>
         </section>
+        </div>
       ))}
     </div>
   )

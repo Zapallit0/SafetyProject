@@ -2,8 +2,21 @@
   width: 100%;
 }
 
+/* ── Full-width wrapper (bg + border) ── */
+.SrvWrap {
+  width: 100%;
+}
+
+.SrvWrap--bordered {
+  border-bottom: 3px solid var(--orange500);
+}
+
+.SrvWrap--unified {
+  background-color: #fafafa;
+}
+
 /* =============================================
-   BASE BLOCK
+   BASE BLOCK (centered)
    ============================================= */
 .Srv {
   display: flex;
@@ -125,46 +138,37 @@
 /* =============================================
    UNIFIED COLOR SCHEME
    ============================================= */
-.Srv--unified {
-  background-color: #fafafa;
-  border-bottom: 3px solid var(--orange500);
-}
-
-.Srv--unified:last-child {
-  border-bottom: none;
-}
-
-.Srv--unified .Srv_iconBadge {
+.SrvWrap--unified .Srv_iconBadge {
   background-color: var(--orange500);
 }
 
-.Srv--unified .Srv_title {
+.SrvWrap--unified .Srv_title {
   color: var(--orange950);
 }
 
-.Srv--unified .Srv_subtitle {
+.SrvWrap--unified .Srv_subtitle {
   color: #555;
 }
 
-.Srv--unified .Srv_card {
+.SrvWrap--unified .Srv_card {
   background-color: var(--orange50);
   color: var(--orange950);
   border: 1px solid var(--orange200);
 }
 
-.Srv--unified .Srv_card img {
+.SrvWrap--unified .Srv_card img {
   filter: none;
 }
 
-.Srv--unified .Srv_download {
+.SrvWrap--unified .Srv_download {
   background-color: var(--orange500);
 }
 
-.Srv--unified .Srv_download a {
+.SrvWrap--unified .Srv_download a {
   color: white;
 }
 
-.Srv--unified .Srv_download img {
+.SrvWrap--unified .Srv_download img {
   filter: invert(1);
 }
 
@@ -216,11 +220,13 @@
   }
 }
 
-/* ── 1000px+: side-by-side ── */
+/* ── 1000px+: side-by-side, centered ── */
 @media screen and (min-width: 1000px) {
   .Srv {
     flex-direction: row;
-    min-height: 550px;
+    max-width: 1100px;
+    margin: 0 auto;
+    min-height: auto;
   }
 
   .Srv--imgRight {
@@ -237,7 +243,7 @@
     justify-content: center;
     align-items: flex-start;
     text-align: left;
-    padding: 3rem;
+    padding: 2.5rem;
   }
 
   .Srv_title {
@@ -265,7 +271,7 @@
 /* ── 1200px+ ── */
 @media screen and (min-width: 1200px) {
   .Srv {
-    min-height: 550px;
+    max-width: 1200px;
   }
 
   .Srv_body {
