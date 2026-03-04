@@ -126,7 +126,7 @@
    UNIFIED COLOR SCHEME
    ============================================= */
 .Srv--unified {
-  background-color: #111;
+  background-color: #fafafa;
   border-bottom: 3px solid var(--orange500);
 }
 
@@ -139,21 +139,21 @@
 }
 
 .Srv--unified .Srv_title {
-  color: white;
+  color: var(--orange950);
 }
 
 .Srv--unified .Srv_subtitle {
-  color: rgba(255, 255, 255, 0.55);
+  color: #555;
 }
 
 .Srv--unified .Srv_card {
-  background-color: rgba(255, 255, 255, 0.07);
-  color: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background-color: var(--orange50);
+  color: var(--orange950);
+  border: 1px solid var(--orange200);
 }
 
 .Srv--unified .Srv_card img {
-  filter: invert(81%) sepia(53%) saturate(5687%) hue-rotate(358deg) brightness(100%) contrast(104%);
+  filter: none;
 }
 
 .Srv--unified .Srv_download {
@@ -161,7 +161,11 @@
 }
 
 .Srv--unified .Srv_download a {
-  color: black;
+  color: white;
+}
+
+.Srv--unified .Srv_download img {
+  filter: invert(1);
 }
 
 /* =============================================
@@ -237,11 +241,11 @@
   }
 
   .Srv_title {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   .Srv_subtitle {
-    font-size: 1.05rem;
+    font-size: 0.9rem;
   }
 
   .Srv_cards {
@@ -249,46 +253,46 @@
   }
 
   .Srv_card {
-    font-size: 1rem;
-    padding: 0.85rem 1rem;
+    font-size: 0.9rem;
+    padding: 0.7rem 0.9rem;
   }
 
   .Srv_download img {
-    width: 30px;
+    width: 26px;
   }
 }
 
 /* ── 1200px+ ── */
 @media screen and (min-width: 1200px) {
   .Srv {
-    min-height: 600px;
+    min-height: 550px;
   }
 
   .Srv_body {
-    padding: 3rem 4rem;
+    padding: 2.5rem 3.5rem;
   }
 
   .Srv_iconBadge {
-    width: 4.2rem;
-    height: 4.2rem;
-    border-radius: 1rem;
+    width: 3.8rem;
+    height: 3.8rem;
+    border-radius: 0.9rem;
   }
 
   .Srv_title {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
   }
 
   .Srv_subtitle {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .Srv_cards {
-    gap: 0.8rem;
+    gap: 0.6rem;
   }
 
   .Srv_card {
-    font-size: 1.1rem;
-    padding: 1rem 1.2rem;
+    font-size: 0.95rem;
+    padding: 0.75rem 1rem;
   }
 
   .Srv_download {
