@@ -47,6 +47,10 @@ function ContactPage() {
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
         >
+          <div className='ContactFormHeader'>
+            <h3>Envíanos un mensaje</h3>
+            <p>Completa el formulario y nos pondremos en contacto contigo.</p>
+          </div>
           <ContactForm />
         </motion.div>
 
