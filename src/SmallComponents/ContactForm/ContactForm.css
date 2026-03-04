@@ -17,10 +17,22 @@
     padding: 0.8rem;
     border:1px solid var(--orange700);
     border-radius: 5px;
+    outline: none;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.ContactInput input:focus{
+    border-color: var(--orange500);
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
 }
 .ContactInput textarea{
     padding: 0.8rem;
     border-radius: 5px;
+    outline: none;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.ContactInput textarea:focus{
+    border-color: var(--orange500);
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
 }
 .MessageForm{
     border:1px solid var(--orange700);
@@ -37,9 +49,11 @@
     font-weight: 600;
     font-size:1rem;
     cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 .ContactSubmit:hover{
     background-color: var(--orange600);
+    transform: translateY(-2px);
 }
 .ContactSubmitLocked{
     width: fit-content;
