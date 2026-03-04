@@ -2,8 +2,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-color: black;
-  padding: 5rem 1.5rem 3.5rem;
+  min-height: 100svh;
+  padding: 5rem 1.5rem 4rem;
 }
 
 /* ── Text ── */
@@ -15,7 +17,7 @@
 
 .MainServ_text h2 {
   color: white;
-  font-size: 2.4rem;
+  font-size: 3rem;
   margin-bottom: 0.8rem;
 }
 
@@ -97,11 +99,11 @@
   }
 
   .MainServ_text h2 {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 
   .MainServ_text p {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
   }
 
   .MainServ_grid {
@@ -127,11 +129,11 @@
   }
 
   .MainServ_text h2 {
-    font-size: 4rem;
+    font-size: 5rem;
   }
 
   .MainServ_text p {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
   }
 
   .MainServ_grid {

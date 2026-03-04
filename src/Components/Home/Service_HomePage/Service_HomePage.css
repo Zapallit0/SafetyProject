@@ -18,7 +18,7 @@
     text-align: center;
     z-index: 100;
 }
-.Service2Text h3,span{
+.Service2Text h3, .Service2Text span{
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 0.1rem;
@@ -222,7 +222,7 @@
     .ServicesPresentation{
         align-items: start;
     }
-    .Service2Text h3,span{
+    .Service2Text h3, .Service2Text span{
         margin-bottom: 2rem;
         font-size: 2rem;
     }

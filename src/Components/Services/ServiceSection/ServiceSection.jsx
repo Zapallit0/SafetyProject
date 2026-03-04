@@ -1,4 +1,5 @@
 import { LazyLoadImage } from 'react-lazy-load-image-component'
+import { motion } from 'framer-motion'
 import CheckList from '../../../assets/IconsList/checklist.svg'
 import DwnldButton from '../../../assets/IconsList/DownloadArrow.svg'
 import GestionIcon from '../../../assets/Icons/Gestion_de_Seguridad.svg'
@@ -19,7 +20,7 @@ const servicesData = [
     title: 'Sistema de Gestión Seguridad y Salud en el Trabajo',
     subtitle: 'según Ley 29783 y reglamiento sectorial',
     image: BgGestion,
-    scheme: 'white',
+    scheme: 'unified',
     items: [
       'Política de SST (Seguridad Salud y Trabajo)',
       'IPERC (Identificación de Peligros y la Evaluación de Riesgos y Controles)',
@@ -37,7 +38,7 @@ const servicesData = [
     title: 'Gestión de Salud Ocupacional',
     subtitle: 'según Ley 29783, DS 005-2012 TR, RM 375-2088 TR',
     image: BgSalud,
-    scheme: 'dark',
+    scheme: 'unified',
     items: [
       'Programas de vigilancia médica ocupacional',
       'Monitoreos de Agentes Ocupacionales',
@@ -50,7 +51,7 @@ const servicesData = [
     title: 'Gestión de Prevención de Riesgos',
     subtitle: 'según Ley 29783, DS 005-2012 TR, RM 375-2088 TR',
     image: BgRiesgos,
-    scheme: 'orange',
+    scheme: 'unified',
     items: [
       'Programas de vigilancia médica ocupacional',
       'Monitoreos de Agentes Ocupacionales',
@@ -63,7 +64,7 @@ const servicesData = [
     title: 'Homologación para proveedores',
     subtitle: 'Requisitos técnicos, legales, de seguridad, éticos y financieros necesarios en los rubros:',
     image: BgHomologacion,
-    scheme: 'brown',
+    scheme: 'unified',
     items: [
       'Minería',
       'Construcción',
@@ -71,6 +72,33 @@ const servicesData = [
     ],
   },
 ]
+
+const imgVariants = {
+  hidden: { opacity: 0, scale: 1.08 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.7, ease: 'easeOut' } },
+}
+
+const bodyVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.1, delayChildren: 0.2 } },
+}
+
+const itemUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
+}
+
+const cardContainer = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.07, delayChildren: 0.1 } },
+}
+
+const cardItem = {
+  hidden: { opacity: 0, x: -16 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.35, ease: 'easeOut' } },
+}
+
+const viewportOpts = { once: true, margin: '-80px' }
 
 function ServiceSection() {
   return (
@@ -81,38 +109,59 @@ function ServiceSection() {
           id={service.id}
           className={`Srv Srv--${service.scheme} ${i % 2 !== 0 ? 'Srv--imgRight' : ''}`}
         >
-          <div className="Srv_imageWrap">
+          <motion.div
+            className="Srv_imageWrap"
+            variants={imgVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportOpts}
+          >
             <img
               className="Srv_image"
               src={service.image}
               alt={service.title}
               loading="lazy"
             />
-          </div>
+          </motion.div>
 
-          <div className="Srv_body">
-            <div className="Srv_iconBadge">
+          <motion.div
+            className="Srv_body"
+            variants={bodyVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportOpts}
+          >
+            <motion.div className="Srv_iconBadge" variants={itemUp}>
               <img src={service.icon} alt="" />
-            </div>
-            <h3 className="Srv_title">{service.title}</h3>
-            <span className="Srv_subtitle">{service.subtitle}</span>
+            </motion.div>
+            <motion.h3 className="Srv_title" variants={itemUp}>
+              {service.title}
+            </motion.h3>
+            <motion.span className="Srv_subtitle" variants={itemUp}>
+              {service.subtitle}
+            </motion.span>
 
-            <div className="Srv_cards">
+            <motion.div className="Srv_cards" variants={cardContainer}>
               {service.items.map((item, j) => (
-                <div className="Srv_card" key={j}>
+                <motion.div className="Srv_card" key={j} variants={cardItem}>
                   <LazyLoadImage src={CheckList} alt="" />
                   <h4>{item}</h4>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
 
-            <button className="Srv_download">
+            <motion.button
+              className="Srv_download"
+              variants={itemUp}
+              whileHover={{ y: -3 }}
+              whileTap={{ scale: 0.96 }}
+            >
               <a href={pdf} target="_blank" rel="noopener noreferrer" download>
                 <LazyLoadImage src={DwnldButton} alt="Descargar Brochure" />
                 BROCHURE COMPLETO
               </a>
-            </button>
-          </div>
+            </motion.button>
+          </motion.div>
         </section>
       ))}
     </div>

@@ -123,155 +123,45 @@
 }
 
 /* =============================================
-   COLOR SCHEMES
+   UNIFIED COLOR SCHEME
    ============================================= */
-
-/* ── WHITE ── */
-.Srv--white {
-  background-color: #fafafa;
+.Srv--unified {
+  background-color: #111;
+  border-bottom: 3px solid var(--orange500);
 }
 
-.Srv--white .Srv_iconBadge {
-  background-color: var(--orange50);
+.Srv--unified:last-child {
+  border-bottom: none;
 }
 
-.Srv--white .Srv_title {
-  color: var(--orange950);
-}
-
-.Srv--white .Srv_subtitle {
-  color: #666;
-}
-
-.Srv--white .Srv_card {
-  background-color: var(--orange50);
-  color: var(--orange950);
-}
-
-.Srv--white .Srv_card img {
-  filter: none;
-}
-
-.Srv--white .Srv_download {
+.Srv--unified .Srv_iconBadge {
   background-color: var(--orange500);
 }
 
-.Srv--white .Srv_download a {
+.Srv--unified .Srv_title {
   color: white;
 }
 
-.Srv--white .Srv_download img {
-  filter: invert(1);
-}
-
-/* ── DARK (black) ── */
-.Srv--dark {
-  background-color: #0a0a0a;
-}
-
-.Srv--dark .Srv_iconBadge {
-  background-color: rgba(255, 152, 0, 0.15);
-}
-
-.Srv--dark .Srv_iconBadge img {
-  filter: invert(81%) sepia(53%) saturate(5687%) hue-rotate(358deg) brightness(100%) contrast(104%);
-}
-
-.Srv--dark .Srv_title {
-  color: white;
-}
-
-.Srv--dark .Srv_subtitle {
+.Srv--unified .Srv_subtitle {
   color: rgba(255, 255, 255, 0.55);
 }
 
-.Srv--dark .Srv_card {
+.Srv--unified .Srv_card {
   background-color: rgba(255, 255, 255, 0.07);
   color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.Srv--dark .Srv_card img {
+.Srv--unified .Srv_card img {
   filter: invert(81%) sepia(53%) saturate(5687%) hue-rotate(358deg) brightness(100%) contrast(104%);
 }
 
-.Srv--dark .Srv_download {
+.Srv--unified .Srv_download {
   background-color: var(--orange500);
 }
 
-.Srv--dark .Srv_download a {
+.Srv--unified .Srv_download a {
   color: black;
-}
-
-/* ── ORANGE ── */
-.Srv--orange {
-  background-color: var(--orange500);
-}
-
-.Srv--orange .Srv_iconBadge {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-.Srv--orange .Srv_title {
-  color: black;
-}
-
-.Srv--orange .Srv_subtitle {
-  color: rgba(0, 0, 0, 0.6);
-}
-
-.Srv--orange .Srv_card {
-  background-color: rgba(255, 255, 255, 0.25);
-  color: black;
-}
-
-.Srv--orange .Srv_card img {
-  filter: none;
-}
-
-.Srv--orange .Srv_download {
-  background-color: black;
-}
-
-.Srv--orange .Srv_download a {
-  color: white;
-}
-
-.Srv--orange .Srv_download img {
-  filter: invert(1);
-}
-
-/* ── BROWN (orange950) ── */
-.Srv--brown {
-  background-color: var(--orange950);
-}
-
-.Srv--brown .Srv_iconBadge {
-  background-color: var(--orange500);
-}
-
-.Srv--brown .Srv_title {
-  color: var(--orange50);
-}
-
-.Srv--brown .Srv_subtitle {
-  color: var(--orange200);
-}
-
-.Srv--brown .Srv_card {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: var(--orange50);
-}
-
-.Srv--brown .Srv_card img {
-  filter: invert(81%) sepia(53%) saturate(5687%) hue-rotate(358deg) brightness(100%) contrast(104%);
-}
-
-.Srv--brown .Srv_download {
-  background-color: var(--orange500);
-}
-
-.Srv--brown .Srv_download a {
-  color: var(--orange950);
 }
 
 /* =============================================
