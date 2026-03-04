@@ -9,7 +9,7 @@ function MissionView() {
         <div className='paragraphsMission_View'>
             <div className='missionView'>
             <h3>Visión</h3>
-            <p>Para el 2026, ser <span>reconocidos</span> como una empresa de calidad por nuestros servicios.</p>
+            <p>Para el 2030, ser <span>reconocidos</span> como una empresa de calidad por nuestros servicios.</p>
             </div>
             <div className='missionView'>
             <h3>Misión</h3>
