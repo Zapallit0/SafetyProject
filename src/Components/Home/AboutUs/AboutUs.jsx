@@ -52,7 +52,7 @@ function AboutUs() {
                         <h3>{item.area}</h3>
                         </div>
                     </div>
-                    ))}
+                    ))}      
                 </div>
             </div>
             <div className='textOurMission'>

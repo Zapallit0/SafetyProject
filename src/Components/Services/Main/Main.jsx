@@ -1,39 +1,44 @@
-import React from 'react'
-import './Main.css'
-import GestionIcon from '../../../assets/Icons/Sistema-de-Gestión-Seguridad.svg'
-import SaludIcon from '../../../assets/Icons/Salud Ocupacional2.svg'
-import RiesgosIcon from '../../../assets/Icons/Prevencion de Riesgo.svg'
-import ProveedorIcon from '../../../assets/Icons/Homologacion.svg'
-import { Link } from 'react-scroll'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
+import GestionIcon from '../../../assets/Icons/Gestion_de_Seguridad.svg'
+import SaludIcon from '../../../assets/Icons/Salud_Ocupacional.svg'
+import RiesgosIcon from '../../../assets/Icons/Prevencion_de_Riesgos.svg'
+import HomologacionIcon from '../../../assets/Icons/Homologacion.svg'
+import './Main.css'
+
+const categories = [
+  { icon: GestionIcon, label: 'Sistema de Gestión', id: 'srv-gestion' },
+  { icon: SaludIcon, label: 'Salud Ocupacional', id: 'srv-salud' },
+  { icon: RiesgosIcon, label: 'Prevención de Riesgos', id: 'srv-riesgos' },
+  { icon: HomologacionIcon, label: 'Homologación', id: 'srv-homologacion' },
+]
 
 function Main() {
+  const scrollTo = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
-    <div className='Main_Services'>
-      <div className='Title_Services'>
-        <h2>Nuestros Servicios</h2>
+    <div className="MainServ">
+      <div className="MainServ_text">
+        <h2>Nuestros <span>Servicios</span></h2>
+        <p>
+          Diseñamos e implementamos soluciones en seguridad y salud ocupacional
+          que protegen a tu empresa, cumplen la normativa y reducen riesgos reales.
+        </p>
       </div>
-      <div className='Icons_Services'>
-        <div className='Icon_Service'>
-          <Link className='Link_Service' onClick={()=>{document.getElementById('Seguridad').scrollIntoView({behavior:'smooth'})}}><LazyLoadImage src={GestionIcon} alt="Seguridad Laboral" /></Link>
-          <span>Seguridad Laboral</span>
-        </div>
-        <div className='Icon_Service'>
-          <Link className='Link_Service' onClick={()=>{document.getElementById('SaludOcupacional').scrollIntoView({behavior:'smooth'})}}><LazyLoadImage src={SaludIcon} alt="Salud Ocupacional" /></Link>
-          <span>Salud Ocupacional</span>
-        </div>
-        <div className='Icon_Service'>
-          <Link className='Link_Service' onClick={()=>{document.getElementById('SaludOcupacional').scrollIntoView({behavior:'smooth'})}}><LazyLoadImage src={RiesgosIcon} alt="Certificacion" /></Link>
-          <span>Prevencion de Riesgos</span>
-        </div>
-        <div className='Icon_Service'>
-          <Link className='Link_Service' onClick={()=>{document.getElementById('Homologacion').scrollIntoView({behavior:'smooth'})}}><LazyLoadImage src={ProveedorIcon} alt="" /></Link>
-          <span>Capacitaciones</span>
-        </div>
-      </div>
-      <div className='CallUs_Services'>
-        <span>¡Llámanos!</span>
-        <a href="tel:964197982">964197982</a>
+      <div className="MainServ_grid">
+        {categories.map((cat, i) => (
+          <button
+            key={i}
+            className="MainServ_card"
+            onClick={() => scrollTo(cat.id)}
+          >
+            <div className="MainServ_cardIcon">
+              <LazyLoadImage src={cat.icon} alt={cat.label} />
+            </div>
+            <h4>{cat.label}</h4>
+          </button>
+        ))}
       </div>
     </div>
   )
