@@ -3,6 +3,7 @@ import {Routes, Route, useLocation} from 'react-router-dom'
 import Navbar from './Components/Home/Navbar/Navbar.jsx'
 import { AnimatePresence } from 'framer-motion'
 import ErrorBoundary from './Components/Helpers/ErrorBoundary.jsx'
+import WhatsAppBubble from './SmallComponents/WhatsAppBubble/WhatsAppBubble.jsx'
 const Home=lazy(()=>(import('./Components/Home.jsx')))
 const AboutUs=lazy(()=>import('./Components/AboutUs.jsx'))
 const Services=lazy(()=>import('./Components/Services.jsx'))
@@ -13,6 +14,7 @@ const App = () => {
   return (
     <>
       <Navbar />
+      <WhatsAppBubble />
       <ErrorBoundary>
         <Suspense fallback={null}>
           <AnimatePresence mode='wait'>
