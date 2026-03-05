@@ -1,7 +1,15 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npx eslint:*)"
+      "Bash(npx eslint:*)",
+      "Bash(find:*)",
+      "Bash(sort:*)",
+      "Bash(ls:*)",
+      "Bash(npm ls:*)",
+      "Bash(npm install:*)",
+      "Bash(node scripts/optimize-images.mjs:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(npm run build:*)"
     ]
   }
 }

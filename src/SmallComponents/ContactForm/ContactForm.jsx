@@ -43,7 +43,6 @@ function ContactForm() {
         publicKey: Public_Key,})
       .then(
         (result) => {
-          console.log(result.text);
           e.target.reset();
           toast.success("Correo enviado correctamente",{
             theme:"dark"

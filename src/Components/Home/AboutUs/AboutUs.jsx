@@ -1,11 +1,11 @@
 import './AboutUs.css'
 import {Link} from 'react-router-dom'
-import Nosotros from'../../../assets/HomePageImgs/Especializacion/Nosotros.jpg';
-import SeguridadImg from '../../../assets/HomePageImgs/Especializacion/Gestion_Seguridad.jpg';
-import SaludImg from '../../../assets/HomePageImgs/Especializacion/Salud_Ocupacional.jpg';
-import MedioAmbienteImg from '../../../assets/HomePageImgs/Especializacion/Medio_Ambiente.jpg';
-import HomologacionesImg from '../../../assets/HomePageImgs/Especializacion/Homologacion.jpg';
-import TalentoImg from '../../../assets/HomePageImgs/Especializacion/Gestion_Talento.jpg';
+import Nosotros from'../../../assets/HomePageImgs/Especializacion/Nosotros.webp';
+import SeguridadImg from '../../../assets/HomePageImgs/Especializacion/Gestion_Seguridad.webp';
+import SaludImg from '../../../assets/HomePageImgs/Especializacion/Salud_Ocupacional.webp';
+import MedioAmbienteImg from '../../../assets/HomePageImgs/Especializacion/Medio_Ambiente.webp';
+import HomologacionesImg from '../../../assets/HomePageImgs/Especializacion/Homologacion.webp';
+import TalentoImg from '../../../assets/HomePageImgs/Especializacion/Gestion_Talento.webp';
 
 function AboutUs() {
     const areas_especializacion = [

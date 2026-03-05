@@ -105,4 +105,5 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+import { memo } from 'react';
+export default memo(Navbar);

@@ -33,4 +33,5 @@ function Footer() {
   )
 }
 
-export default Footer
+import { memo } from 'react';
+export default memo(Footer)

@@ -16,7 +16,7 @@
     height: 100svh;
     display: block;
     position: absolute;
-    background-image: url("../../../assets/HomePageImgs/Bg.jpg");
+    background-image: url("../../../assets/HomePageImgs/Bg.webp");
     background-size: cover;
     background-position-y:center;
     background-position-x:70%;
@@ -24,7 +24,7 @@
     
     z-index: 1;
     background-color: black;
-    background-attachment: fixed;
+    background-attachment: scroll;
 }
 .mainPage .information{
     display: flex;

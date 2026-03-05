@@ -31,22 +31,17 @@ function Contact() {
                   <ContactForm/>
                 </div>
                 <div className='MapaDesktop'>
-
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.359159434794!2d-77.04547562490546!3d-12.087546642661458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c9005c2c32a9%3A0x55ebe8ff26685bcd!2sSAFETY%20ADVISORS!5e0!3m2!1ses-419!2spe!4v1734312689649!5m2!1ses-419!2spe"
-                      width="200" 
-                      height="450" allowFullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
-                      title='Ubicación Google Map'>
-                    </iframe>
-                </div> 
+                    <a href='https://www.google.com/maps/place/SAFETY+ADVISORS/@-12.0875466,-77.0454756,17z' target='_blank' rel='noreferrer' className='MapLink'>
+                      Ver ubicación en Google Maps →
+                    </a>
+                </div>
         </div>
       </div> 
       <div className='Mapa'>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.359159434794!2d-77.04547562490546!3d-12.087546642661458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c9005c2c32a9%3A0x55ebe8ff26685bcd!2sSAFETY%20ADVISORS!5e0!3m2!1ses-419!2spe!4v1734312689649!5m2!1ses-419!2spe"
-        width="200" 
-        height="450" allowFullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
-        title='Ubicación Google Map'>
-      </iframe>
-      </div> 
+        <a href='https://www.google.com/maps/place/SAFETY+ADVISORS/@-12.0875466,-77.0454756,17z' target='_blank' rel='noreferrer' className='MapLink'>
+          Ver ubicación en Google Maps →
+        </a>
+      </div>
     </section>
   )
 }

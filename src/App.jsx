@@ -1,7 +1,8 @@
-import React,{lazy} from 'react'
+import React,{lazy, Suspense} from 'react'
 import {Routes, Route, useLocation} from 'react-router-dom'
 import Navbar from './Components/Home/Navbar/Navbar.jsx'
 import { AnimatePresence } from 'framer-motion'
+import ErrorBoundary from './Components/Helpers/ErrorBoundary.jsx'
 const Home=lazy(()=>(import('./Components/Home.jsx')))
 const AboutUs=lazy(()=>import('./Components/AboutUs.jsx'))
 const Services=lazy(()=>import('./Components/Services.jsx'))
@@ -12,14 +13,18 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <AnimatePresence mode='wait'>
-        <Routes location={location} key={location.pathname}>
-          <Route index element={<Home />}/>
-          <Route exact path="/Nosotros" element={<AboutUs />}/>
-          <Route exact path="/Servicios" element={<Services />}/>
-          <Route exact path="/Contacto" element={<Contacto />}/>
-        </Routes>
-      </AnimatePresence>
+      <ErrorBoundary>
+        <Suspense fallback={null}>
+          <AnimatePresence mode='wait'>
+            <Routes location={location} key={location.pathname}>
+              <Route index element={<Home />}/>
+              <Route exact path="/Nosotros" element={<AboutUs />}/>
+              <Route exact path="/Servicios" element={<Services />}/>
+              <Route exact path="/Contacto" element={<Contacto />}/>
+            </Routes>
+          </AnimatePresence>
+        </Suspense>
+      </ErrorBoundary>
     </>
   )
 }
