@@ -55,32 +55,27 @@
     width: 90%;
 }
 .MapaDesktop{
+    background-color: black;
     display: none;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
+}
+.MapaDesktop iframe{
+    top:0;
+    left: 0;
+    border: none;
+    height: 100%;
+    width: 100%;
 }
 .Mapa{
     background-color: black;
     width: 100%;
-    padding: 3rem 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 50vh;
 }
-.MapLink{
-    display: inline-block;
-    padding: 1rem 2rem;
-    background-color: var(--orange500);
-    color: #ffffff;
-    font-weight: 600;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background-color 0.2s ease, transform 0.2s ease;
-}
-.MapLink:hover{
-    background-color: var(--orange600);
-    transform: translateY(-2px);
+.Mapa iframe{
+    top:0;
+    left: 0;
+    border: none;
+    height: 100%;
+    width: 100%;
 }
 @media screen and (min-width:720px){
     .DatosForm{
@@ -138,7 +133,8 @@
         margin-left: 1rem;
     }
     .MapaDesktop{
-        display: flex;
+        display: block;
+        height: 40rem;
         width: 100%;
     }
 }

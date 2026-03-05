@@ -147,17 +147,6 @@
     filter: brightness(0) invert(1);
 }
 
-.ContactMapContainer{
-    border-radius: 12px;
-    overflow: hidden;
-}
-.ContactMapContainer iframe{
-    display: block;
-    width: 100%;
-    height: 250px;
-    border: none;
-    border-radius: 12px;
-}
 
 .ContactSupport{
     width: 100%;
@@ -235,9 +224,6 @@
     }
     .ContactSocialRow{
         padding: 1.2rem;
-    }
-    .ContactMapContainer iframe{
-        height: 200px;
     }
     .ContactSupport{
         padding: 3rem 0rem;
