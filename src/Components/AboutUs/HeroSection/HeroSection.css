@@ -32,33 +32,6 @@
 .contentAboutUs1 span{
     font-size: 1rem;
 }
-.contactNumberHeroAboutUs{
-    position:absolute;
-    display: flex;
-    background-color: var(--orange500);
-    align-items: center;
-    width: 15rem;
-    height: 5rem;
-    padding: 1rem;
-    padding-right: 0;
-    right: 0px;
-    bottom: 0px;
-}
-.contactNumberHeroAboutUs img{
-    width: 2rem;
-    margin-right: 1.5rem;
-}
-.infoHeroAboutUs{
-    padding: 0;
-}
-.infoHeroAboutUs span{
-    font-size: 1rem;
-}
-.infoHeroAboutUs h4{
-    text-align: left;
-    text-decoration: underline;
-    font-size: 1rem;
-}
 @media screen and (min-width:720px){
     .contentAboutUs1{
         padding:0 6rem;
@@ -69,22 +42,4 @@
     .contentAboutUs1 span{
         font-size: 1.2rem;
     }
-    .contactNumberHeroAboutUs{
-        width: 20rem;
-        height: 8rem;
-        padding: 1rem;
-        right: 0px;
-    }
-    .contactNumberHeroAboutUs img{
-        width: 4rem;
-    }
-    .infoHeroAboutUs span{
-        font-size: 1.2rem;
-    }
-    .infoHeroAboutUs h4{
-        font-size: 1.5rem;
-    }
-}
-@media screen and (min-width:1000px){
-
 }
