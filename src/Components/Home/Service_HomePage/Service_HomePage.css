@@ -4,37 +4,54 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem 0;
+    padding: 4.5rem 1.25rem;
+    overflow: hidden;
+}
+/* Hairline diagonal hi-vis accent — single signature stroke */
+.Service2::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--orange500) 0%, transparent 45%);
+    opacity: 0.5;
+    z-index: 0;
 }
 .Service2Text{
-    margin-bottom: 2rem;
+    margin-bottom: 2.75rem;
     display: flex;
     flex-direction: column;
-    width:75%;
+    align-items: center;
+    gap: 0.9rem;
+    width: min(75%, 720px);
     height: fit-content;
-    color: white;
     justify-content: center;
-    border-radius: 25px;
     text-align: center;
-    z-index: 100;
+    z-index: 1;
 }
-.Service2Text h3, .Service2Text span{
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: 0.1rem;
-    margin-bottom: 1rem;
-    color: var(--orange950)
+.Service2Text h3{
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    color: var(--orange950);
 }
-.Service2Text span{
-    color:var(--orange600);
+.Service2Text h3 span{
+    color: var(--orange600);
 }
 .Service2Text p{
-    font-size: 1rem;
-    color: black;
+    font-size: 1.02rem;
+    line-height: 1.6;
+    color: var(--orange950);
+    opacity: 0.78;
+    max-width: 60ch;
 }
 .btnServicio2{
-    z-index: 100;
+    z-index: 1;
     text-decoration: none;
+    margin-top: 2.75rem;
 }
 .btnServicio2 .btnMasInfoCel {
   display: flex;
@@ -46,10 +63,10 @@
   border-radius: 28px;
 
   background-color: var(--orange500);
-  color: white;
+  color: var(--orange950);
 
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.3px;
   cursor: pointer;
   box-shadow:
@@ -90,161 +107,203 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     text-align: left;
     width: 90%;
-    color: white;
-    z-index: 100;
+    gap: 1.25rem;
+    z-index: 1;
 }
 .ServiceCard.horizontal {
+  position: relative;
   width: 100%;
   min-height: 160px;
+  isolation: isolate;
 
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1.2rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1.15rem;
 
-  padding: 1.8rem 2rem;
-  margin: 1rem;
+  padding: 1.9rem 1.8rem;
 
-  background-color: white;
-  border-radius: 22px;
+  background-color: #ffffff;
+  border: 1px solid var(--orange100);
+  border-radius: 18px;
 
-  box-shadow:
-    0 12px 30px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 10px 28px rgba(72, 23, 0, 0.08);
+  overflow: hidden;
 
   transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease,
-    background-color 0.35s ease;
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s ease,
+    border-color 0.4s ease,
+    background-color 0.4s ease;
+}
+/* Hi-vis edge that lights up on hover */
+.ServiceCard.horizontal::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--orange500);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.4s ease;
+  z-index: 2;
+}
+.ServiceCard.horizontal:hover::before{ transform: scaleY(1); }
+
+/* Big watermark number that sits behind the content */
+.ServiceCardNumber{
+  position: absolute;
+  top: -0.6rem;
+  right: 0.6rem;
+  z-index: 0;
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--orange100);
+  font-variant-numeric: tabular-nums;
+  pointer-events: none;
+  transition: -webkit-text-stroke-color 0.4s ease, color 0.4s ease, transform 0.4s ease;
+}
+.ServiceCard.horizontal:hover .ServiceCardNumber {
+  -webkit-text-stroke-color: var(--orange200);
+  transform: translateY(2px);
 }
 .ServiceCard.horizontal span {
     letter-spacing: 0;
 }
 .ServiceCardContent {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 0.55rem;
+  flex: 1;
 }
 
 .ServiceCardContent h4 {
   font-size: 1.2rem;
-  color: var(--orange700);
+  font-weight: 700;
+  color: var(--orange950);
   line-height: 1.3;
+  max-width: 95%;
 }
 
 .ServiceCardContent p {
-  font-size: 0.95rem;
-  color: #333;
-  line-height: 1.4;
+  font-size: 0.94rem;
+  color: var(--orange950);
+  opacity: 0.7;
+  line-height: 1.55;
 }
 
 .ServiceLink {
-  margin-top: 0.4rem;
+  position: relative;
+  margin-top: auto;
+  padding-top: 0.6rem;
   font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--orange500);
+  font-weight: 700;
+  color: var(--orange700);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  width: fit-content;
+}
+/* Animated underline under the link label */
+.ServiceLink::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: var(--orange500);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.ServiceCard.horizontal:hover .ServiceLink::after{ transform: scaleX(1); }
+.ServiceLinkArrow{
+  display: inline-block;
   transition: transform 0.25s ease;
 }
-
-.ServiceCard.horizontal:hover .ServiceLink {
-  transform: translateX(4px);
+.ServiceCard.horizontal:hover .ServiceLinkArrow {
+  transform: translateX(5px);
 }
 .ServiceCardIcon {
+  position: relative;
+  z-index: 1;
   flex-shrink: 0;
-  width: 64px;
-  height: 64px;
+  width: 60px;
+  height: 60px;
+  align-self: flex-start;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
   background-color: var(--orange50);
-  border-radius: 14px;
+  border: 1px solid var(--orange100);
+  border-radius: 15px;
+  transition: background-color 0.4s ease, border-color 0.4s ease, transform 0.4s ease;
 }
 
 .ServiceCardIcon img {
-  width: 70%;
+  width: 58%;
   height: auto;
+  transition: filter 0.4s ease;
 }
 
 .ServiceCard.horizontal:hover {
-  background-color: var(--orange500);
-  box-shadow:
-    0 20px 45px rgba(0, 0, 0, 0.28);
+  transform: translateY(-8px);
+  border-color: var(--orange300);
+  box-shadow: 0 26px 50px rgba(72, 23, 0, 0.18);
 }
-
-.ServiceCard.horizontal:hover h4,
-.ServiceCard.horizontal:hover p {
-  color: var(--orange950);
-}
-
-.ServiceCard.horizontal:hover .ServiceLink {
-  color: var(--orange950);
-}
-
 .ServiceCard.horizontal:hover .ServiceCardIcon {
-  background-color: white;
+  background-color: var(--orange500);
+  border-color: var(--orange500);
+  transform: translateY(-2px);
+}
+.ServiceCard.horizontal:hover .ServiceCardIcon img {
+  filter: brightness(0) invert(1);
 }
 
 @media screen and (min-width:960px){
     .Service2{
-        padding: 3rem 0;
-    }
-    .Service2Text{
-        max-width: 60%;
+        padding: 5.5rem 2rem;
     }
     .ServicesPresentation{
         width: 100%;
+        max-width: 1100px;
+        flex-wrap: nowrap;
     }
      .ServiceCard.horizontal {
-        width:35% ;
+        flex: 1 1 0;
         text-align: left;
-        align-items: flex-start;
-        min-height: 250px;
-    }
-    .ServiceCardIcon {
-        align-self: flex-end;
-    }
-    .btnMasInfoCel{
-        margin-top: 2rem;
+        min-height: 270px;
     }
 }
 @media screen and (min-width:1400px){
-    .Service2Text{
-        justify-content: center;
-        border-radius: 25px;
-        text-align: center;
-        z-index: 100;
-        max-width: 50%;
+    .Service2{
+        padding: 6.5rem 2rem;
     }
     .ServicesPresentation{
-        align-items: start;
-    }
-    .Service2Text h3, .Service2Text span{
-        margin-bottom: 2rem;
-        font-size: 2rem;
+        max-width: 1240px;
     }
     .ServiceCard.horizontal {
-        width:20% ;
         min-height: 300px;
+        padding: 2.2rem;
     }
     .ServiceCard.horizontal h4{
-        font-size: 1.4rem;
-        margin-bottom: 1rem;
-    }
-    .ServiceCard span{
-        font-size: 1.1rem;
-    }
-    .ServiceCardContent{
-        height:250px;
-    }
-    .ServiceCardContent span{
-        justify-self:end
+        font-size: 1.32rem;
     }
     .ServiceCardIcon img {
-    width: 90%;
+        width: 64%;
     }
 }
 

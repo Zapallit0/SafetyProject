@@ -10,13 +10,13 @@ const Services=lazy(()=>import('./Components/Services.jsx'))
 const Contacto=lazy(()=>import('./Components/Contacto.jsx'))
 
 const App = () => {
-  const location=useLocation(true);
+  const location=useLocation();
   return (
     <>
       <Navbar />
       <WhatsAppBubble />
       <ErrorBoundary>
-        <Suspense fallback={null}>
+        <Suspense fallback={<div className="routeFallback" />}>
           <AnimatePresence mode='wait'>
             <Routes location={location} key={location.pathname}>
               <Route index element={<Home />}/>

@@ -50,11 +50,11 @@
     padding: 0.95rem 2rem;
     margin-top: 0.5rem;
     background: linear-gradient(135deg, var(--orange500), var(--orange600));
-    color: #ffffff;
+    color: var(--orange950);
     border: none;
     border-radius: 8px;
     font-family: inherit;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1rem;
     cursor: pointer;
     letter-spacing: 0.03em;
@@ -74,11 +74,11 @@
     padding: 0.95rem 2rem;
     margin-top: 0.5rem;
     background: var(--orange300);
-    color: #ffffff;
+    color: var(--orange950);
     border: none;
     border-radius: 8px;
     font-family: inherit;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1rem;
     cursor: not-allowed;
     letter-spacing: 0.03em;

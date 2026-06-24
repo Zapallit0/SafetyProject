@@ -15,20 +15,39 @@
   margin-bottom: 2.5rem;
 }
 
-.MainServ_text h2 {
+.MainServ_text h1 {
   color: white;
-  font-size: 3rem;
+  font-size: clamp(1.9rem, 5vw, 3.25rem);
+  line-height: 1.12;
   margin-bottom: 0.8rem;
 }
 
-.MainServ_text h2 span {
+.MainServ_text h1 span {
   color: var(--orange500);
 }
 
+/* Eyebrow tuned for the dark hero */
+.MainServ_eyebrow {
+  justify-content: center;
+  margin-bottom: 1.1rem;
+}
+.MainServ .hv-eyebrow-rule {
+  background: linear-gradient(90deg, var(--orange500), transparent);
+}
+.MainServ .hv-eyebrow-rule--rev {
+  background: linear-gradient(90deg, transparent, var(--orange500));
+}
+.MainServ .hv-eyebrow-text {
+  color: rgba(255, 255, 255, 0.75);
+  opacity: 1;
+}
+
 .MainServ_text p {
+  max-width: 520px;
+  margin: 0 auto;
   color: rgba(255, 255, 255, 0.6);
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 /* ── Card grid ── */
@@ -41,24 +60,60 @@
 }
 
 .MainServ_card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.8rem;
-  padding: 1.5rem 0.8rem;
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 1.2rem;
+  gap: 0.85rem;
+  padding: 1.7rem 1rem 1.4rem;
+  background-color: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.1rem;
   cursor: pointer;
-  transition: background-color 0.3s, border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  transition:
+    background-color 0.35s ease,
+    border-color 0.35s ease,
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease;
 }
 
-.MainServ_card:hover {
-  background-color: var(--orange500);
-  border-color: var(--orange500);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(255, 152, 0, 0.3);
+/* Hi-vis bar that wipes in along the bottom */
+.MainServ_card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background: var(--orange500);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
 }
+.MainServ_card:hover::after { transform: scaleX(1); }
+
+.MainServ_card:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: var(--orange500);
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(255, 152, 0, 0.18);
+}
+
+/* Index marker, top-right */
+.MainServ_cardNum {
+  position: absolute;
+  top: 0.85rem;
+  right: 1rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.28);
+  font-variant-numeric: tabular-nums;
+  transition: color 0.35s ease;
+}
+.MainServ_card:hover .MainServ_cardNum { color: var(--orange500); }
 
 .MainServ_cardIcon {
   width: 3.5rem;
@@ -68,16 +123,21 @@
   justify-content: center;
   background-color: var(--orange50);
   border-radius: 0.9rem;
-  transition: background-color 0.3s;
+  transition: background-color 0.35s ease, transform 0.35s ease;
 }
 
 .MainServ_card:hover .MainServ_cardIcon {
-  background-color: white;
+  background-color: var(--orange500);
+  transform: scale(1.06) translateY(-2px);
 }
 
 .MainServ_cardIcon img {
   width: 60%;
   height: 60%;
+  transition: filter 0.35s ease;
+}
+.MainServ_card:hover .MainServ_cardIcon img {
+  filter: brightness(0); /* dark pictogram on the orange chip */
 }
 
 .MainServ_card h4 {
@@ -85,21 +145,41 @@
   font-size: 0.85rem;
   font-weight: 600;
   text-align: center;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
-.MainServ_card:hover h4 {
-  color: black;
+.MainServ_card:hover h4 { color: #ffffff; }
+
+/* Down-arrow hint (cards scroll to their section) */
+.MainServ_cardArrow {
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--orange500);
+  opacity: 0;
+  transform: translateY(-5px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.MainServ_card:hover .MainServ_cardArrow {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Touch devices have no hover — keep the scroll hint visible */
+@media (hover: none) {
+  .MainServ_cardArrow {
+    opacity: 0.7;
+    transform: none;
+  }
+  .MainServ_card::after {
+    transform: scaleX(1);
+  }
 }
 
 /* ── 720px+ ── */
 @media screen and (min-width: 720px) {
   .MainServ {
     padding: 6rem 2rem 4rem;
-  }
-
-  .MainServ_text h2 {
-    font-size: 3.5rem;
   }
 
   .MainServ_text p {
@@ -128,12 +208,8 @@
     padding: 7rem 2rem 5rem;
   }
 
-  .MainServ_text h2 {
-    font-size: 5rem;
-  }
-
   .MainServ_text p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .MainServ_grid {
@@ -142,12 +218,12 @@
   }
 
   .MainServ_card {
-    padding: 2rem 1rem;
+    padding: 2rem 1.1rem 1.7rem;
   }
 
   .MainServ_cardIcon {
-    width: 5rem;
-    height: 5rem;
+    width: 4.25rem;
+    height: 4.25rem;
     border-radius: 1rem;
   }
 

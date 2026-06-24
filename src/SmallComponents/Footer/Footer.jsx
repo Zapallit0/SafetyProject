@@ -1,4 +1,3 @@
-import React from 'react'
 import './Footer.css'
 import { Link } from 'react-router-dom';
 import Facebook from '../../assets/social/facebook-SafetyAdvisors.svg';
@@ -10,26 +9,41 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 function Footer() {
   return (
     <footer className='Footer'>
-      <div className='footerImgs'>
-        <LazyLoadImage src={logo} alt="LOGO" />
-        <div className='LogosFooter'>
-          <a href="https://www.facebook.com/profile.php?id=61557920314806&mibextid=ZbWKwL" target='_blank'><LazyLoadImage src={Facebook} alt="facebook" /></a>
-          <a href="https://www.linkedin.com/company/safety-advisors24/about/" target='_blank'><LazyLoadImage src={Linkedin} alt="linkedin" /></a>
-          <a href="https://www.instagram.com/safety__advisors/?igsh=dGNvN3ZiMGtsMDlm" target='_blank'><LazyLoadImage src={Instagram}  alt="instagram" /></a>
+      <div className='FooterTop'>
+        <div className='footerImgs'>
+          <LazyLoadImage src={logo} alt="Safety Advisors" />
+          <p className='footerTagline'>Seguridad y salud ocupacional para un futuro más seguro y sostenible.</p>
+          <div className='LogosFooter'>
+            <a href="https://www.facebook.com/profile.php?id=61557920314806&mibextid=ZbWKwL" target='_blank' rel="noreferrer" aria-label="Facebook"><LazyLoadImage src={Facebook} alt="facebook" /></a>
+            <a href="https://www.linkedin.com/company/safety-advisors24/about/" target='_blank' rel="noreferrer" aria-label="LinkedIn"><LazyLoadImage src={Linkedin} alt="linkedin" /></a>
+            <a href="https://www.instagram.com/safety__advisors/?igsh=dGNvN3ZiMGtsMDlm" target='_blank' rel="noreferrer" aria-label="Instagram"><LazyLoadImage src={Instagram} alt="instagram" /></a>
+          </div>
+        </div>
+
+        <div className='footerCol'>
+          <h4>Navegación</h4>
+          <ul className='footerIndices'>
+            <Link className='footerIndice' to={'/'}><li>Inicio</li></Link>
+            <Link className='footerIndice' to={'/Servicios'}><li>Servicios</li></Link>
+            <Link className='footerIndice' to={'/Nosotros'}><li>Nosotros</li></Link>
+            <Link className='footerIndice' to={'/Contacto'}><li>Contacto</li></Link>
+          </ul>
+        </div>
+
+        <div className='footerCol'>
+          <h4>Contacto</h4>
+          <ul className='footerMasInfo'>
+            <li>964197982</li>
+            <li>gerencia@safeadvisors.com</li>
+            <li>Políticas</li>
+          </ul>
         </div>
       </div>
-        <ul className='footerIndices'>
-          <Link className='footerIndice' to={'/'}><li>Home</li></Link>
-          <Link className='footerIndice' to={'/Servicios'}><li>Services</li></Link>
-          <Link className='footerIndice' to={'/Nosotros'}><li>Nosotros</li></Link>
-          <Link className='footerIndice' to={'/Contacto'}><li>Servicios</li></Link>
-        </ul>
-        <ul className='footerMasInfo'>
-          <li>964197982</li>
-          <li>gerencia@safeadvisors.com</li>
-          <li>Políticas</li>
-        </ul>
-      </footer>
+
+      <div className='FooterBottom'>
+        <span>© 2026 Safety Advisors. Todos los derechos reservados.</span>
+      </div>
+    </footer>
   )
 }
 

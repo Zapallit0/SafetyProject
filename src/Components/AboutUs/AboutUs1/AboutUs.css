@@ -1,78 +1,75 @@
 .aboutUs1{
     display: flex;
     flex-direction: column;
-    background-color: black;
-    height: fit-content;
     align-items: center;
     text-align: center;
-    padding: 2rem 0;
+    gap: 2.5rem;
+    padding: 4.5rem 1.5rem;
 }
 .titleAboutUs1{
-    color: white;
-    width:80%;
-    margin: 2rem 0;
+    width: 100%;
+    max-width: 560px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: var(--orange950);
 }
 .titleAboutUs1 h2{
-    font-size: 2rem;
-    text-decoration:dotted underline #FFA500;
-    margin-bottom: 1.5rem;
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+    color: var(--orange950);
 }
 .titleAboutUs1 p{
-    width: fit-content;
-    font-size: 1rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
     text-align: left;
+    color: var(--orange950);
+    opacity: 0.82;
 }
 .titleAboutUs1 p span{
-    text-transform: uppercase;
-    font-weight: bolder;
-    color: #FFA500;
+    color: var(--orange700);
+    font-weight: 700;
 }
 .imgsAboutUs1{
-    width: 80%;
-    margin: 1rem 0;
+    width: 100%;
+    max-width: 520px;
 }
 .imgsAboutUs1 img{
     width: 100%;
-    border-radius: 0.5rem;
+    border-radius: 18px;
     object-fit: cover;
+    box-shadow: 0 20px 45px rgba(72, 23, 0, 0.18);
 }
 @media screen and (min-width: 720px) {
     .aboutUs1{
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        padding: 4rem 2rem;
-        gap: 3rem;
+        padding: 5rem 2rem;
+        gap: 3.5rem;
     }
     .titleAboutUs1{
         width: 50%;
+        align-items: flex-start;
         text-align: left;
-        margin: 0;
-    }
-    .titleAboutUs1 h2{
-        font-size: 3rem;
-    }
-    .titleAboutUs1 p{
-        font-size: 1.2rem;
     }
     .imgsAboutUs1{
-        width: 40%;
-        margin: 0;
+        width: 42%;
     }
     .imgsAboutUs1 img{
-        max-height: 25rem;
+        max-height: 26rem;
     }
 }
 @media screen and (min-width:1000px){
     .aboutUs1{
-        padding: 5rem 6rem;
-        gap: 4rem;
-    }
-    .titleAboutUs1 h2{
-        font-size: 3rem;
+        padding: 6rem;
+        gap: 4.5rem;
     }
     .titleAboutUs1 p{
-        font-size: 1.2rem;
+        font-size: 1.15rem;
     }
     .imgsAboutUs1 img{
         max-height: 30rem;

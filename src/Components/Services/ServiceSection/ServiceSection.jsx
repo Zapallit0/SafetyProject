@@ -17,6 +17,7 @@ const servicesData = [
   {
     id: 'srv-gestion',
     icon: GestionIcon,
+    kicker: 'Gestión',
     title: 'Sistema de Gestión Seguridad y Salud en el Trabajo',
     subtitle: 'según Ley 29783 y reglamiento sectorial',
     image: BgGestion,
@@ -35,6 +36,7 @@ const servicesData = [
   {
     id: 'srv-salud',
     icon: SaludIcon,
+    kicker: 'Salud',
     title: 'Gestión de Salud Ocupacional',
     subtitle: 'según Ley 29783, DS 005-2012 TR, RM 375-2088 TR',
     image: BgSalud,
@@ -48,6 +50,7 @@ const servicesData = [
   {
     id: 'srv-riesgos',
     icon: RiesgosIcon,
+    kicker: 'Prevención',
     title: 'Gestión de Prevención de Riesgos',
     subtitle: 'según Ley 29783, DS 005-2012 TR, RM 375-2088 TR',
     image: BgRiesgos,
@@ -61,6 +64,7 @@ const servicesData = [
   {
     id: 'srv-homologacion',
     icon: HomologacionIcon,
+    kicker: 'Homologación',
     title: 'Homologación para proveedores',
     subtitle: 'Requisitos técnicos, legales, de seguridad, éticos y financieros necesarios en los rubros:',
     image: BgHomologacion,
@@ -125,6 +129,10 @@ function ServiceSection() {
               alt={service.title}
               loading="lazy"
             />
+            <div className="Srv_imageTag">
+              <span className="Srv_imageNum">{(i + 1).toString().padStart(2, '0')}</span>
+              <span className="Srv_imageKicker">{service.kicker}</span>
+            </div>
           </motion.div>
 
           <motion.div
@@ -147,23 +155,27 @@ function ServiceSection() {
             <motion.div className="Srv_cards" variants={cardContainer}>
               {service.items.map((item, j) => (
                 <motion.div className="Srv_card" key={j} variants={cardItem}>
-                  <LazyLoadImage src={CheckList} alt="" />
+                  <span className="Srv_check"><LazyLoadImage src={CheckList} alt="" /></span>
                   <h4>{item}</h4>
                 </motion.div>
               ))}
             </motion.div>
 
-            <motion.button
+            <motion.a
               className="Srv_download"
+              href={pdf}
+              target="_blank"
+              rel="noopener noreferrer"
+              download
               variants={itemUp}
               whileHover={{ y: -3 }}
               whileTap={{ scale: 0.96 }}
             >
-              <a href={pdf} target="_blank" rel="noopener noreferrer" download>
-                <LazyLoadImage src={DwnldButton} alt="Descargar Brochure" />
-                BROCHURE COMPLETO
-              </a>
-            </motion.button>
+              <span className="Srv_downloadIcon">
+                <LazyLoadImage src={DwnldButton} alt="" />
+              </span>
+              <span className="Srv_downloadLabel">Descargar brochure</span>
+            </motion.a>
           </motion.div>
         </section>
         </div>

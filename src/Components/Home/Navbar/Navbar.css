@@ -13,8 +13,12 @@
 .navbar {
   display: flex;
   align-items: center;
-  background: rgba(120, 120, 120, 0.35);
-  backdrop-filter: blur(10px);
+  background: rgba(18, 9, 2, 0.62);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
   padding:  1.5rem 5rem;
   z-index: 10;
   border-radius: 0 0 24px 24px;
@@ -29,27 +33,43 @@
 
 .nav-link {
   text-decoration: none;
-  color: #eee;
+  color: #ffffff;
   position: relative;
-  font-weight: 400;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+  transition: color 0.2s ease;
 }
 
 .nav-link li {
   cursor: pointer;
 }
 
-.nav-link.active {
-  font-weight: 600;
+.nav-link:hover {
+  color: var(--orange400);
 }
 
-.nav-link.active::after {
+.nav-link.active {
+  font-weight: 700;
+}
+
+/* Animated hi-vis underline for hover + active */
+.nav-link::after {
   content: '';
   position: absolute;
   width: 100%;
   height: 2px;
-  background: white;
+  background: var(--orange400);
   bottom: -6px;
   left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
 }
 
 /* Logo */
@@ -89,9 +109,10 @@
   transform: translateX(-50%);
   width: 100%;
 
-  background: rgba(120, 120, 120, 0.4);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: rgba(18, 9, 2, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 152, 0, 0.18);
 
   list-style: none;
   padding: 1rem 0.75rem;

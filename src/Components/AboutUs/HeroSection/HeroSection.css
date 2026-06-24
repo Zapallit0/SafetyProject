@@ -1,4 +1,5 @@
 .heroSectionAboutUs1{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,40 +7,68 @@
     height: fit-content;
 }
 .backgroundHeroAboutUs{
+    position: relative;
     height: 100svh;
     width: 100%;
+    overflow: hidden;
+}
+.heroBgZoom{
+    width: 100%;
+    height: 100%;
 }
 .backgroundHeroAboutUs img{
     object-fit: cover;
     width: 100%;
     height: 100%;
     z-index: 0;
-    filter: brightness(30%);
+    filter: brightness(42%);
+}
+/* Warm gradient overlay for depth + readable text */
+.backgroundHeroAboutUs::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(20,8,0,0.35) 0%, rgba(20,8,0,0.25) 45%, rgba(20,8,0,0.85) 100%);
+    z-index: 1;
 }
 .contentAboutUs1{
     display: flex;
     flex-direction: column;
+    align-items: center;
     position: absolute;
     z-index: 50;
     color: white;
     text-align: center;
-    padding:0 2rem;
+    padding: 0 1.5rem;
 }
-.contentAboutUs1 h2{
-    font-size: 3rem;
-    margin-bottom:3rem;
+.heroAboutUs_eyebrow{
+    margin-bottom: 1.25rem;
 }
-.contentAboutUs1 span{
-    font-size: 1rem;
+.heroAboutUs_eyebrow .hv-eyebrow-text{
+    color: rgba(255, 255, 255, 0.8);
+    opacity: 1;
+}
+.heroAboutUs_eyebrow .hv-eyebrow-rule{
+    background: linear-gradient(90deg, var(--orange500), transparent);
+}
+.heroAboutUs_eyebrow .hv-eyebrow-rule--rev{
+    background: linear-gradient(90deg, transparent, var(--orange500));
+}
+.contentAboutUs1 h1{
+    font-size: clamp(2.6rem, 8vw, 4.5rem);
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    line-height: 1.05;
+    margin-bottom: 1.25rem;
+}
+.heroAboutUs_tagline{
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    max-width: 520px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.82);
 }
 @media screen and (min-width:720px){
     .contentAboutUs1{
-        padding:0 6rem;
-    }
-    .contentAboutUs1 h2{
-        font-size: 4rem;
-    }
-    .contentAboutUs1 span{
-        font-size: 1.2rem;
+        padding: 0 2rem;
     }
 }

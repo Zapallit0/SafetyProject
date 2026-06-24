@@ -20,10 +20,14 @@ function Main() {
   return (
     <div className="MainServ">
       <div className="MainServ_text">
-        <h2>Nuestros <span>Servicios</span></h2>
+        <span className="hv-eyebrow MainServ_eyebrow">
+          <span className="hv-eyebrow-rule" aria-hidden="true"></span>
+          <span className="hv-eyebrow-text">Catálogo de servicios</span>
+          <span className="hv-eyebrow-rule hv-eyebrow-rule--rev" aria-hidden="true"></span>
+        </span>
+        <h1>Servicios de <span>Seguridad</span> y Salud Ocupacional</h1>
         <p>
-          Diseñamos e implementamos soluciones en seguridad y salud ocupacional
-          que protegen a tu empresa, cumplen la normativa y reducen riesgos reales.
+          Protegemos a tu empresa, cumplimos la normativa y reducimos riesgos reales.
         </p>
       </div>
       <div className="MainServ_grid">
@@ -33,10 +37,14 @@ function Main() {
             className="MainServ_card"
             onClick={() => scrollTo(cat.id)}
           >
+            <span className="MainServ_cardNum" aria-hidden="true">
+              {(i + 1).toString().padStart(2, '0')}
+            </span>
             <div className="MainServ_cardIcon">
               <LazyLoadImage src={cat.icon} alt={cat.label} />
             </div>
             <h4>{cat.label}</h4>
+            <span className="MainServ_cardArrow" aria-hidden="true">↓</span>
           </button>
         ))}
       </div>

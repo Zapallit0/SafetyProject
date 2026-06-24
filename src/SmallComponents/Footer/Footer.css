@@ -1,64 +1,121 @@
 .Footer{
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 1rem;
-    height: fit-content;
-    color:white;
-    background-color: black;
-    gap: 1rem;
+    flex-direction: column;
+    background-color: var(--orange950);
+    color: var(--orange50);
+    padding: 3.5rem 1.5rem 1.5rem;
 }
+.FooterTop{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(255, 152, 0, 0.18);
+}
+
+/* Brand column */
 .Footer .footerImgs{
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
+    gap: 1.1rem;
+    max-width: 320px;
 }
-.Footer .footerImgs img{
-    cursor: pointer;
-    height: 2rem;
+.Footer .footerImgs > img{
+    height: 2.4rem;
+    width: auto;
 }
-.footerImgs{
-    display: flex;
-    flex-direction: column;
+.footerTagline{
+    font-size: 0.92rem;
+    line-height: 1.6;
+    opacity: 0.7;
 }
 .LogosFooter{
     display: flex;
-    flex-direction: row;
+    gap: 0.6rem;
+}
+.LogosFooter a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: rgba(255, 152, 0, 0.1);
+    border: 1px solid rgba(255, 152, 0, 0.2);
+    transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+}
+.LogosFooter a:hover{
+    transform: translateY(-3px);
+    background: rgba(255, 152, 0, 0.22);
+    border-color: var(--orange500);
 }
 .footerImgs .LogosFooter img{
-    width: 1rem;
-    cursor: pointer;
-    margin:1rem 0.3rem;
+    width: 18px;
+    height: 18px;
     filter: invert(100%) sepia(93%) saturate(0%) hue-rotate(168deg) brightness(108%) contrast(108%);
+}
+
+/* Link columns */
+.footerCol{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.footerCol h4{
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--orange400);
 }
 .Footer ul{
     list-style: none;
-}   
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
 .Footer .footerIndice{
-    color: white;
+    color: var(--orange50);
     text-decoration: none;
 }
 .Footer li{
-    margin: 0.7rem 0;
     cursor: pointer;
-    font-size: 0.7rem;
+    font-size: 0.95rem;
+    opacity: 0.82;
+    transition: opacity 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
-.Footer li:hover{
-    color: gray;
+.footerIndice:hover li{
+    opacity: 1;
+    color: var(--orange400);
+    transform: translateX(4px);
+}
+.footerMasInfo li:hover{
+    opacity: 1;
+    color: var(--orange400);
+}
+
+/* Bottom bar */
+.FooterBottom{
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 1.5rem;
+    text-align: center;
+    font-size: 0.82rem;
+    opacity: 0.6;
 }
 
 @media screen and (min-width:720px){
-    .Footer li{
-        font-size: 0.9rem;
+    .FooterTop{
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 3rem;
     }
-    .footerImgs .LogosFooter img{
-        width: 2rem;
-    }
-    .Footer li{
-        font-size: 1.1rem;
-    }
-    .Footer .footerImgs img{
-        height:3rem;
+    .Footer .footerImgs > img{
+        height: 3rem;
     }
 }

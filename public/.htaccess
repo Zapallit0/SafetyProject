@@ -1,0 +1,63 @@
+# ───────────────────────────────────────────────────────────────────────────
+# Safety Advisors — Hostinger (Apache / LiteSpeed) configuration
+# Deploy: run `npm run build:seo` locally, then upload the CONTENTS of dist/
+# (including this .htaccess) to public_html. This file is copied from public/.
+# ───────────────────────────────────────────────────────────────────────────
+
+Options -MultiViews
+RewriteEngine On
+RewriteBase /
+
+# 1) Canonical host: force HTTPS and strip www in a single 301.
+#    Matches the <link rel="canonical"> tags (https://safetyadvisors.io, no www).
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+# 2) An existing file (assets, robots.txt, sitemap.xml, og-image.png, favicon)
+#    is served as-is.
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# 3) Clean URL -> its prerendered file, e.g. /Servicios -> /Servicios/index.html
+#    (with or without a trailing slash). This is what gives crawlers/social bots
+#    the correct per-route <title>, meta and JSON-LD instead of the homepage's.
+RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+RewriteRule ^(.+?)/?$ /$1/index.html [L]
+
+# 4) SPA fallback: any other path is handled by the client router.
+RewriteRule ^ /index.html [L]
+
+# ── Custom error page (let the SPA render 404s) ──────────────────────────────
+ErrorDocument 404 /index.html
+
+# ── Compression ──────────────────────────────────────────────────────────────
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml \
+    application/javascript application/json application/xml \
+    image/svg+xml application/ld+json
+</IfModule>
+
+# ── Caching ──────────────────────────────────────────────────────────────────
+# Content-hashed build assets: cache hard. HTML: always revalidate so new
+# deploys (and updated meta) are picked up immediately.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|woff2?|ttf|eot|otf|svg|png|jpe?g|webp|gif|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(html|json)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+  # robots.txt / sitemap.xml change rarely but should not be cached for a year.
+  <FilesMatch "^(robots\.txt|sitemap\.xml)$">
+    Header set Cache-Control "public, max-age=86400"
+  </FilesMatch>
+</IfModule>
+
+# ── Correct MIME types (older Apache builds) ─────────────────────────────────
+<IfModule mod_mime.c>
+  AddType application/ld+json .jsonld
+  AddType image/webp .webp
+  AddType image/svg+xml .svg
+</IfModule>

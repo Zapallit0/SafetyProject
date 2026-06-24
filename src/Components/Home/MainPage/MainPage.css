@@ -53,7 +53,7 @@
     height: fit-content;
     width:max-content;
 }
- .wrapper h2{
+ .wrapper h1{
     font-size:2rem;
 }
 .mainPage p{
@@ -149,7 +149,7 @@
     filter: invert(52%) sepia(93%) saturate(1201%) hue-rotate(2deg) brightness(107%) contrast(104%);
 }
 @media screen and (min-width:720px){
-    .wrapper h2{
+    .wrapper h1{
         font-size:2.5rem;
     }
     .motion-words span {
@@ -174,7 +174,7 @@
         width: 65%;
         gap: 3rem;
     }
-     .wrapper h2{
+     .wrapper h1{
         font-size:3rem;
     }
     .motion-words {

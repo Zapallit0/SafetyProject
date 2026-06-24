@@ -4,18 +4,84 @@
   box-sizing: border-box;
   font-family:"Work Sans", sans-serif;
 }
+/* Visually hidden but readable by search engines & screen readers */
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 :root{
   --orange50:#fffbea;
   --orange100:#fff2c5;
   --orange200:#ffe585;
+  --orange300:#ffd54a;
   --orange400:#ffbc1b;
   --orange500:#ff9800;
   --orange600:#e27100;
   --orange700:#bb4c02;
+  --orange800:#9a3d05;
   --orange900:#7c300b;
   --orange950:#481700;
 }
 
+/* ===== Hi-Vis Precision shared system (built from the orange palette) ===== */
+.hv-section{
+  position: relative;
+  width: 100%;
+}
+.hv-section-light{ background-color: var(--orange50); color: var(--orange950); }
+.hv-section-dark{ background-color: var(--orange950); color: var(--orange50); }
+
+/* Signature: small measurement-style eyebrow shown ABOVE the section title */
+.hv-eyebrow{
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+}
+.hv-eyebrow .hv-eyebrow-index{
+  color: var(--orange700); /* readable accent on light backgrounds */
+  font-variant-numeric: tabular-nums;
+}
+.hv-eyebrow .hv-eyebrow-rule{
+  width: clamp(1.5rem, 5vw, 2.75rem);
+  height: 2px;
+  background: linear-gradient(90deg, var(--orange600), transparent);
+}
+.hv-eyebrow .hv-eyebrow-text{ opacity: 0.75; }
+
+/* On dark sections the bright accent has plenty of contrast */
+.hv-section-dark .hv-eyebrow .hv-eyebrow-index{ color: var(--orange500); }
+.hv-section-dark .hv-eyebrow .hv-eyebrow-rule{
+  background: linear-gradient(90deg, var(--orange500), transparent);
+}
+
+@media (prefers-reduced-motion: reduce){
+  *,
+  *::before,
+  *::after{
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.routeFallback{
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background:#0f0f0f;
+}
 .slide-in{
   position: fixed;
   z-index: 1000;

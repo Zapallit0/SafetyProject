@@ -8,11 +8,15 @@
 }
 
 .SrvWrap--bordered {
-  border-bottom: 3px solid var(--orange500);
+  border-bottom: 1px solid var(--orange100);
 }
 
+/* Alternating light rhythm (keeps the palette, drops the heavy orange rule) */
 .SrvWrap--unified {
-  background-color: #fafafa;
+  background-color: var(--orange50);
+}
+.SrvSections .SrvWrap:nth-child(even) {
+  background-color: #ffffff;
 }
 
 /* =============================================
@@ -25,6 +29,7 @@
 
 /* ── Image ── */
 .Srv_imageWrap {
+  position: relative;
   width: 100%;
   overflow: hidden;
   max-height: 260px;
@@ -35,6 +40,41 @@
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+/* Readability gradient for the overlaid number/category */
+.Srv_imageWrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(20, 8, 0, 0.72) 0%, rgba(20, 8, 0, 0) 45%);
+  pointer-events: none;
+}
+
+.Srv_imageTag {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  padding: 1.1rem 1.3rem;
+}
+.Srv_imageNum {
+  font-size: clamp(2.4rem, 7vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1;
+  color: #ffffff;
+  font-variant-numeric: tabular-nums;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+}
+.Srv_imageKicker {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--orange400);
 }
 
 /* ── Body ── */
@@ -54,12 +94,29 @@
   align-items: center;
   justify-content: center;
   border-radius: 0.8rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.9rem;
 }
 
 .Srv_iconBadge img {
   width: 60%;
   height: 60%;
+}
+
+/* Check chip in front of each list item */
+.Srv_check {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.7rem;
+  background-color: var(--orange500);
+  border-radius: 50%;
+}
+.Srv_check img {
+  width: 13px;
+  margin: 0;
 }
 
 .Srv_title {
@@ -89,50 +146,66 @@
   border-radius: 0.7rem;
   font-size: 0.82rem;
   text-align: left;
+  transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
 }
 
 .Srv_card h4 {
   font-weight: 500;
-}
-
-.Srv_card img {
-  width: 18px;
-  flex-shrink: 0;
-  margin-right: 0.6rem;
+  line-height: 1.35;
 }
 
 /* ── Download ── */
 .Srv_download {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
   margin-top: 1.5rem;
-  padding: 0.65rem 1.8rem;
-  border-radius: 2rem;
+  padding: 0.5rem 1.4rem 0.5rem 0.5rem;
+  border-radius: 999px;
   border: none;
-  font-weight: 700;
-  font-size: 0.82rem;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-  transition: opacity 0.2s, transform 0.2s;
-}
-
-.Srv_download:hover {
-  opacity: 0.88;
-  transform: translateY(-2px);
-}
-
-.Srv_download:active {
-  transform: scale(0.98);
-}
-
-.Srv_download a {
   text-decoration: none;
-  display: flex;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+}
+
+/* Icon chip */
+.Srv_downloadIcon {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--orange950);
+}
+.Srv_downloadIcon img {
+  width: 15px;
+  margin: 0;
+  transition: transform 0.3s ease;
+}
+.Srv_download:hover .Srv_downloadIcon img {
+  transform: translateY(3px); /* downward nudge = "download" */
 }
 
-.Srv_download img {
-  margin-right: 0.6rem;
-  width: 22px;
+/* Shine sweep on hover */
+.Srv_download::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.45), transparent 70%);
+  transform: translateX(-130%);
+  transition: transform 0.6s ease;
+  pointer-events: none;
+}
+.Srv_download:hover::after {
+  transform: translateX(130%);
 }
 
 /* =============================================
@@ -142,34 +215,52 @@
   background-color: var(--orange500);
 }
 
+.SrvWrap--unified .Srv_iconBadge img {
+  filter: brightness(0); /* dark pictogram on the orange badge → 7:1 */
+}
+
 .SrvWrap--unified .Srv_title {
   color: var(--orange950);
 }
 
 .SrvWrap--unified .Srv_subtitle {
-  color: #555;
+  color: var(--orange950);
+  opacity: 0.65;
 }
 
 .SrvWrap--unified .Srv_card {
-  background-color: var(--orange50);
+  background-color: #ffffff;
   color: var(--orange950);
   border: 1px solid var(--orange200);
 }
+.SrvSections .SrvWrap:nth-child(even) .Srv_card {
+  background-color: var(--orange50);
+}
 
-.SrvWrap--unified .Srv_card img {
-  filter: none;
+.SrvWrap--unified .Srv_card:hover {
+  border-color: var(--orange400);
+  background-color: var(--orange100);
+  transform: translateX(4px);
+}
+
+.SrvWrap--unified .Srv_check img {
+  filter: brightness(0); /* dark check on the orange chip */
 }
 
 .SrvWrap--unified .Srv_download {
   background-color: var(--orange500);
+  color: var(--orange950);
+  box-shadow: 0 8px 20px rgba(255, 152, 0, 0.28);
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-.SrvWrap--unified .Srv_download a {
-  color: white;
+.SrvWrap--unified .Srv_download:hover {
+  background-color: var(--orange400);
+  box-shadow: 0 12px 28px rgba(255, 152, 0, 0.38);
 }
 
-.SrvWrap--unified .Srv_download img {
-  filter: invert(1);
+.SrvWrap--unified .Srv_downloadIcon img {
+  filter: brightness(0) invert(1); /* white arrow on the dark chip */
 }
 
 /* =============================================
@@ -212,11 +303,15 @@
   .Srv_download {
     margin-top: 2rem;
     font-size: 0.9rem;
-    padding: 0.75rem 2.2rem;
+    padding: 0.55rem 1.7rem 0.55rem 0.55rem;
   }
 
-  .Srv_download img {
-    width: 26px;
+  .Srv_downloadIcon {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+  .Srv_downloadIcon img {
+    width: 16px;
   }
 }
 
@@ -224,9 +319,12 @@
 @media screen and (min-width: 1000px) {
   .Srv {
     flex-direction: row;
-    max-width: 1100px;
+    align-items: center;
+    gap: 3rem;
+    max-width: 1180px;
     margin: 0 auto;
     min-height: auto;
+    padding: 4.5rem 2rem;
   }
 
   .Srv--imgRight {
@@ -234,16 +332,20 @@
   }
 
   .Srv_imageWrap {
-    width: 45%;
+    flex: 0 0 44%;
+    height: 420px;
     max-height: none;
+    align-self: center;
+    border-radius: 18px;
+    box-shadow: 0 18px 40px rgba(72, 23, 0, 0.18);
   }
 
   .Srv_body {
-    width: 55%;
+    flex: 1;
     justify-content: center;
     align-items: flex-start;
     text-align: left;
-    padding: 2.5rem;
+    padding: 0;
   }
 
   .Srv_title {
@@ -262,20 +364,18 @@
     font-size: 0.9rem;
     padding: 0.7rem 0.9rem;
   }
-
-  .Srv_download img {
-    width: 26px;
-  }
 }
 
 /* ── 1200px+ ── */
 @media screen and (min-width: 1200px) {
   .Srv {
-    max-width: 1200px;
+    max-width: 1240px;
+    gap: 4rem;
+    padding: 5.5rem 2.5rem;
   }
 
-  .Srv_body {
-    padding: 2.5rem 3.5rem;
+  .Srv_imageWrap {
+    height: 460px;
   }
 
   .Srv_iconBadge {
@@ -302,11 +402,15 @@
   }
 
   .Srv_download {
-    padding: 0.85rem 2.8rem;
+    padding: 0.6rem 2rem 0.6rem 0.6rem;
     font-size: 0.95rem;
   }
 
-  .Srv_download img {
-    width: 34px;
+  .Srv_downloadIcon {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+  .Srv_downloadIcon img {
+    width: 18px;
   }
 }

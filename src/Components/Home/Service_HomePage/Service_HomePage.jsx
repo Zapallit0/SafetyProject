@@ -48,11 +48,16 @@ function Service_HomePage() {
         }
     };
   return (
-    
-    <div className='Service2' id='Services'>
+
+    <section className='Service2 hv-section hv-section-light' id='Services'>
         <div className='Service2Text'>
+            <span className="hv-eyebrow">
+                <span className="hv-eyebrow-index">01</span>
+                <span className="hv-eyebrow-rule" aria-hidden="true"></span>
+                <span className="hv-eyebrow-text">Soluciones</span>
+            </span>
             <h3>Nuestros <span>Servicios</span></h3>
-            <p>Diseñamos e implementamos soluciones en seguridad y salud ocupacional 
+            <p>Diseñamos e implementamos soluciones en seguridad y salud ocupacional
                 que protegen a tu empresa, cumplen la normativa y reducen riesgos reales.</p>
         </div>
         <motion.div
@@ -70,19 +75,21 @@ function Service_HomePage() {
                 whileHover={{ y: -6 }}
                 whileTap={{ scale: 0.97 }}
                 >
-                <div className="ServiceCardContent">
-                    <h4>{service.ServiceName}</h4>
-                    <p>{service.Info}</p>
-                    <span className="ServiceLink">
-                    Conoce más →
-                    </span>
-                </div>
-
+                <span className="ServiceCardNumber" aria-hidden="true">
+                    {(index + 1).toString().padStart(2, '0')}
+                </span>
                 <div className="ServiceCardIcon">
                     <LazyLoadImage
                     src={service.Icon}
                     alt={service.ServiceName}
                     />
+                </div>
+                <div className="ServiceCardContent">
+                    <h4>{service.ServiceName}</h4>
+                    <p>{service.Info}</p>
+                    <span className="ServiceLink">
+                    Conoce más <span className="ServiceLinkArrow" aria-hidden="true">→</span>
+                    </span>
                 </div>
             </motion.div>
             ))
@@ -95,10 +102,10 @@ function Service_HomePage() {
                     whileTap={{ scale: 0.96 }}
                     transition={{ duration: 0.2, ease: "easeOut" }}
                 >
-                    Todos los servicios →
+                    Todos los servicios <span aria-hidden="true">→</span>
                 </motion.button>
         </Link>
-    </div>
+    </section>
   )
 }
 

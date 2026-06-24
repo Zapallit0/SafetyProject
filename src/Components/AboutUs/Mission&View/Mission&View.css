@@ -1,86 +1,118 @@
 .Mission_View {
-    color:white;
-    background-color: black;
+    background-color: var(--orange950);
+    color: var(--orange50);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: fit-content;
-    padding: 1rem;
+    gap: 1.25rem;
+    padding: 4.5rem 1.5rem 5.5rem;
 }
-.Mission_View h3{
-    font-size: 2rem;
-    text-underline-offset: 0.5rem;
-    margin: 2rem 0;
+.Mission_title{
+    font-size: clamp(1.7rem, 4.5vw, 2.6rem);
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    color: var(--orange50);
+    max-width: 700px;
+    margin-bottom: 1.5rem;
 }
+
 .paragraphsMission_View{
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    text-align: center;
-    height: fit-content;
-    width: 95%;
-    margin-bottom: 2rem;
-    justify-content: center;
-}
-.paragraphsMission_View p{
-    text-align: left;
-    padding-left: 1rem;
-    font-size: 1rem;
-    font-weight: 300;
+    flex-direction: column;
+    gap: 1.25rem;
     width: 100%;
-    border-left: 3px #FFA500;
-    border-style: solid;
-    border-bottom: 0px white;
-    border-right: 0px white;
-    border-top: 0px white;
+    max-width: 920px;
+    margin-bottom: 1.25rem;
 }
 .missionView{
+    position: relative;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: fit-content;
+    gap: 0.55rem;
+    text-align: left;
+    background: linear-gradient(160deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 152, 0, 0.18);
+    border-radius: 16px;
+    padding: 2rem 1.8rem;
+    transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+/* Top hi-vis bar wipes in on hover */
+.missionView::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(90deg, var(--orange500), transparent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+}
+.missionView:hover::before{ transform: scaleX(1); }
+.missionView:hover{
+    transform: translateY(-6px);
+    border-color: rgba(255, 152, 0, 0.45);
+    box-shadow: 0 22px 44px rgba(0, 0, 0, 0.4);
+}
+.missionView_num{
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    color: var(--orange500);
+    font-variant-numeric: tabular-nums;
+}
+.missionView h3{
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--orange50);
+    margin: 0;
+}
+.missionView p{
+    font-size: 1.05rem;
+    font-weight: 400;
+    line-height: 1.65;
+    opacity: 0.85;
 }
 .paragraphsMission_View span{
-    color:#FFA500;
-    font-weight: 500;
+    color: var(--orange400);
+    font-weight: 600;
 }
-.Mission_View img{
-    width: 70%;
-    margin: 2rem 0;
+
+.missionImage{
+    width: 100%;
+    max-width: 760px;
 }
+.missionImage img{
+    width: 100%;
+    border-radius: 18px;
+    object-fit: cover;
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.45);
+}
+
 @media screen and (min-width: 720px){
-    .Mission_View h3{
-        font-size: 3rem;
+    .paragraphsMission_View{
+        flex-direction: row;
+        align-items: stretch;
     }
     .missionView{
-        width: 50%;
+        flex: 1;
     }
-    .paragraphsMission_View p{
-        width: 70%;
-        font-size: 1.5rem;
-    }
-    .missionView{
-        align-items: center;
+    .missionView h3{
+        font-size: 1.7rem;
     }
 }
 @media screen and (min-width: 1200px){
-    .paragraphsMission_View{
-        justify-content: center;
-    }
-    .Mission_View img{
-        width: 60%;
+    .Mission_View{
+        padding: 6rem 2rem 7rem;
     }
     .missionView{
-        width: 40%;
+        padding: 2.4rem 2.2rem;
     }
-    .Mission_View h3{
-        font-size: 2.5rem;
-        margin-top: 3rem;
-    }
-    .paragraphsMission_View p{
-        font-size: 1.4rem;
-        padding-left: 2rem;
+    .missionView p{
+        font-size: 1.1rem;
     }
 }
